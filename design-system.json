@@ -1,0 +1,181 @@
+{
+  "designSystem": {
+    "name": "Blob Token Design System",
+    "description": "Modern meme coin website with glass morphism and vibrant animations",
+    "version": "1.0.0",
+    
+    "colors": {
+      "primary": {
+        "main": "#FFCE3D",
+        "light": "#FFE799",
+        "dark": "#E6B800",
+        "accent": "#FFC93C"
+      },
+      "neutral": {
+        "white": "#FFFFFF",
+        "light": "#FAFAFA",
+        "dark": "#0F0F0F",
+        "black": "#111111",
+        "gray": {
+          "50": "#F9FAFB",
+          "100": "#F3F4F6",
+          "200": "#E5E7EB",
+          "300": "#D1D5DB",
+          "400": "#9CA3AF",
+          "500": "#6B7280",
+          "600": "#4B5563",
+          "700": "#374151",
+          "800": "#1F2937",
+          "900": "#111827"
+        }
+      },
+      "gradients": {
+        "primary": "linear-gradient(135deg, #FFCE3D 0%, #FFC93C 100%)",
+        "dark": "linear-gradient(135deg, #111111 0%, #333333 100%)",
+        "glass": "linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)",
+        "animated": "linear-gradient(-45deg, #FFCE3D, #FFC93C, #FFE799, #FFCE3D)"
+      }
+    },
+    
+    "typography": {
+      "fontFamily": {
+        "primary": "'Chakra Petch', 'Space Grotesk', sans-serif",
+        "secondary": "'Space Grotesk', sans-serif"
+      },
+      "fontSize": {
+        "xs": "0.75rem",
+        "sm": "0.875rem",
+        "base": "1rem",
+        "lg": "1.125rem",
+        "xl": "1.25rem",
+        "2xl": "1.5rem",
+        "3xl": "1.875rem",
+        "4xl": "2.25rem",
+        "5xl": "3rem",
+        "6xl": "3.75rem",
+        "7xl": "4.5rem"
+      },
+      "fontWeight": {
+        "normal": "400",
+        "medium": "500",
+        "semibold": "600",
+        "bold": "700"
+      },
+      "lineHeight": {
+        "tight": "1.25",
+        "normal": "1.5",
+        "relaxed": "1.75"
+      }
+    },
+    
+    "spacing": {
+      "xs": "0.25rem",
+      "sm": "0.5rem",
+      "md": "1rem",
+      "lg": "1.5rem",
+      "xl": "2rem",
+      "2xl": "3rem",
+      "3xl": "4rem",
+      "4xl": "6rem"
+    },
+    
+    "borderRadius": {
+      "sm": "0.25rem",
+      "md": "0.5rem",
+      "lg": "0.75rem",
+      "xl": "1rem",
+      "2xl": "1.5rem",
+      "full": "9999px"
+    },
+    
+    "shadows": {
+      "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+      "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+      "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
+      "xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1)",
+      "glow": "0 0 30px rgba(255, 206, 61, 0.3)",
+      "glowHover": "0 0 40px rgba(255, 206, 61, 0.4)"
+    },
+    
+    "animations": {
+      "duration": {
+        "fast": "0.2s",
+        "normal": "0.3s",
+        "slow": "0.5s"
+      },
+      "easing": {
+        "smooth": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "bounce": "cubic-bezier(0.68, -0.55, 0.265, 1.55)"
+      },
+      "keyframes": {
+        "float": "0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); }",
+        "pulse": "0%, 100% { opacity: 1; } 50% { opacity: 0.5; }",
+        "gradientShift": "0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; }"
+      }
+    },
+    
+    "components": {
+      "button": {
+        "primary": {
+          "background": "var(--gradient-primary)",
+          "color": "#111111",
+          "padding": "1rem 2rem",
+          "borderRadius": "9999px",
+          "fontWeight": "600",
+          "transition": "all 0.3s ease",
+          "hover": {
+            "transform": "scale(1.05) translateY(-2px)",
+            "boxShadow": "var(--shadow-glow-hover)"
+          }
+        },
+        "secondary": {
+          "background": "#111111",
+          "color": "#FFFFFF",
+          "padding": "1rem 2rem",
+          "borderRadius": "9999px",
+          "fontWeight": "600",
+          "transition": "all 0.3s ease",
+          "hover": {
+            "transform": "scale(1.05) translateY(-2px)",
+            "boxShadow": "var(--shadow-glow-hover)"
+          }
+        }
+      },
+      "card": {
+        "background": "rgba(255, 255, 255, 0.9)",
+        "backdropFilter": "blur(20px)",
+        "border": "1px solid rgba(255, 255, 255, 0.2)",
+        "borderRadius": "1.5rem",
+        "padding": "2rem",
+        "boxShadow": "var(--shadow-lg)",
+        "transition": "all 0.3s ease",
+        "hover": {
+          "transform": "translateY(-8px) scale(1.02)",
+          "boxShadow": "var(--shadow-xl)"
+        }
+      },
+      "glass": {
+        "background": "rgba(255, 255, 255, 0.1)",
+        "backdropFilter": "blur(20px)",
+        "border": "1px solid rgba(255, 255, 255, 0.2)",
+        "borderRadius": "1rem"
+      }
+    },
+    
+    "layout": {
+      "container": {
+        "maxWidth": "80rem",
+        "padding": "0 1rem",
+        "margin": "0 auto"
+      },
+      "grid": {
+        "columns": {
+          "mobile": 1,
+          "tablet": 2,
+          "desktop": 3
+        },
+        "gap": "2rem"
+      }
+    }
+  }
+} 

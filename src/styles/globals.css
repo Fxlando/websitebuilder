@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --blob-yellow: #FFCE3D;
+  --blob-yellow-accent: #FFC93C;
+  --blob-yellow-light: #FFE799;
+  --blob-yellow-dark: #E6B800;
+
+  /* Neutral Colors */
+  --background-white: #FFFFFF;
+  --background-light: #FAFAFA;
+  --background-dark: #0F0F0F;
+  --text-black: #111111;
+  --text-gray: #666666;
+  --text-light: #999999;
+
+  /* Utility Colors */
+  --border-light: #E5E5E5;
+  --shadow-subtle: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+  --shadow-heavy: rgba(0, 0, 0, 0.15);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #FFCE3D 0%, #FFC93C 100%);
+  --gradient-dark: linear-gradient(135deg, #111111 0%, #333333 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Chakra Petch', 'Space Grotesk', sans-serif;
+  line-height: 1.6;
+}
+
+body {
+  color: var(--text-black);
+  background: var(--background-white);
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Custom utility classes */
+.text-blob-yellow {
+  color: var(--blob-yellow);
+}
+
+.bg-blob-yellow {
+  background-color: var(--blob-yellow);
+}
+
+.border-blob-yellow {
+  border-color: var(--blob-yellow);
+}
+
+/* Enhanced glass morphism */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced shadows */
+.shadow-glow {
+  box-shadow: 0 0 30px rgba(255, 206, 61, 0.3);
+}
+
+.shadow-glow-hover:hover {
+  box-shadow: 0 0 40px rgba(255, 206, 61, 0.4);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gradient background */
+.animated-gradient {
+  background: linear-gradient(-45deg, #FFCE3D, #FFC93C, #FFE799, #FFCE3D);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Pulse animation */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 206, 61, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(255, 206, 61, 0.6); }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blob-yellow);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blob-yellow-accent);
+}
+
+/* Selection styles */
+::selection {
+  background: var(--blob-yellow);
+  color: var(--text-black);
+}
+
+/* Focus styles for accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid var(--blob-yellow);
+  outline-offset: 2px;
+}
+
+/* Loading states */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-white: #0F0F0F;
+    --background-light: #1A1A1A;
+    --text-black: #FFFFFF;
+    --text-gray: #CCCCCC;
+    --border-light: #333333;
+  }
+} 

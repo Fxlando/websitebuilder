@@ -96,9 +96,9 @@ export const HeroSection = () => {
             </p>
           </motion.div>
 
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex justify-center"
             variants={fadeInUp}
           >
             <motion.div
@@ -111,19 +111,6 @@ export const HeroSection = () => {
                 onClick={() => window.open(SITE_CONFIG.links.twitter, '_blank')}
               >
                 Follow on X
-              </Button>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-yellow-400 text-yellow-600 hover:bg-yellow-400 hover:text-gray-900 px-8 py-4 text-lg font-medium"
-                onClick={() => window.open(SITE_CONFIG.links.telegram, '_blank')}
-              >
-                Join Telegram
               </Button>
             </motion.div>
           </motion.div>

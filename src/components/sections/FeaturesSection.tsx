@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { TrendingUp, Shield, Zap, Rocket, Target, AlertTriangle, Eye, BarChart3 } from 'lucide-react';
 import { TiltedCard } from '../ui/TiltedCard';
 import { Card, CardContent } from '../ui/Card';
+import { SITE_CONFIG } from '@/lib/constants';
 
 export const FeaturesSection = () => {
   const features = [
@@ -218,14 +219,14 @@ export const FeaturesSection = () => {
             </p>
             
             <motion.a
-              href="https://t.me/blobtoken"
+              href={SITE_CONFIG.links.twitter}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 bg-blob-yellow text-black px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200 group"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>Join Telegram</span>
+              <span>Follow on X</span>
               <Rocket className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
             </motion.a>
           </div>

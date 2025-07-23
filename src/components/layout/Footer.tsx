@@ -134,7 +134,6 @@ export const Footer = () => {
             <div className="flex space-x-4">
               {[
                 { icon: '🐦', href: SITE_CONFIG.links.twitter, label: 'Twitter' },
-                { icon: '📱', href: SITE_CONFIG.links.telegram, label: 'Telegram' },
                 { icon: '🎮', href: SITE_CONFIG.links.discord, label: 'Discord' }
               ].map((social) => (
                 <motion.div

@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { Zap, Moon, Dna, Sparkles, BookOpen, Users } from 'lucide-react';
 

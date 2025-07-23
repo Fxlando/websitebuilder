@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { CheckCircle, Circle, Clock, Calendar, Rocket, Zap } from 'lucide-react';
 

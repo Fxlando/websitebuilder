@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { TrendingUp, Shield, Zap, Rocket, Target, AlertTriangle, Eye, BarChart3 } from 'lucide-react';
 import { TiltedCard } from '../ui/TiltedCard';

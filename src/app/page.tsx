@@ -24,20 +24,15 @@ export default function Home() {
         <AppsSection />
         <FutureSection />
         <BuildSection />
-        
-        {/* Navigation Target Sections */}
         <section id="lore">
           <LoreSection />
         </section>
-        
         <section id="features">
           <FeaturesSection />
         </section>
-        
         <section id="timeline">
           <LaunchTimeline />
         </section>
-        
         <section id="newsletter">
           <NewsletterSignup />
         </section>

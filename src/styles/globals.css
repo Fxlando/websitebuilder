@@ -74,7 +74,7 @@
 
 /* Custom TON website styles */
 .gradient-text {
-  background: linear-gradient(135deg, #1ba6f3 0%, #4285f4 100%);
+  background: linear-gradient(135deg, #FF8C00 0%, #FFA500 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

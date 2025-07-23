@@ -2,66 +2,50 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '../ui/Button';
+import { SITE_CONFIG } from '@/lib/constants';
 
 export const Footer = () => {
   const footerSections = [
     {
-      title: 'Use',
+      title: 'Trading Tools',
       links: [
-        'Get a Wallet',
-        'Get Toncoin',
-        'Stake',
-        'Accept Payments',
-        'Apps & Services',
-        'Domains',
-        'USDT on TON',
-        'Cross-Chain Bridges'
-      ]
-    },
-    {
-      title: 'Learn',
-      links: [
-        'TON Concept',
-        'Decentralized Network',
-        'Roadmap',
-        'TonStat',
-        'History of Mining',
-        'Toncoin',
-        'Validators',
-        'White Paper',
-        'Brand Assets',
-        'Sustainability'
-      ]
-    },
-    {
-      title: 'For Builders',
-      links: [
-        'TON Builders Portal',
-        'Getting Started',
-        'Documentation',
-        'Telegram Mini Apps',
-        'Dev Forum',
-        'Dev Chats',
-        'Bug Bounty',
-        'Find a Job',
-        'Find a Talent'
-      ]
-    },
-    {
-      title: 'Use Cases',
-      links: [
-        'GameFi',
-        'Memecoins & Tokens',
-        'Community Tools',
-        'TON Sites'
+        'Snipe Scanner',
+        'Meme Signal Oracle',
+        'Rug Radar',
+        'Auto-Liquidity Watcher',
+        'MemeCoin Tracker',
+        'Blob Analytics'
       ]
     },
     {
       title: 'Community',
       links: [
-        'Communities',
+        'Telegram',
+        'Twitter',
+        'Discord',
         'Blog',
-        'Careers'
+        'Roadmap',
+        'Whitepaper'
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        'Contract Address',
+        'Tokenomics',
+        'Security Audit',
+        'FAQ',
+        'Support',
+        'Bug Report'
+      ]
+    },
+    {
+      title: 'Legal',
+      links: [
+        'Privacy Policy',
+        'Terms of Service',
+        'Cookie Policy',
+        'Disclaimer'
       ]
     }
   ];
@@ -123,7 +107,7 @@ export const Footer = () => {
           ))}
         </motion.div>
 
-        {/* Language & Social Section */}
+        {/* Social & Copyright Section */}
         <motion.div
           className="border-t border-gray-200 pt-8"
           initial={{ opacity: 0, y: 20 }}
@@ -132,23 +116,29 @@ export const Footer = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
-            {/* Language Notice */}
+            {/* Copyright */}
             <div className="flex items-center mb-4 md:mb-0">
               <motion.div
-                className="w-6 h-6 bg-gray-300 rounded-full mr-3"
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.2 }}
-              />
+                className="w-8 h-8 bg-yellow-400 rounded-full mr-3 flex items-center justify-center"
+                whileHover={{ scale: 1.1, rotate: 360 }}
+                transition={{ duration: 0.6 }}
+              >
+                <span className="text-lg">🟡</span>
+              </motion.div>
               <span className="text-sm text-gray-600">
-                The language of your region is automatically used. Change to English?
+                © 2024 Blob Token. All rights reserved.
               </span>
             </div>
 
             {/* Social Icons */}
             <div className="flex space-x-4">
-              {['Li', 'Tg', 'Gh', 'Tw', 'Yt', 'Rd'].map((social) => (
+              {[
+                { icon: '🐦', href: SITE_CONFIG.links.twitter, label: 'Twitter' },
+                { icon: '📱', href: SITE_CONFIG.links.telegram, label: 'Telegram' },
+                { icon: '🎮', href: SITE_CONFIG.links.discord, label: 'Discord' }
+              ].map((social) => (
                 <motion.div
-                  key={social}
+                  key={social.label}
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
@@ -156,11 +146,11 @@ export const Footer = () => {
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="w-8 h-8 bg-gray-200 rounded-full hover:bg-gray-300 text-gray-600"
+                    className="w-10 h-10 bg-yellow-100 rounded-full hover:bg-yellow-200 text-gray-700"
                     asChild
                   >
-                    <a href="#" className="flex items-center justify-center">
-                      <span className="text-sm">{social}</span>
+                    <a href={social.href} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                      <span className="text-lg">{social.icon}</span>
                     </a>
                   </Button>
                 </motion.div>
@@ -169,9 +159,9 @@ export const Footer = () => {
           </div>
         </motion.div>
 
-        {/* Cookie Notice */}
+        {/* Blob Quote */}
         <motion.div
-          className="mt-8 p-4 bg-gray-50 rounded-lg"
+          className="mt-8 p-6 bg-yellow-50 rounded-lg border border-yellow-200"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -179,16 +169,15 @@ export const Footer = () => {
         >
           <div className="flex items-start">
             <motion.div
-              className="w-6 h-6 bg-blue-500 rounded-full mr-3 mt-1 flex items-center justify-center"
+              className="w-8 h-8 bg-yellow-400 rounded-full mr-4 mt-1 flex items-center justify-center"
               whileHover={{ rotate: 360, scale: 1.1 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-white text-xs">⚡</span>
+              <span className="text-lg">🟡</span>
             </motion.div>
             <div className="flex-1">
-              <p className="text-sm text-gray-700">
-                By using our site you agree to our use of cookies to deliver a better site experience.
-                You can disable cookies in the browser settings.
+              <p className="text-sm text-gray-700 italic">
+                "Born from memes. Built for traders. The Blob has awakened, and the future of trading is here."
               </p>
             </div>
           </div>

@@ -18,10 +18,10 @@ export const Header = () => {
   }, []);
 
   const navItems = [
-    { name: 'Use', href: '#use' },
-    { name: 'Learn', href: '#learn' },
-    { name: 'Build', href: '#build' },
-    { name: 'Community', href: '#community' },
+    { name: 'Lore', href: '#lore' },
+    { name: 'Tools', href: '#features' },
+    { name: 'Roadmap', href: '#timeline' },
+    { name: 'Community', href: '#newsletter' },
   ];
 
   return (
@@ -45,13 +45,13 @@ export const Header = () => {
           >
             <Link href="/" className="flex items-center space-x-2">
               <motion.div
-                className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center"
+                className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
               >
-                <span className="text-white font-bold text-sm">T</span>
+                <span className="text-gray-900 font-bold text-sm">🟡</span>
               </motion.div>
-              <span className="font-bold text-xl text-gray-900">TON</span>
+              <span className="font-bold text-xl text-gray-900">Blob Token</span>
             </Link>
           </motion.div>
 
@@ -66,10 +66,14 @@ export const Header = () => {
             ))}
           </nav>
 
-          {/* Language Selector */}
+          {/* CTA Button */}
           <div className="flex items-center">
-            <Button variant="ghost" className="text-gray-700 hover:text-blue-600">
-              Eng
+            <Button 
+              variant="outline" 
+              className="text-gray-700 hover:text-yellow-600 border-yellow-400 hover:border-yellow-500"
+              onClick={() => window.open('https://t.me/blobtoken', '_blank')}
+            >
+              Join Telegram
             </Button>
           </div>
         </div>

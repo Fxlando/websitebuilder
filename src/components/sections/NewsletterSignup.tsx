@@ -66,7 +66,7 @@ export const NewsletterSignup = () => {
             Get <span className="gradient-text">Alerts</span> When $BLOB Launches
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Be the first to know when $BLOB launches and get exclusive early access to our advanced trading tools. Join the waitlist now!
+            Get alerts when $BLOB launches + tool alpha early. Be among the first to access our advanced trading tools and never miss a moon shot.
           </p>
 
           {/* Benefits */}

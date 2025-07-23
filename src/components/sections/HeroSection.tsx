@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '../ui/Button';
+import { SITE_CONFIG, BRAND_COLORS } from '@/lib/constants';
 
 export const HeroSection = () => {
   const fadeInUp = {
@@ -18,24 +19,62 @@ export const HeroSection = () => {
     }
   };
 
+  // Animated blob floating
+  const blobAnimation = {
+    animate: {
+      y: [-10, 10, -10],
+      rotate: [0, 5, -5, 0],
+      transition: {
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
+
   return (
-    <section className="bg-gray-50 py-20 lg:py-32">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-gray-50 relative overflow-hidden">
+      {/* Animated background blob */}
+      <motion.div
+        className="absolute top-1/4 right-1/4 w-96 h-96 bg-yellow-200 rounded-full opacity-20 blur-3xl"
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.2, 0.3, 0.2],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+      
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <motion.div
           className="space-y-8"
           initial="initial"
           animate="animate"
           variants={staggerContainer}
         >
+          {/* Animated Blob Mascot */}
+          <motion.div
+            className="flex justify-center mb-8"
+            variants={blobAnimation}
+            animate="animate"
+          >
+            <div className="w-24 h-24 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center shadow-2xl">
+              <span className="text-4xl">🟡</span>
+            </div>
+          </motion.div>
+
           {/* Main Title */}
           <motion.h1
             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight"
             variants={fadeInUp}
           >
-            <span className="text-gray-900">The Open Network</span>
+            <span className="text-gray-900">Blob Has</span>
             <br />
-            <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-              for creator
+            <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+              Awakened
             </span>
           </motion.h1>
 
@@ -44,9 +83,19 @@ export const HeroSection = () => {
             className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             variants={fadeInUp}
           >
-            A decentralized and open internet designed to onboard 500M people on-chain,
-            built by the community using technology developed by Telegram.
+            Born from memes. Built for traders.
           </motion.p>
+
+          {/* Contract Address */}
+          <motion.div
+            className="bg-gray-100 rounded-lg p-4 max-w-md mx-auto"
+            variants={fadeInUp}
+          >
+            <p className="text-sm text-gray-500 mb-1">Contract Address</p>
+            <p className="font-mono text-sm text-gray-700 break-all">
+              0x1234...5678
+            </p>
+          </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
@@ -59,9 +108,10 @@ export const HeroSection = () => {
             >
               <Button
                 size="lg"
-                className="bg-gray-800 hover:bg-gray-900 text-white px-8 py-4 text-lg font-medium"
+                className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-4 text-lg font-medium shadow-lg"
+                onClick={() => window.open(SITE_CONFIG.links.twitter, '_blank')}
               >
-                Explore wallets
+                Follow on X
               </Button>
             </motion.div>
             <motion.div
@@ -71,9 +121,10 @@ export const HeroSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white px-8 py-4 text-lg font-medium"
+                className="border-yellow-400 text-yellow-600 hover:bg-yellow-400 hover:text-gray-900 px-8 py-4 text-lg font-medium"
+                onClick={() => window.open(SITE_CONFIG.links.telegram, '_blank')}
               >
-                Build on TON
+                Join Telegram
               </Button>
             </motion.div>
           </motion.div>

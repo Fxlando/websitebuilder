@@ -1,33 +1,57 @@
 import { motion } from 'framer-motion';
-import { TrendingUp, Shield, Zap, Rocket } from 'lucide-react';
+import { TrendingUp, Shield, Zap, Rocket, Target, AlertTriangle, Eye, BarChart3 } from 'lucide-react';
 import { TiltedCard } from '../ui/TiltedCard';
 import { Card, CardContent } from '../ui/Card';
 
 export const FeaturesSection = () => {
   const features = [
     {
-      title: "Lightning Fast",
-      description: "Experience unprecedented speed with our optimized solutions and cutting-edge technology.",
-      icon: Zap,
-      status: "Available Now",
-      color: "from-purple-500 to-pink-500",
+      title: "Snipe Scanner",
+      description: "Advanced token detection system that identifies promising new launches before they moon. Get early access to the next 100x gems.",
+      icon: Target,
+      status: "Coming Soon",
+      color: "from-yellow-400 to-orange-500",
       delay: 0.1
     },
     {
-      title: "Secure by Design",
-      description: "Enterprise-grade security protecting your valuable data with industry-leading protocols.",
-      icon: Shield,
-      status: "Available Now",
-      color: "from-blue-500 to-cyan-500",
+      title: "Meme Signal Oracle",
+      description: "AI-powered sentiment analysis that tracks social media buzz and predicts which memes will go viral. Never miss a trend again.",
+      icon: Zap,
+      status: "Coming Soon",
+      color: "from-blue-400 to-purple-500",
       delay: 0.2
     },
     {
-      title: "Scale Effortlessly",
-      description: "Grow without limits using our scalable infrastructure designed for your success.",
-      icon: TrendingUp,
-      status: "Available Now",
-      color: "from-green-500 to-emerald-500",
+      title: "Rug Radar",
+      description: "Real-time security scanner that detects potential rug pulls and suspicious contract activity. Protect your investments with advanced analytics.",
+      icon: Shield,
+      status: "Coming Soon",
+      color: "from-red-400 to-pink-500",
       delay: 0.3
+    },
+    {
+      title: "Auto-Liquidity Watcher",
+      description: "Monitor liquidity movements and detect when whales are accumulating or dumping. Stay ahead of the market with institutional-grade tracking.",
+      icon: Eye,
+      status: "Coming Soon",
+      color: "from-green-400 to-teal-500",
+      delay: 0.4
+    },
+    {
+      title: "MemeCoin Tracker",
+      description: "Comprehensive dashboard tracking all meme coins, their performance, and community sentiment. Your one-stop shop for meme coin intelligence.",
+      icon: BarChart3,
+      status: "Coming Soon",
+      color: "from-purple-400 to-indigo-500",
+      delay: 0.5
+    },
+    {
+      title: "Blob Analytics",
+      description: "Advanced trading analytics powered by the Blob community. Get insights from thousands of traders and make data-driven decisions.",
+      icon: TrendingUp,
+      status: "Coming Soon",
+      color: "from-yellow-500 to-yellow-600",
+      delay: 0.6
     }
   ];
 
@@ -90,21 +114,21 @@ export const FeaturesSection = () => {
             viewport={{ once: true }}
           >
             <Zap className="w-4 h-4 text-blob-yellow" />
-            <span className="text-sm font-semibold text-blob-yellow">Premium Features</span>
+            <span className="text-sm font-semibold text-blob-yellow">Trading Tools</span>
           </motion.div>
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6">
-            Why Choose{' '}
-            <span className="gradient-text">Our Platform</span>
+            Tools Built for{' '}
+            <span className="gradient-text">Traders</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover the features that set us apart and help your business thrive in today&apos;s competitive landscape.
+            Advanced trading tools designed by traders, for traders. Get the edge you need in the meme coin market.
           </p>
         </motion.div>
 
-        {/* Simple Features Grid */}
+        {/* Trading Tools Grid */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -185,19 +209,21 @@ export const FeaturesSection = () => {
             </motion.div>
             
             <h3 className="text-2xl font-bold text-black mb-4">
-              Ready to Transform Your Business?
+              Ready to Get the Trading Edge?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Start your journey with us today and experience the difference our platform can make for your business growth and success.
+              Join the Blob community and get early access to these powerful trading tools. Be among the first to experience the future of meme coin trading.
             </p>
             
             <motion.a
-              href="#contact"
+              href="https://t.me/blobtoken"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 bg-blob-yellow text-black px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200 group"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>Get Started Today</span>
+              <span>Join Telegram</span>
               <Rocket className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
             </motion.a>
           </div>

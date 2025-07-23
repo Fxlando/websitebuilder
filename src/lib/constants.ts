@@ -1,14 +1,25 @@
 // Site configuration
 export const SITE_CONFIG = {
   name: "Blob Token",
-  description: "The ultimate meme coin on Solana",
+  description: "Born from memes. Built for traders.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://blobtoken.com",
   ogImage: "/og-image.png",
   links: {
-    twitter: process.env.NEXT_PUBLIC_TWITTER_URL || "",
-    telegram: process.env.NEXT_PUBLIC_TELEGRAM_URL || "",
-    discord: process.env.NEXT_PUBLIC_DISCORD_URL || "",
+    twitter: process.env.NEXT_PUBLIC_TWITTER_URL || "https://x.com/blobtoken",
+    telegram: process.env.NEXT_PUBLIC_TELEGRAM_URL || "https://t.me/blobtoken",
+    discord: process.env.NEXT_PUBLIC_DISCORD_URL || "https://discord.gg/blobtoken",
   },
+};
+
+// Blob Token Brand Colors
+export const BRAND_COLORS = {
+  primary: "#FFCE3D",    // Blob Yellow
+  secondary: "#FFC93C",  // Accent Yellow
+  light: "#FFE799",      // Light Yellow
+  background: "#FFFFFF",  // White
+  backgroundAlt: "#FAFAFA", // Light Gray
+  text: "#111111",       // Black/Dark Gray
+  textLight: "#666666",  // Light Text
 };
 
 // Token configuration

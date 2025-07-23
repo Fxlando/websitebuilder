@@ -1,8 +1,8 @@
 // Site configuration
 export const SITE_CONFIG = {
-  name: "Blob Token",
+  name: "BLOBSY",
   description: "On a mission. Headed to find the tool that will save his trading future.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://blobtoken.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://blobsy.com",
   ogImage: "/og-image.png",
   links: {
     twitter: process.env.NEXT_PUBLIC_TWITTER_URL || "https://x.com/bl0bsy",

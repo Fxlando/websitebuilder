@@ -120,10 +120,10 @@ export const FutureSection = () => {
                   <div>
                     <div className="text-sm font-medium mb-2 opacity-90">PHASE 2.0</div>
                     <h3 className="text-3xl lg:text-4xl font-bold mb-6">
-                      Blob Analytics
+                      BLOBSY Analytics
                     </h3>
                     <p className="text-lg mb-8 opacity-90 leading-relaxed">
-                      Advanced trading analytics powered by the Blob community. Get insights from thousands of traders and make data-driven decisions.
+                      Advanced trading analytics powered by the BLOBSY community. Get insights from thousands of traders and make data-driven decisions.
                     </p>
                     <div className="flex flex-wrap gap-4">
                       <motion.div

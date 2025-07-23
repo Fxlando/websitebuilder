@@ -51,7 +51,7 @@ export const Header = () => {
               >
                 <span className="text-gray-900 font-bold text-sm">🟡</span>
               </motion.div>
-              <span className="font-bold text-xl text-gray-900">Blob Token</span>
+              <span className="font-bold text-xl text-gray-900">BLOBSY</span>
             </Link>
           </motion.div>
 

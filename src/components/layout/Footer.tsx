@@ -14,7 +14,7 @@ export const Footer = () => {
         'Rug Radar',
         'Auto-Liquidity Watcher',
         'MemeCoin Tracker',
-        'Blob Analytics'
+        'BLOBSY Analytics'
       ]
     },
     {
@@ -177,7 +177,7 @@ export const Footer = () => {
             </motion.div>
             <div className="flex-1">
               <p className="text-sm text-gray-700 italic">
-                "On a mission. Headed to find the tool that will save his trading future. The Blob has awakened, and the future of trading is here."
+                "On a mission. Headed to find the tool that will save his trading future. BLOBSY has awakened, and the future of trading is here."
               </p>
             </div>
           </div>

@@ -83,18 +83,44 @@ export const HeroSection = () => {
             className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             variants={fadeInUp}
           >
-            The Degen Trench Intelligence System - "NarrativeScope"
+            On a mission. Headed to find the tool that will save his trading future.
           </motion.p>
 
-          {/* Intelligence System */}
+          {/* NarrativeScope Intelligence System */}
           <motion.div
-            className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-6 max-w-2xl mx-auto border border-yellow-200"
+            className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-6 max-w-4xl mx-auto border border-yellow-200"
             variants={fadeInUp}
           >
-            <p className="text-sm text-gray-600 mb-2 font-semibold">🔍 Live Market Intelligence</p>
-            <p className="text-sm text-gray-700 leading-relaxed">
-              A comprehensive Solana meme coin market intelligence tool that reads the entire degen ecosystem in real-time, giving Blobsy "god mode" vision into the chaotic world of Solana meme coin degeneracy.
+            <p className="text-sm text-gray-600 mb-3 font-semibold">🔍 The Degen Trench Intelligence System - "NarrativeScope"</p>
+            <p className="text-sm text-gray-700 leading-relaxed mb-4">
+              A comprehensive Solana meme coin market intelligence tool that reads the entire degen ecosystem in real-time:
             </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div className="space-y-2">
+                <p className="font-semibold text-gray-800">Live Narrative Tracker:</p>
+                <ul className="text-gray-600 space-y-1 ml-4">
+                  <li>• Meta Analysis: Identifies which narrative is currently dominating</li>
+                  <li>• Narrative Rotation Predictor: Spots when current meta is getting stale</li>
+                  <li>• Sub-Narrative Detection: Finds emerging micro-trends</li>
+                </ul>
+              </div>
+              
+              <div className="space-y-2">
+                <p className="font-semibold text-gray-800">Market Condition Dashboard:</p>
+                <ul className="text-gray-600 space-y-1 ml-4">
+                  <li>• Degen Liquidity Flow: Tracks total available "ape money"</li>
+                  <li>• Risk Appetite Gauge: Measures average market cap of new launches</li>
+                  <li>• Attention Span Metrics: Analyzes how long meme coins hold attention</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="mt-4 p-3 bg-yellow-100 rounded-lg">
+              <p className="text-xs text-gray-700 italic">
+                Blobsy finds this tool can essentially give him "god mode" vision into the chaotic world of Solana meme coin degeneracy, seeing patterns that individual traders miss in the chaos.
+              </p>
+            </div>
           </motion.div>
 
           {/* CTA Buttons */}

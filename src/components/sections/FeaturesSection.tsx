@@ -6,50 +6,50 @@ import { Card, CardContent } from '../ui/Card';
 export const FeaturesSection = () => {
   const features = [
     {
-      title: "Live Narrative Tracker",
-      description: "Meta Analysis identifies which narrative is currently dominating (AI agents, cult coins, animal seasons, food coins, gaming tokens) and tracks narrative lifecycle stages with rotation prediction.",
+      title: "Snipe Scanner",
+      description: "Advanced token detection system that identifies promising new launches before they moon. Get early access to the next 100x gems.",
       icon: Target,
-      status: "Live",
+      status: "Coming Soon",
       color: "from-yellow-400 to-orange-500",
       delay: 0.1
     },
     {
-      title: "Market Condition Dashboard",
-      description: "Degen Liquidity Flow tracks total available 'ape money' flowing between meme coins vs flowing out to majors/stablecoins with risk appetite gauge.",
-      icon: BarChart3,
-      status: "Live",
+      title: "Meme Signal Oracle",
+      description: "AI-powered sentiment analysis that tracks social media buzz and predicts which memes will go viral. Never miss a trend again.",
+      icon: Zap,
+      status: "Coming Soon",
       color: "from-blue-400 to-purple-500",
       delay: 0.2
     },
     {
-      title: "Ecosystem Health Monitor",
-      description: "New Launch Velocity tracks rate of new token deployments and quality indicators with whale activity patterns and social engagement quality analysis.",
-      icon: Eye,
-      status: "Live",
-      color: "from-green-400 to-teal-500",
+      title: "Rug Radar",
+      description: "Real-time security scanner that detects potential rug pulls and suspicious contract activity. Protect your investments with advanced analytics.",
+      icon: Shield,
+      status: "Coming Soon",
+      color: "from-red-400 to-pink-500",
       delay: 0.3
     },
     {
-      title: "Real-Time Intelligence Feed",
-      description: "Narrative Strength Score (1-10) with market phase detection (Bull-degen, Bear-degen, Rotation, Dead-cat) and optimal entry/exit timing windows.",
-      icon: Zap,
-      status: "Live",
-      color: "from-red-400 to-pink-500",
+      title: "Auto-Liquidity Watcher",
+      description: "Monitor liquidity movements and detect when whales are accumulating or dumping. Stay ahead of the market with institutional-grade tracking.",
+      icon: Eye,
+      status: "Coming Soon",
+      color: "from-green-400 to-teal-500",
       delay: 0.4
     },
     {
-      title: "Sub-Narrative Detection",
-      description: "Finds emerging micro-trends within larger narratives (like 'depressed animals' within animal season, or 'retro gaming' within gaming tokens).",
-      icon: TrendingUp,
-      status: "Live",
+      title: "MemeCoin Tracker",
+      description: "Comprehensive dashboard tracking all meme coins, their performance, and community sentiment. Your one-stop shop for meme coin intelligence.",
+      icon: BarChart3,
+      status: "Coming Soon",
       color: "from-purple-400 to-indigo-500",
       delay: 0.5
     },
     {
-      title: "Whale Activity Patterns",
-      description: "Identifies which known degen whales are active, what they're buying, and their current rotation patterns across the Solana ecosystem.",
-      icon: Shield,
-      status: "Live",
+      title: "Blob Analytics",
+      description: "Advanced trading analytics powered by the Blob community. Get insights from thousands of traders and make data-driven decisions.",
+      icon: TrendingUp,
+      status: "Coming Soon",
       color: "from-yellow-500 to-yellow-600",
       delay: 0.6
     }
@@ -118,11 +118,11 @@ export const FeaturesSection = () => {
           </motion.div>
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6">
-            NarrativeScope{' '}
-            <span className="gradient-text">Intelligence</span>
+            Tools Built for{' '}
+            <span className="gradient-text">Traders</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            A comprehensive Solana meme coin market intelligence tool that reads the entire degen ecosystem in real-time, giving you "god mode" vision into the chaotic world of Solana meme coin degeneracy.
+            Advanced trading tools designed by traders, for traders. Get the edge you need in the meme coin market.
           </p>
         </motion.div>
 
@@ -209,10 +209,10 @@ export const FeaturesSection = () => {
             </motion.div>
             
             <h3 className="text-2xl font-bold text-black mb-4">
-              Ready for God Mode Vision?
+              Ready to Get the Trading Edge?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Join the Blob community and get access to NarrativeScope intelligence. See patterns that individual traders miss in the chaos of Solana meme coin degeneracy.
+              Join the Blob community and get early access to these powerful trading tools. Be among the first to experience the future of meme coin trading.
             </p>
             
             <motion.a

@@ -66,14 +66,21 @@ export const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="flex items-center">
+          {/* CTA Buttons */}
+          <div className="flex items-center space-x-4">
             <Button 
               variant="outline" 
               className="text-gray-700 hover:text-yellow-600 border-yellow-400 hover:border-yellow-500"
               onClick={() => window.open('https://t.me/blobtoken', '_blank')}
             >
               Join Telegram
+            </Button>
+            <Button 
+              variant="outline" 
+              className="text-gray-700 hover:text-yellow-600 border-yellow-400 hover:border-yellow-500"
+              onClick={() => window.open('https://x.com/bl0bsy', '_blank')}
+            >
+              Follow X
             </Button>
           </div>
         </div>

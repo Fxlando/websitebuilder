@@ -83,7 +83,7 @@ export const HeroSection = () => {
             className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             variants={fadeInUp}
           >
-            Born from memes. Built for traders.
+            On a mission. Headed to find the tool that will save his trading future.
           </motion.p>
 
           {/* Contract Address */}

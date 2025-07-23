@@ -1,7 +1,7 @@
 // Site configuration
 export const SITE_CONFIG = {
   name: "Blob Token",
-  description: "Born from memes. Built for traders.",
+  description: "On a mission. Headed to find the tool that will save his trading future.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://blobtoken.com",
   ogImage: "/og-image.png",
   links: {

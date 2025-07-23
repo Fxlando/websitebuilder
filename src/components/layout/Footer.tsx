@@ -177,7 +177,7 @@ export const Footer = () => {
             </motion.div>
             <div className="flex-1">
               <p className="text-sm text-gray-700 italic">
-                "Born from memes. Built for traders. The Blob has awakened, and the future of trading is here."
+                "On a mission. Headed to find the tool that will save his trading future. The Blob has awakened, and the future of trading is here."
               </p>
             </div>
           </div>

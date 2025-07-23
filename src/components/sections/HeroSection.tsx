@@ -83,17 +83,17 @@ export const HeroSection = () => {
             className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             variants={fadeInUp}
           >
-            On a mission. Headed to find the tool that will save his trading future.
+            The Degen Trench Intelligence System - "NarrativeScope"
           </motion.p>
 
-          {/* Contract Address */}
+          {/* Intelligence System */}
           <motion.div
-            className="bg-gray-100 rounded-lg p-4 max-w-md mx-auto"
+            className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-6 max-w-2xl mx-auto border border-yellow-200"
             variants={fadeInUp}
           >
-            <p className="text-sm text-gray-500 mb-1">Contract Address</p>
-            <p className="font-mono text-sm text-gray-700 break-all">
-              0x1234...5678
+            <p className="text-sm text-gray-600 mb-2 font-semibold">🔍 Live Market Intelligence</p>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              A comprehensive Solana meme coin market intelligence tool that reads the entire degen ecosystem in real-time, giving Blobsy "god mode" vision into the chaotic world of Solana meme coin degeneracy.
             </p>
           </motion.div>
 

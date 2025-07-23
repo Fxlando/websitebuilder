@@ -112,12 +112,11 @@ export const DeFiSection = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover="whileHover"
               className="group"
+              {...cardHover}
             >
               <Card 
                 className={`${feature.bgColor} border-0 hover:shadow-lg transition-all duration-300 cursor-pointer`}
-                {...cardHover}
               >
                 <CardContent className="p-8">
                   <div className="mb-6">

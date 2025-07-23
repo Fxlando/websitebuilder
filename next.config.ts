@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Using pages directory structure
+  // Using app directory structure
   output: 'export',
   trailingSlash: true,
   images: {

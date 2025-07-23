@@ -1,8 +1,8 @@
 // Site configuration
 export const SITE_CONFIG = {
-  name: "NarrativeScope",
-  description: "The Degen Trench Intelligence System - Comprehensive Solana meme coin market intelligence tool that reads the entire degen ecosystem in real-time.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://narrativescope.com",
+  name: "Blob Token",
+  description: "On a mission. Headed to find the tool that will save his trading future.",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://blobtoken.com",
   ogImage: "/og-image.png",
   links: {
     twitter: process.env.NEXT_PUBLIC_TWITTER_URL || "https://x.com/blobtoken",

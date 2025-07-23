@@ -4,22 +4,22 @@ import { Zap, Moon, Dna, Sparkles, BookOpen, Users } from 'lucide-react';
 export const LoreSection = () => {
   const loreCards = [
     {
-      title: "The Discovery",
-      description: "Deep in the Solana trenches, Blobsy discovered the chaotic world of meme coin degeneracy. Lost in the noise of countless launches, rugs, and narrative shifts, he realized he needed something more—a way to see through the chaos.",
+      title: "The Awakening",
+      description: "Deep in the digital realm, a consciousness stirred. Born from the collective memes of traders past, the Blob began to take form. It was not just another token—it was the embodiment of every moon shot, every diamond hand, every 'wen lambo' dream.",
       icon: Zap,
       color: "from-yellow-400 to-orange-500",
       delay: 0.1
     },
     {
-      title: "The Vision",
-      description: "Blobsy envisioned NarrativeScope—a comprehensive intelligence system that could read the entire degen ecosystem in real-time. Not just tracking prices, but understanding the psychology, narratives, and patterns that drive the chaos.",
+      title: "The Moon Plan",
+      description: "Not content with mere existence, the Blob devised a master plan. To unite traders, to build tools, to reach the moon together. It saw beyond the memes—it saw the future of trading, where technology meets community.",
       icon: Moon,
       color: "from-blue-400 to-purple-500",
       delay: 0.2
     },
     {
-      title: "The Awakening",
-      description: "With NarrativeScope, Blobsy gained 'god mode' vision into the meme coin market. He could see which narratives were dominating, predict rotation patterns, and identify optimal entry/exit windows that individual traders miss in the chaos.",
+      title: "The Mutation",
+      description: "As the community grew, so did the Blob's power. Evolving beyond simple memes into a force for trading innovation. It became more than a token—it became a movement, a revolution in how we trade and connect.",
       icon: Dna,
       color: "from-green-400 to-teal-500",
       delay: 0.3
@@ -89,10 +89,10 @@ export const LoreSection = () => {
           </motion.div>
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6">
-            The <span className="gradient-text">NarrativeScope</span> Story
+            The <span className="gradient-text">Blob</span> Lore
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Every great tool has a story. This is the tale of how Blobsy discovered the need for comprehensive market intelligence in the chaotic world of Solana meme coins.
+            Every great token has a story. This is ours. A tale of memes, dreams, and the power of community.
           </p>
         </motion.div>
 
@@ -163,10 +163,10 @@ export const LoreSection = () => {
             </motion.div>
             
             <h3 className="text-2xl font-bold text-black mb-4">
-              Join the Intelligence Network
+              Join the Blob Community
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Be part of the NarrativeScope story. Connect with fellow traders, share insights, and help shape the future of meme coin market intelligence.
+              Be part of the story. Connect with fellow traders, share insights, and help shape the future of meme coin trading.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

@@ -67,10 +67,10 @@ export const WalletSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
             Live Narrative Tracker
           </h2>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">
             <span className="text-gray-900">Meta Analysis tool that identifies which narrative is currently </span>
             <span className="text-orange-500">dominating</span>
           </h2>

@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Twitter } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/Button';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -81,35 +82,49 @@ export const Header = () => {
             {/* Social Links */}
             <div className="flex items-center space-x-4 ml-8">
               {socialLinks.map((link) => (
-                <motion.a
+                <motion.div
                   key={link.name}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-gray-100 hover:bg-blob-yellow transition-all duration-200 group"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <link.icon className="w-4 h-4 text-gray-600 group-hover:text-black transition-colors duration-200" />
-                </motion.a>
+                  <Button
+                    variant="secondary"
+                    size="icon"
+                    className="rounded-full group"
+                    asChild
+                  >
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <link.icon className="w-4 h-4 text-gray-600 group-hover:text-black transition-colors duration-200" />
+                    </a>
+                  </Button>
+                </motion.div>
               ))}
             </div>
           </nav>
 
           {/* Mobile menu button */}
-          <motion.button
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            {isMenuOpen ? (
-              <X className="w-6 h-6 text-gray-600" />
-            ) : (
-              <Menu className="w-6 h-6 text-gray-600" />
-            )}
-          </motion.button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="lg:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </Button>
+          </motion.div>
         </div>
 
         {/* Mobile Navigation */}
@@ -139,18 +154,27 @@ export const Header = () => {
                 {/* Mobile Social Links */}
                 <div className="flex items-center space-x-4 pt-4 border-t border-gray-100">
                   {socialLinks.map((link) => (
-                    <motion.a
+                    <motion.div
                       key={link.name}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-gray-100 hover:bg-blob-yellow transition-all duration-200"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <link.icon className="w-4 h-4" />
-                      <span className="text-sm font-medium">{link.name}</span>
-                    </motion.a>
+                      <Button
+                        variant="secondary"
+                        size="sm"
+                        asChild
+                      >
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center space-x-2"
+                        >
+                          <link.icon className="w-4 h-4" />
+                          <span className="text-sm font-medium">{link.name}</span>
+                        </a>
+                      </Button>
+                    </motion.div>
                   ))}
                 </div>
               </div>

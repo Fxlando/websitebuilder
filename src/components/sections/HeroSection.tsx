@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '../ui/Button';
+import { BlobAvatar } from '../ui/BlobAvatar';
 import { SITE_CONFIG, BRAND_COLORS } from '@/lib/constants';
 
 export const HeroSection = () => {
@@ -61,9 +62,7 @@ export const HeroSection = () => {
             variants={blobAnimation}
             animate="animate"
           >
-            <div className="w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center shadow-2xl">
-              <span className="text-4xl">🟠</span>
-            </div>
+            <BlobAvatar />
           </motion.div>
 
           {/* Main Title */}

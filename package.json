@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "npx tsc --noEmit && next lint",
-    "format": "npx biome format --write"
+    "format": "npx biome format --write",
+    "git:setup": "powershell -ExecutionPolicy Bypass -File scripts/setup-git.ps1",
+    "git:commit": "powershell -ExecutionPolicy Bypass -File scripts/git-auto-commit.ps1",
+    "git:commit:force": "powershell -ExecutionPolicy Bypass -File scripts/git-auto-commit.ps1 -Force",
+    "git:commit:custom": "powershell -ExecutionPolicy Bypass -File scripts/git-auto-commit.ps1 -CustomMessage"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

@@ -59,9 +59,19 @@ export const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <motion.div key={item.name} className="relative group">
-                <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
+                <a 
+                  href={item.href}
+                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 cursor-pointer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.querySelector(item.href);
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
                   {item.name}
-                </button>
+                </a>
               </motion.div>
             ))}
           </nav>

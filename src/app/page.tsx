@@ -6,6 +6,10 @@ import { DeFiSection } from '@/components/sections/DeFiSection';
 import { AppsSection } from '@/components/sections/AppsSection';
 import { FutureSection } from '@/components/sections/FutureSection';
 import { BuildSection } from '@/components/sections/BuildSection';
+import { LoreSection } from '@/components/sections/LoreSection';
+import { FeaturesSection } from '@/components/sections/FeaturesSection';
+import { LaunchTimeline } from '@/components/sections/LaunchTimeline';
+import { NewsletterSignup } from '@/components/sections/NewsletterSignup';
 import { Footer } from '@/components/layout/Footer';
 
 export default function Home() {
@@ -20,6 +24,23 @@ export default function Home() {
         <AppsSection />
         <FutureSection />
         <BuildSection />
+        
+        {/* Navigation Target Sections */}
+        <section id="lore">
+          <LoreSection />
+        </section>
+        
+        <section id="features">
+          <FeaturesSection />
+        </section>
+        
+        <section id="timeline">
+          <LaunchTimeline />
+        </section>
+        
+        <section id="newsletter">
+          <NewsletterSignup />
+        </section>
       </main>
       <Footer />
     </div>

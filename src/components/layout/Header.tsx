@@ -1,10 +1,9 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Button } from '../ui/Button';
 
 export const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -42,7 +41,7 @@ export const Header = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <a href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <motion.div
                 className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center"
                 whileHover={{ rotate: 360 }}
@@ -51,7 +50,7 @@ export const Header = () => {
                 <span className="text-white font-bold text-sm">T</span>
               </motion.div>
               <span className="font-bold text-xl text-gray-900">TON</span>
-            </a>
+            </Link>
           </motion.div>
 
           {/* Navigation */}

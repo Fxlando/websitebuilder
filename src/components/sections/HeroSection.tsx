@@ -71,10 +71,10 @@ export const HeroSection = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight"
             variants={fadeInUp}
           >
-            <span className="text-gray-900">Blob Has</span>
+            <span className="text-gray-900">The Degen Trench</span>
             <br />
             <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-              Awakened
+              Intelligence System
             </span>
           </motion.h1>
 
@@ -83,43 +83,37 @@ export const HeroSection = () => {
             className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             variants={fadeInUp}
           >
-            On a mission. Headed to find the tool that will save his trading future.
+            "NarrativeScope" - A comprehensive Solana meme coin market intelligence tool that reads the entire degen ecosystem in real-time.
           </motion.p>
 
-          {/* NarrativeScope Intelligence System */}
+          {/* Getting Started Section */}
           <motion.div
             className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-6 max-w-4xl mx-auto border border-yellow-200"
             variants={fadeInUp}
           >
-            <p className="text-sm text-gray-600 mb-3 font-semibold">🔍 The Degen Trench Intelligence System - "NarrativeScope"</p>
+            <p className="text-sm text-gray-600 mb-3 font-semibold">🚀 Getting started is easy:</p>
             <p className="text-sm text-gray-700 leading-relaxed mb-4">
-              A comprehensive Solana meme coin market intelligence tool that reads the entire degen ecosystem in real-time:
+              All you need is 📱 Telegram to access the NarrativeScope intelligence system
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <div className="space-y-2">
-                <p className="font-semibold text-gray-800">Live Narrative Tracker:</p>
-                <ul className="text-gray-600 space-y-1 ml-4">
-                  <li>• Meta Analysis: Identifies which narrative is currently dominating</li>
-                  <li>• Narrative Rotation Predictor: Spots when current meta is getting stale</li>
-                  <li>• Sub-Narrative Detection: Finds emerging micro-trends</li>
-                </ul>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+              <div className="bg-white p-4 rounded-lg border border-yellow-200">
+                <p className="font-semibold text-gray-800 mb-2">💳 Get Wallet</p>
+                <p className="text-gray-600 text-xs">Direct and easy access to Solana from Telegram</p>
+                <p className="text-yellow-600 font-bold mt-2">Balance: $225.64</p>
               </div>
               
-              <div className="space-y-2">
-                <p className="font-semibold text-gray-800">Market Condition Dashboard:</p>
-                <ul className="text-gray-600 space-y-1 ml-4">
-                  <li>• Degen Liquidity Flow: Tracks total available "ape money"</li>
-                  <li>• Risk Appetite Gauge: Measures average market cap of new launches</li>
-                  <li>• Attention Span Metrics: Analyzes how long meme coins hold attention</li>
-                </ul>
+              <div className="bg-white p-4 rounded-lg border border-yellow-200">
+                <p className="font-semibold text-gray-800 mb-2">🔄 Commission-Free</p>
+                <p className="text-gray-600 text-xs">Enjoy commission-free crypto transfers to any Telegram user</p>
+                <p className="text-yellow-600 font-bold mt-2">$100 USDT</p>
               </div>
-            </div>
-            
-            <div className="mt-4 p-3 bg-yellow-100 rounded-lg">
-              <p className="text-xs text-gray-700 italic">
-                Blobsy finds this tool can essentially give him "god mode" vision into the chaotic world of Solana meme coin degeneracy, seeing patterns that individual traders miss in the chaos.
-              </p>
+              
+              <div className="bg-white p-4 rounded-lg border border-yellow-200">
+                <p className="font-semibold text-gray-800 mb-2">🔐 Full Control</p>
+                <p className="text-gray-600 text-xs">Retain full control of your Solana and other digital assets</p>
+                <p className="text-yellow-600 font-bold mt-2">$1,114.05</p>
+              </div>
             </div>
           </motion.div>
 

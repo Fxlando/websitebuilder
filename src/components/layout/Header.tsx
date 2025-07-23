@@ -49,9 +49,9 @@ export const Header = () => {
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
               >
-                <span className="text-gray-900 font-bold text-sm">🟡</span>
+                <span className="text-gray-900 font-bold text-sm">🔍</span>
               </motion.div>
-              <span className="font-bold text-xl text-gray-900">Blob Token</span>
+              <span className="font-bold text-xl text-gray-900">NarrativeScope</span>
             </Link>
           </motion.div>
 

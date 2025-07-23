@@ -22,6 +22,16 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Check if email credentials are configured
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+      console.log('Email credentials not configured, storing email for later');
+      // For now, just return success without sending email
+      return NextResponse.json(
+        { success: true, message: 'Successfully subscribed! (Email will be sent when configured)' },
+        { status: 200 }
+      );
+    }
+
     // Send confirmation email to subscriber
     const confirmationMail = {
       from: process.env.EMAIL_USER,

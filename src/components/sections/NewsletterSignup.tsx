@@ -29,6 +29,7 @@ export const NewsletterSignup = () => {
       if (response.ok) {
         setIsSubmitted(true);
         setEmail('');
+        console.log('Subscription response:', data);
       } else {
         // Handle error
         console.error('Subscription error:', data.error);

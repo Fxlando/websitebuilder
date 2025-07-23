@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap');
 
+/* Import design tokens */
+@import './design-tokens.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Primary Colors */
-  --blob-yellow: #FFCE3D;
-  --blob-yellow-accent: #FFC93C;
-  --blob-yellow-light: #FFE799;
-  --blob-yellow-dark: #E6B800;
+  /* Primary Colors - Customize these with your brand colors */
+  --blob-yellow: #FFCE3D;        /* Your main brand color */
+  --blob-yellow-accent: #FFC93C; /* Your accent color */
+  --blob-yellow-light: #FFE799;  /* Your light variant */
+  --blob-yellow-dark: #E6B800;   /* Your dark variant */
 
   /* Neutral Colors */
   --background-white: #FFFFFF;
@@ -25,7 +28,7 @@
   --shadow-medium: rgba(0, 0, 0, 0.1);
   --shadow-heavy: rgba(0, 0, 0, 0.15);
   
-  /* Gradients */
+  /* Gradients - Customize these gradients */
   --gradient-primary: linear-gradient(135deg, #FFCE3D 0%, #FFC93C 100%);
   --gradient-dark: linear-gradient(135deg, #111111 0%, #333333 100%);
   --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);

@@ -3,29 +3,29 @@ import Head from 'next/head';
 import { Header } from '../src/components/layout/Header';
 import { Footer } from '../src/components/layout/Footer';
 import { HeroSection } from '../src/components/sections/HeroSection';
-import { LoreSection } from '../src/components/sections/LoreSection';
 import { FeaturesSection } from '../src/components/sections/FeaturesSection';
-import { LaunchTimeline } from '../src/components/sections/LaunchTimeline';
-import { NewsletterSignup } from '../src/components/sections/NewsletterSignup';
+import { ProductsSection } from '../src/components/sections/ProductsSection';
+import { TestimonialsSection } from '../src/components/sections/TestimonialsSection';
+import { CTASection } from '../src/components/sections/CTASection';
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>$BLOB Token - Blob Has Awakened</title>
-        <meta name="description" content="Born from memes. Built for traders. Advanced trading tools and meme coin innovation." />
+        <title>YourBrand - Transform Your Business with Innovation</title>
+        <meta name="description" content="Discover cutting-edge solutions that revolutionize how you work, built with the latest technology and designed for the future." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <div className="min-h-screen">
+      <div className="min-h-screen bg-gray-50">
         <Header />
         
         <main>
           <HeroSection />
-          <LoreSection />
           <FeaturesSection />
-          <LaunchTimeline />
-          <NewsletterSignup />
+          <ProductsSection />
+          <TestimonialsSection />
+          <CTASection />
         </main>
 
         <Footer />

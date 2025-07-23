@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Twitter } from 'lucide-react';
+import { Menu, X, Twitter, Github, Linkedin, Instagram, Youtube } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export const Header = () => {
@@ -15,14 +15,18 @@ export const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Customize these navigation items for your brand
   const navItems = [
-    { name: 'Lore', href: '#lore' },
-    { name: 'Features', href: '#features' },
-    { name: 'Timeline', href: '#timeline' },
+    { name: 'Products', href: '#products' },
+    { name: 'Solutions', href: '#solutions' },
+    { name: 'Resources', href: '#resources' },
+    { name: 'About', href: '#about' },
   ];
 
+  // Customize these social links for your brand
   const socialLinks = [
-    { name: 'Twitter', href: 'https://x.com/BL0BSY', icon: Twitter },
+    { name: 'Twitter', href: 'https://x.com/YourBrand', icon: Twitter },
+    // Add more social links as needed
   ];
 
   return (
@@ -49,11 +53,13 @@ export const Header = () => {
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-black font-bold text-lg lg:text-xl">B</span>
+              {/* Replace with your logo or brand initial */}
+              <span className="text-black font-bold text-lg lg:text-xl">YB</span>
             </motion.div>
             <div className="flex flex-col">
-              <span className="text-xl lg:text-2xl font-bold text-black">$BLOB</span>
-              <span className="text-xs text-gray-500 -mt-1">Token</span>
+              {/* Replace with your brand name */}
+              <span className="text-xl lg:text-2xl font-bold text-black">YourBrand</span>
+              <span className="text-xs text-gray-500 -mt-1">Tagline</span>
             </div>
           </motion.div>
 

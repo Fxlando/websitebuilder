@@ -5,51 +5,51 @@ import { TiltedCard } from '../ui/TiltedCard';
 export const FeaturesSection = () => {
   const features = [
     {
-      title: "Snipe Scanner",
-      description: "Real-time detection of new token launches with instant alerts and analysis.",
-      icon: Target,
-      status: "Coming Soon",
-      color: "from-red-500 to-pink-500",
+      title: "Lightning Fast",
+      description: "Experience unprecedented speed with our optimized solutions and cutting-edge technology.",
+      icon: Zap,
+      status: "Available Now",
+      color: "from-purple-500 to-pink-500",
       delay: 0.1
     },
     {
-      title: "Meme Signal Oracle",
-      description: "AI-powered sentiment analysis to predict meme coin movements before they happen.",
-      icon: TrendingUp,
-      status: "Coming Soon",
-      color: "from-green-500 to-blue-500",
+      title: "Secure by Design",
+      description: "Enterprise-grade security protecting your valuable data with industry-leading protocols.",
+      icon: Shield,
+      status: "Available Now",
+      color: "from-blue-500 to-cyan-500",
       delay: 0.2
     },
     {
-      title: "Rug Radar",
-      description: "Advanced contract analysis to detect potential rug pulls and suspicious activity.",
-      icon: Shield,
-      status: "Coming Soon",
-      color: "from-purple-500 to-indigo-500",
+      title: "Scale Effortlessly",
+      description: "Grow without limits using our scalable infrastructure designed for your success.",
+      icon: TrendingUp,
+      status: "Available Now",
+      color: "from-green-500 to-emerald-500",
       delay: 0.3
     },
     {
-      title: "Auto-Liquidity Watcher",
-      description: "Monitor liquidity changes and get alerts on significant movements in real-time.",
-      icon: Eye,
-      status: "Coming Soon",
-      color: "from-yellow-500 to-orange-500",
+      title: "24/7 Support",
+      description: "Round-the-clock expert support to ensure your business runs smoothly.",
+      icon: Users,
+      status: "Available Now",
+      color: "from-orange-500 to-red-500",
       delay: 0.4
     },
     {
-      title: "MemeCoin Tracker",
-      description: "Comprehensive dashboard for tracking all your meme coin positions and performance.",
+      title: "Analytics Dashboard",
+      description: "Comprehensive insights and analytics to track your business performance.",
       icon: BarChart3,
-      status: "Coming Soon",
-      color: "from-blue-500 to-cyan-500",
+      status: "Available Now",
+      color: "from-indigo-500 to-purple-500",
       delay: 0.5
     },
     {
-      title: "Community Hub",
-      description: "Connect with fellow traders, share insights, and stay ahead of the curve.",
-      icon: Users,
-      status: "Coming Soon",
-      color: "from-emerald-500 to-teal-500",
+      title: "Custom Solutions",
+      description: "Tailored solutions designed specifically for your unique business needs.",
+      icon: Target,
+      status: "Available Now",
+      color: "from-teal-500 to-blue-500",
       delay: 0.6
     }
   ];
@@ -113,15 +113,15 @@ export const FeaturesSection = () => {
             viewport={{ once: true }}
           >
             <Zap className="w-4 h-4 text-blob-yellow" />
-            <span className="text-sm font-semibold text-blob-yellow">Advanced Tools</span>
+            <span className="text-sm font-semibold text-blob-yellow">Premium Features</span>
           </motion.div>
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6">
-            Tools Built for{' '}
-            <span className="gradient-text">Traders</span>
+            Why Choose{' '}
+            <span className="gradient-text">Our Platform</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Advanced trading tools designed by traders, for traders. Stay ahead of the curve with our cutting-edge technology.
+            Discover the features that set us apart and help your business thrive in today's competitive landscape.
           </p>
         </motion.div>
 
@@ -205,19 +205,19 @@ export const FeaturesSection = () => {
             </motion.div>
             
             <h3 className="text-2xl font-bold text-black mb-4">
-              Ready to Level Up Your Trading?
+              Ready to Transform Your Business?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Join the waitlist to be first in line when our advanced trading tools launch. Get exclusive early access and special perks.
+              Start your journey with us today and experience the difference our platform can make for your business growth and success.
             </p>
             
             <motion.a
-              href="#newsletter"
-              className="inline-flex items-center space-x-2 bg-black text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200 group"
+              href="#contact"
+              className="inline-flex items-center space-x-2 bg-blob-yellow text-black px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200 group"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>Get Early Access</span>
+              <span>Get Started Today</span>
               <Rocket className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
             </motion.a>
           </div>

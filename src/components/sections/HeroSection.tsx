@@ -83,7 +83,7 @@ export const HeroSection = () => {
           animate="animate"
           variants={staggerContainer}
         >
-          {/* Enhanced Animated Blob */}
+          {/* Enhanced Animated Logo/Icon */}
           <motion.div
             className="flex justify-center mb-8"
             initial={{ scale: 0, rotate: -180 }}
@@ -99,7 +99,10 @@ export const HeroSection = () => {
                 }}
                 transition={{ duration: 4, repeat: Infinity }}
               >
-                <BlobIcon size={200} />
+                {/* Replace BlobIcon with your custom logo or icon */}
+                <div className="w-48 h-48 bg-gradient-to-br from-blob-yellow to-blob-yellow-accent rounded-full flex items-center justify-center shadow-2xl">
+                  <span className="text-6xl font-bold text-black">YB</span>
+                </div>
                 <motion.div
                   className="absolute inset-0 bg-blob-yellow rounded-full blur-xl opacity-30"
                   animate={{ 
@@ -117,8 +120,9 @@ export const HeroSection = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-black leading-tight"
             variants={fadeInUp}
           >
-            Blob Has{' '}
-            <span className="gradient-text">Awakened</span>
+            <span className="text-gray-900">Transform Your Business</span>
+            <br />
+            <span className="gradient-text">with Innovation</span>
           </motion.h1>
 
           {/* Enhanced Subtitle */}
@@ -126,7 +130,8 @@ export const HeroSection = () => {
             className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             variants={fadeInUp}
           >
-            Born from memes. Built for traders. Advanced trading tools and meme coin innovation.
+            Discover cutting-edge solutions that revolutionize how you work, 
+            built with the latest technology and designed for the future.
           </motion.p>
 
           {/* Enhanced CTA Buttons */}
@@ -135,23 +140,28 @@ export const HeroSection = () => {
             variants={fadeInUp}
           >
             <motion.a
-              href="https://x.com/BL0BSY"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center space-x-3 bg-black text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200 relative overflow-hidden"
+              href="#contact"
+              className="group flex items-center space-x-3 bg-blob-yellow text-black px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200 relative overflow-hidden"
               variants={buttonHover}
             >
               <span className="relative z-10 flex items-center space-x-2">
-                <Twitter className="w-6 h-6" />
-                <span>Follow on X</span>
+                <span>Get Started</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
               </span>
               <motion.div
-                className="absolute inset-0 bg-blob-yellow"
+                className="absolute inset-0 bg-white"
                 initial={{ x: '-100%' }}
                 whileHover={{ x: 0 }}
                 transition={{ duration: 0.3 }}
               />
+            </motion.a>
+
+            <motion.a
+              href="#learn-more"
+              className="group flex items-center space-x-3 border-2 border-blob-yellow text-blob-yellow px-8 py-4 rounded-full font-semibold text-lg hover:bg-blob-yellow hover:text-black transition-all duration-200"
+              variants={buttonHover}
+            >
+              <span>Learn More</span>
             </motion.a>
 
 
@@ -167,16 +177,16 @@ export const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="text-2xl md:text-3xl font-bold text-black">10K+</div>
-              <div className="text-sm text-gray-500">Community Members</div>
+              <div className="text-2xl md:text-3xl font-bold text-black">500+</div>
+              <div className="text-sm text-gray-500">Happy Clients</div>
             </motion.div>
             <motion.div
               className="text-center"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="text-2xl md:text-3xl font-bold text-black">$2M+</div>
-              <div className="text-sm text-gray-500">Market Cap</div>
+              <div className="text-2xl md:text-3xl font-bold text-black">99%</div>
+              <div className="text-sm text-gray-500">Success Rate</div>
             </motion.div>
             <motion.div
               className="text-center"
@@ -184,7 +194,7 @@ export const HeroSection = () => {
               transition={{ duration: 0.2 }}
             >
               <div className="text-2xl md:text-3xl font-bold text-black">24/7</div>
-              <div className="text-sm text-gray-500">Trading Tools</div>
+              <div className="text-sm text-gray-500">Support</div>
             </motion.div>
           </motion.div>
 

@@ -7,14 +7,14 @@ import { SITE_CONFIG } from '@/lib/constants';
 export const Footer = () => {
   const footerSections = [
     {
-      title: 'NarrativeScope Intelligence',
+      title: 'Trading Tools',
       links: [
-        'Live Narrative Tracker',
-        'Market Condition Dashboard',
-        'Ecosystem Health Monitor',
-        'Real-Time Intelligence Feed',
-        'Sub-Narrative Detection',
-        'Whale Activity Patterns'
+        'Snipe Scanner',
+        'Meme Signal Oracle',
+        'Rug Radar',
+        'Auto-Liquidity Watcher',
+        'MemeCoin Tracker',
+        'Blob Analytics'
       ]
     },
     {
@@ -177,7 +177,7 @@ export const Footer = () => {
             </motion.div>
             <div className="flex-1">
               <p className="text-sm text-gray-700 italic">
-                "The Degen Trench Intelligence System - NarrativeScope gives Blobsy 'god mode' vision into the chaotic world of Solana meme coin degeneracy."
+                "On a mission. Headed to find the tool that will save his trading future. The Blob has awakened, and the future of trading is here."
               </p>
             </div>
           </div>

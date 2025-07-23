@@ -108,7 +108,7 @@ export const AppsSection = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <Button variant="link" className="text-blue-500 hover:text-blue-600 font-medium">
+            <Button variant="link" className="text-orange-500 hover:text-orange-600 font-medium">
               Explore all ecosystem →
             </Button>
           </motion.div>
@@ -145,7 +145,7 @@ export const AppsSection = () => {
                       </motion.span>
                       <span className="text-sm font-medium opacity-80">{app.badge}</span>
                     </div>
-                    <h3 className="text-xl font-semibold mb-3 group-hover:text-blob-yellow transition-colors duration-200">
+                    <h3 className="text-xl font-semibold mb-3 group-hover:text-orange-500 transition-colors duration-200">
                       {app.title}
                     </h3>
                     <p className="opacity-90 leading-relaxed">

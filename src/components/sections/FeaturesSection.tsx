@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Target, TrendingUp, Shield, BarChart3, Zap, Users, Rocket } from 'lucide-react';
+import { TrendingUp, Shield, Zap, Rocket } from 'lucide-react';
 import { TiltedCard } from '../ui/TiltedCard';
 import { Card, CardContent } from '../ui/Card';
 

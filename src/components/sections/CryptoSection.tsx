@@ -61,7 +61,7 @@ export const CryptoSection = () => {
               is the heart of TON
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Toncoin is TON's native cryptocurrency. It is used for network operations,
+              Toncoin is TON&apos;s native cryptocurrency. It is used for network operations,
               transactions, games or collectibles built on TON.
             </p>
             <motion.div

@@ -144,7 +144,7 @@ export const Footer = () => {
 
             {/* Social Icons */}
             <div className="flex space-x-4">
-              {['Li', 'Tg', 'Gh', 'Tw', 'Yt', 'Rd'].map((social, index) => (
+              {['Li', 'Tg', 'Gh', 'Tw', 'Yt', 'Rd'].map((social) => (
                 <motion.div
                   key={social}
                   whileHover={{ scale: 1.1, y: -2 }}

@@ -21,7 +21,7 @@ export const CryptoSection = () => {
       x: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };
@@ -33,7 +33,7 @@ export const CryptoSection = () => {
       x: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };
@@ -78,7 +78,7 @@ export const CryptoSection = () => {
           {/* Right Content - Price Card */}
           <motion.div variants={rightVariants}>
             <motion.div
-              whileHover={{ y: -8, shadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}
+              whileHover={{ y: -8 }}
               transition={{ duration: 0.3 }}
             >
               <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300">

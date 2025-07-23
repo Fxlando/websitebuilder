@@ -66,7 +66,7 @@ export const DeFiSection = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };
@@ -77,7 +77,7 @@ export const DeFiSection = () => {
       scale: 1.02,
       transition: {
         duration: 0.2,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };

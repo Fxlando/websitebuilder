@@ -54,34 +54,37 @@ export const BlobAvatar = () => {
 
   return (
     <motion.div
-      className="w-24 h-24 relative"
+      className="w-32 h-32 relative"
       initial={{ y: 50, scale: 0.1, opacity: 0 }}
       animate={{
-        y: [-10, 10, -10],
-        rotate: [0, 5, -5, 0],
-        scale: [1, 1.05, 1],
+        y: [-5, 5, -5],
+        rotate: [0, 2, -2, 0],
+        scale: [1, 1.02, 1],
         opacity: 1,
       }}
       transition={{
-        y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
-        rotate: { duration: 4, repeat: Infinity, ease: "easeInOut" },
-        scale: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+        y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+        rotate: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+        scale: { duration: 6, repeat: Infinity, ease: "easeInOut" },
         opacity: { duration: 0.5, delay: 0.5 },
       }}
     >
-      {/* Main Blob Body */}
+      {/* Avatar Container with Shadow */}
       <motion.svg
         viewBox="0 0 100 100"
-        className="w-full h-full"
-        whileHover={{ scale: 1.1 }}
+        className="w-full h-full drop-shadow-2xl"
+        whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.3 }}
       >
-        {/* Blob Body - More pear-shaped like the image */}
+        {/* Background Circle for Avatar Effect */}
+        <circle cx="50" cy="50" r="48" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="2" />
+        
+        {/* Blob Body - More compact for avatar */}
         <motion.path
-          d="M50 20 C65 20, 80 35, 80 55 C80 75, 65 90, 50 90 C35 90, 20 75, 20 55 C20 35, 35 20, 50 20 Z"
+          d="M50 25 C60 25, 70 35, 70 50 C70 65, 60 75, 50 75 C40 75, 30 65, 30 50 C30 35, 40 25, 50 25 Z"
           fill="url(#blobGradient)"
           stroke="#8B4513"
-          strokeWidth="2.5"
+          strokeWidth="2"
         />
 
         {/* Gradient Definition */}
@@ -93,127 +96,127 @@ export const BlobAvatar = () => {
           </linearGradient>
         </defs>
 
-        {/* Left Arm - More rounded and stubby */}
+        {/* Left Arm - Smaller for avatar */}
         <motion.path
-          d="M22 50 Q12 45, 18 40 Q22 35, 28 40 Q32 45, 28 50 Z"
+          d="M25 50 Q18 48, 22 45 Q25 42, 28 45 Q32 48, 28 50 Z"
           fill="url(#blobGradient)"
           stroke="#8B4513"
-          strokeWidth="2"
+          strokeWidth="1.5"
           animate={{
-            rotate: [0, 15, -15, 0],
+            rotate: [0, 10, -10, 0],
           }}
           transition={{
-            duration: 2,
+            duration: 3,
             repeat: Infinity,
             ease: "easeInOut"
           }}
         />
 
-        {/* Right Arm - More rounded and stubby */}
+        {/* Right Arm - Smaller for avatar */}
         <motion.path
-          d="M78 50 Q88 45, 82 40 Q78 35, 72 40 Q68 45, 72 50 Z"
+          d="M75 50 Q82 48, 78 45 Q75 42, 72 45 Q68 48, 72 50 Z"
           fill="url(#blobGradient)"
           stroke="#8B4513"
-          strokeWidth="2"
+          strokeWidth="1.5"
           animate={{
-            rotate: [0, -15, 15, 0],
+            rotate: [0, -10, 10, 0],
           }}
           transition={{
-            duration: 2,
+            duration: 3,
             repeat: Infinity,
             ease: "easeInOut"
           }}
         />
 
-        {/* Left Leg - More rounded and stubby */}
+        {/* Left Leg - Smaller for avatar */}
         <motion.path
-          d="M38 90 Q33 100, 38 105 Q43 100, 38 90 Z"
+          d="M42 75 Q38 80, 42 85 Q46 80, 42 75 Z"
           fill="url(#blobGradient)"
           stroke="#8B4513"
-          strokeWidth="2"
+          strokeWidth="1.5"
         />
 
-        {/* Right Leg - More rounded and stubby */}
+        {/* Right Leg - Smaller for avatar */}
         <motion.path
-          d="M62 90 Q67 100, 62 105 Q57 100, 62 90 Z"
+          d="M58 75 Q62 80, 58 85 Q54 80, 58 75 Z"
           fill="url(#blobGradient)"
           stroke="#8B4513"
-          strokeWidth="2"
+          strokeWidth="1.5"
         />
 
-        {/* Left Eye - Larger and more anime-style */}
+        {/* Left Eye - Avatar sized */}
         <motion.g>
-          <ellipse cx="32" cy="45" rx="7" ry="9" fill="white" stroke="#8B4513" strokeWidth="2" />
-          <ellipse cx="32" cy="45" rx="4" ry="5" fill="#8B4513" />
-          <ellipse cx="30" cy="43" rx="1.5" ry="2" fill="white" />
+          <ellipse cx="35" cy="42" rx="5" ry="6" fill="white" stroke="#8B4513" strokeWidth="1.5" />
+          <ellipse cx="35" cy="42" rx="2.5" ry="3" fill="#8B4513" />
+          <ellipse cx="33.5" cy="40.5" rx="1" ry="1.5" fill="white" />
           <motion.rect
-            x="29" y="43" width="6" height="4" fill="white"
+            x="33" y="40.5" width="4" height="3" fill="white"
             animate={{
               scaleY: [1, 0.1, 1],
             }}
             transition={{
               duration: 0.3,
               repeat: Infinity,
-              repeatDelay: 3,
+              repeatDelay: 4,
               ease: "easeInOut"
             }}
           />
         </motion.g>
 
-        {/* Right Eye - Larger and more anime-style */}
+        {/* Right Eye - Avatar sized */}
         <motion.g>
-          <ellipse cx="68" cy="45" rx="7" ry="9" fill="white" stroke="#8B4513" strokeWidth="2" />
-          <ellipse cx="68" cy="45" rx="4" ry="5" fill="#8B4513" />
-          <ellipse cx="66" cy="43" rx="1.5" ry="2" fill="white" />
+          <ellipse cx="65" cy="42" rx="5" ry="6" fill="white" stroke="#8B4513" strokeWidth="1.5" />
+          <ellipse cx="65" cy="42" rx="2.5" ry="3" fill="#8B4513" />
+          <ellipse cx="63.5" cy="40.5" rx="1" ry="1.5" fill="white" />
           <motion.rect
-            x="65" y="43" width="6" height="4" fill="white"
+            x="63" y="40.5" width="4" height="3" fill="white"
             animate={{
               scaleY: [1, 0.1, 1],
             }}
             transition={{
               duration: 0.3,
               repeat: Infinity,
-              repeatDelay: 3,
+              repeatDelay: 4,
               ease: "easeInOut"
             }}
           />
         </motion.g>
 
-        {/* Eyebrows - More curved and expressive */}
-        <path d="M28 37 Q33 35, 38 37" stroke="#8B4513" strokeWidth="2" fill="none" />
-        <path d="M62 37 Q67 35, 72 37" stroke="#8B4513" strokeWidth="2" fill="none" />
+        {/* Eyebrows - Avatar sized */}
+        <path d="M32 36 Q35 34, 38 36" stroke="#8B4513" strokeWidth="1.5" fill="none" />
+        <path d="M62 36 Q65 34, 68 36" stroke="#8B4513" strokeWidth="1.5" fill="none" />
 
-        {/* Smile - More gentle and friendly */}
+        {/* Smile - Avatar sized */}
         <motion.path
-          d="M35 60 Q50 70, 65 60"
+          d="M38 55 Q50 62, 62 55"
           stroke="#8B4513"
-          strokeWidth="2.5"
+          strokeWidth="2"
           fill="none"
           animate={{
-            d: ["M35 60 Q50 70, 65 60", "M35 60 Q50 73, 65 60", "M35 60 Q50 70, 65 60"],
+            d: ["M38 55 Q50 62, 62 55", "M38 55 Q50 65, 62 55", "M38 55 Q50 62, 62 55"],
           }}
           transition={{
-            duration: 2,
+            duration: 3,
             repeat: Infinity,
             ease: "easeInOut"
           }}
         />
 
-        {/* Nose - Tiny dot like in the image */}
-        <circle cx="50" cy="58" r="0.8" fill="#8B4513" />
+        {/* Nose - Avatar sized */}
+        <circle cx="50" cy="52" r="0.6" fill="#8B4513" />
 
-        {/* Blush - Left - Three lines like in the image */}
+        {/* Blush - Left - Avatar sized */}
         <motion.g>
-          <line x1="20" y1="50" x2="22" y2="50" stroke="#FFB6C1" strokeWidth="1.5" opacity="0.8" />
-          <line x1="20" y1="52" x2="22" y2="52" stroke="#FFB6C1" strokeWidth="1.5" opacity="0.8" />
-          <line x1="20" y1="54" x2="22" y2="54" stroke="#FFB6C1" strokeWidth="1.5" opacity="0.8" />
+          <line x1="25" y1="48" x2="27" y2="48" stroke="#FFB6C1" strokeWidth="1" opacity="0.7" />
+          <line x1="25" y1="50" x2="27" y2="50" stroke="#FFB6C1" strokeWidth="1" opacity="0.7" />
+          <line x1="25" y1="52" x2="27" y2="52" stroke="#FFB6C1" strokeWidth="1" opacity="0.7" />
         </motion.g>
 
-        {/* Blush - Right - Three lines like in the image */}
+        {/* Blush - Right - Avatar sized */}
         <motion.g>
-          <line x1="78" y1="50" x2="80" y2="50" stroke="#FFB6C1" strokeWidth="1.5" opacity="0.8" />
-          <line x1="78" y1="52" x2="80" y2="52" stroke="#FFB6C1" strokeWidth="1.5" opacity="0.8" />
-          <line x1="78" y1="54" x2="80" y2="54" stroke="#FFB6C1" strokeWidth="1.5" opacity="0.8" />
+          <line x1="73" y1="48" x2="75" y2="48" stroke="#FFB6C1" strokeWidth="1" opacity="0.7" />
+          <line x1="73" y1="50" x2="75" y2="50" stroke="#FFB6C1" strokeWidth="1" opacity="0.7" />
+          <line x1="73" y1="52" x2="75" y2="52" stroke="#FFB6C1" strokeWidth="1" opacity="0.7" />
         </motion.g>
       </motion.svg>
     </motion.div>

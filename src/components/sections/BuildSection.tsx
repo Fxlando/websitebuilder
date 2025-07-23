@@ -45,7 +45,7 @@ export const BuildSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 font-['Space_Grotesk']">
             Ready for God Mode Vision?
           </h2>
           <div className="flex justify-center space-x-8 text-lg font-medium">

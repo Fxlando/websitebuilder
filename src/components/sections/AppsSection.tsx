@@ -101,7 +101,7 @@ export const AppsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-['Space_Grotesk']">
             Explore services
           </h2>
           <motion.div

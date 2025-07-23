@@ -1,3 +1,4 @@
+// Updated for Netlify deployment - pages directory at root level
 import Head from 'next/head';
 import { Header } from '../src/components/layout/Header';
 import { Footer } from '../src/components/layout/Footer';

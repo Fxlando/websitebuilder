@@ -35,7 +35,7 @@ export const BuildSection = () => {
   ];
 
   return (
-    <section className="bg-gray-900 text-white py-20">
+    <section className="bg-gradient-to-br from-white to-gray-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -45,13 +45,13 @@ export const BuildSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
             Ready for God Mode Vision?
           </h2>
           <div className="flex justify-center space-x-8 text-lg font-medium">
-            <span className="text-blue-400">Live Tracking</span>
-            <span className="text-blue-400">Market Intelligence</span>
-            <span className="text-blue-400">Pattern Recognition</span>
+            <span className="text-yellow-600">Live Tracking</span>
+            <span className="text-yellow-600">Market Intelligence</span>
+            <span className="text-yellow-600">Pattern Recognition</span>
           </div>
         </motion.div>
 
@@ -65,8 +65,8 @@ export const BuildSection = () => {
         >
           {/* Left Sidebar */}
           <motion.div className="space-y-8" variants={itemVariants}>
-            <div className="text-sm text-gray-400">
-              Join the <span className="text-blue-400">NarrativeScope</span> community and get access to comprehensive market intelligence.
+            <div className="text-sm text-gray-600">
+              Join the <span className="text-yellow-600">NarrativeScope</span> community and get access to comprehensive market intelligence.
             </div>
 
             <div className="space-y-6">
@@ -78,13 +78,13 @@ export const BuildSection = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <motion.div
-                    className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center"
+                    className="w-8 h-8 bg-yellow-500 rounded-lg flex items-center justify-center"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >
                     <span className="text-sm">{category.icon}</span>
                   </motion.div>
-                  <span className="font-medium">{category.name}</span>
+                  <span className="font-medium text-gray-900">{category.name}</span>
                 </motion.div>
               ))}
             </div>
@@ -92,10 +92,10 @@ export const BuildSection = () => {
 
           {/* Right Content */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-2xl font-bold mb-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">
               See patterns that individual traders miss in the chaos
             </h3>
-            <p className="text-gray-300 leading-relaxed mb-8">
+            <p className="text-gray-600 leading-relaxed mb-8">
               NarrativeScope gives you "god mode" vision into the chaotic world of Solana meme coin degeneracy. 
               Track narratives, predict rotations, and identify optimal entry/exit windows that others miss.
             </p>

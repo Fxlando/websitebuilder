@@ -47,7 +47,7 @@ export const CryptoSection = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="grid lg:grid-cols-2 gap-12 items-center"
@@ -86,7 +86,7 @@ export const CryptoSection = () => {
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
                     <motion.div
-                      className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4"
+                      className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mr-4"
                       whileHover={{ rotate: 360, scale: 1.1 }}
                       transition={{ duration: 0.6 }}
                     >

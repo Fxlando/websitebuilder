@@ -85,7 +85,7 @@ export const DeFiSection = () => {
   };
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-gradient-to-br from-white to-gray-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <motion.div

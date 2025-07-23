@@ -1,7 +1,8 @@
 import type { Config } from "tailwindcss";
 
-const config: Config = {
-  content: [
+export default {
+    darkMode: ["class"],
+    content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,98 +10,70 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'blob-yellow': '#FFCE3D',
-        'blob-yellow-accent': '#FFC93C',
-        'blob-yellow-light': '#FFE799',
-        'background-white': '#FFFFFF',
-        'background-light': '#FAFAFA',
-        'text-black': '#111111',
-        'text-gray': '#666666',
-        'border-light': '#E5E5E5',
-      },
-      fontFamily: {
-        'chakra': ['Chakra Petch', 'sans-serif'],
-        'space': ['Space Grotesk', 'sans-serif'],
-        'primary': ['var(--font-primary)'],
-        'heading': ['var(--font-heading)'],
-        'secondary': ['var(--font-secondary)'],
-      },
-      fontSize: {
-        'xs': 'var(--text-xs)',
-        'sm': 'var(--text-sm)',
-        'base': 'var(--text-base)',
-        'lg': 'var(--text-lg)',
-        'xl': 'var(--text-xl)',
-        '2xl': 'var(--text-2xl)',
-        '3xl': 'var(--text-3xl)',
-        '4xl': 'var(--text-4xl)',
-        '5xl': 'var(--text-5xl)',
-        '6xl': 'var(--text-6xl)',
-        '7xl': 'var(--text-7xl)',
-      },
-      fontWeight: {
-        'light': 'var(--font-light)',
-        'normal': 'var(--font-normal)',
-        'medium': 'var(--font-medium)',
-        'semibold': 'var(--font-semibold)',
-        'bold': 'var(--font-bold)',
-        'extrabold': 'var(--font-extrabold)',
-      },
-      lineHeight: {
-        'tight': 'var(--leading-tight)',
-        'normal': 'var(--leading-normal)',
-        'relaxed': 'var(--leading-relaxed)',
-      },
-      spacing: {
-        'xs': 'var(--spacing-xs)',
-        'sm': 'var(--spacing-sm)',
-        'md': 'var(--spacing-md)',
-        'lg': 'var(--spacing-lg)',
-        'xl': 'var(--spacing-xl)',
-        '2xl': 'var(--spacing-2xl)',
-        '3xl': 'var(--spacing-3xl)',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))'
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))'
+        },
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))'
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))'
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))'
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))'
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))'
+        },
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        chart: {
+          '1': 'hsl(var(--chart-1))',
+          '2': 'hsl(var(--chart-2))',
+          '3': 'hsl(var(--chart-3))',
+          '4': 'hsl(var(--chart-4))',
+          '5': 'hsl(var(--chart-5))'
+        }
       },
       borderRadius: {
-        'sm': 'var(--radius-sm)',
-        'md': 'var(--radius-md)',
-        'lg': 'var(--radius-lg)',
-        'xl': 'var(--radius-xl)',
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)'
       },
-      boxShadow: {
-        'sm': 'var(--shadow-sm)',
-        'md': 'var(--shadow-md)',
-        'lg': 'var(--shadow-lg)',
-        'xl': 'var(--shadow-xl)',
-        'glow': 'var(--shadow-glow)',
-        'glow-hover': 'var(--shadow-glow-hover)',
+      container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
       },
-      transitionDuration: {
-        'fast': 'var(--transition-fast)',
-        'normal': 'var(--transition-normal)',
-        'slow': 'var(--transition-slow)',
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px',
       },
-      zIndex: {
-        'dropdown': 'var(--z-dropdown)',
-        'sticky': 'var(--z-sticky)',
-        'fixed': 'var(--z-fixed)',
-        'modal-backdrop': 'var(--z-modal-backdrop)',
-        'modal': 'var(--z-modal)',
-        'popover': 'var(--z-popover)',
-        'tooltip': 'var(--z-tooltip)',
       },
-      animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-      },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
-        }
-      }
-    },
+    }
   },
-  plugins: [],
-};
-
-export default config; 
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config; 

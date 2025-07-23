@@ -10,6 +10,7 @@ import { LoreSection } from '@/components/sections/LoreSection';
 import { FeaturesSection } from '@/components/sections/FeaturesSection';
 import { LaunchTimeline } from '@/components/sections/LaunchTimeline';
 import { NewsletterSignup } from '@/components/sections/NewsletterSignup';
+import AvatarDemoSection from '@/components/sections/AvatarDemoSection';
 import { Footer } from '@/components/layout/Footer';
 
 export default function Home() {
@@ -35,6 +36,9 @@ export default function Home() {
         </section>
         <section id="newsletter">
           <NewsletterSignup />
+        </section>
+        <section id="avatar-demo">
+          <AvatarDemoSection />
         </section>
       </main>
       <Footer />

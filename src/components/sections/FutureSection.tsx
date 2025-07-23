@@ -118,12 +118,12 @@ export const FutureSection = () => {
               <CardContent className="p-8 lg:p-12">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                   <div>
-                    <div className="text-sm font-medium mb-2 opacity-90">VERSION 1.0</div>
+                    <div className="text-sm font-medium mb-2 opacity-90">PHASE 2.0</div>
                     <h3 className="text-3xl lg:text-4xl font-bold mb-6">
-                      TON Storage
+                      Blob Analytics
                     </h3>
                     <p className="text-lg mb-8 opacity-90 leading-relaxed">
-                      Keep your data safe and secure with the decentralized storage of the future.
+                      Advanced trading analytics powered by the Blob community. Get insights from thousands of traders and make data-driven decisions.
                     </p>
                     <div className="flex flex-wrap gap-4">
                       <motion.div
@@ -134,7 +134,7 @@ export const FutureSection = () => {
                           variant="secondary"
                           className="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3"
                         >
-                          Read more
+                          View Analytics
                         </Button>
                       </motion.div>
                       <motion.div
@@ -156,7 +156,7 @@ export const FutureSection = () => {
                           variant="outline"
                           className="border-white text-white hover:bg-white hover:text-purple-600 px-6 py-3"
                         >
-                          Dev docs →
+                          Join Community →
                         </Button>
                       </motion.div>
                     </div>
@@ -178,7 +178,7 @@ export const FutureSection = () => {
                             whileHover={{ scale: 1.2, rotate: -10 }}
                             transition={{ duration: 0.3 }}
                           >
-                            💾
+                            📊
                           </motion.span>
                         </motion.div>
                       </motion.div>
@@ -187,7 +187,7 @@ export const FutureSection = () => {
                         whileHover={{ scale: 1.2, rotate: -360 }}
                         transition={{ duration: 0.6 }}
                       >
-                        <span className="text-2xl">🔒</span>
+                        <span className="text-2xl">📈</span>
                       </motion.div>
                     </div>
                   </div>

@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
-import { FloatingElement } from '../ui/FloatingElement';
+import { Button } from '../ui/Button';
 
 export const HeroSection = () => {
   const fadeInUp = {
@@ -9,146 +8,72 @@ export const HeroSection = () => {
     transition: { duration: 0.6 }
   };
 
-  const buttonHover = {
-    whileHover: { scale: 1.05, y: -2 },
-    whileTap: { scale: 0.95 },
-    transition: { duration: 0.2 }
-  };
-
   const staggerContainer = {
     animate: {
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: 0.2
       }
     }
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-gray-100">
-      {/* Simple Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <motion.div 
-          className="absolute top-20 left-20 w-32 h-32 bg-blob-yellow rounded-full blur-3xl"
-          animate={{ 
-            scale: [1, 1.1, 1],
-            opacity: [0.2, 0.4, 0.2]
-          }}
-          transition={{ duration: 6, repeat: Infinity }}
-        />
-        <motion.div 
-          className="absolute bottom-20 right-20 w-40 h-40 bg-blob-yellow rounded-full blur-3xl"
-          animate={{ 
-            scale: [1.1, 1, 1.1],
-            opacity: [0.4, 0.2, 0.4]
-          }}
-          transition={{ duration: 6, repeat: Infinity, delay: 3 }}
-        />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+    <section className="bg-gray-50 py-20 lg:py-32">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           className="space-y-8"
           initial="initial"
           animate="animate"
           variants={staggerContainer}
         >
-          {/* Enhanced Animated Logo/Icon */}
-          <motion.div
-            className="flex justify-center mb-8"
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-          >
-            <FloatingElement duration={4} delay={0}>
-              <motion.div
-                className="relative"
-                animate={{ 
-                  rotate: [0, 5, -5, 0],
-                  scale: [1, 1.05, 1]
-                }}
-                transition={{ duration: 4, repeat: Infinity }}
-              >
-                {/* Replace BlobIcon with your custom logo or icon */}
-                <div className="w-48 h-48 bg-gradient-to-br from-blob-yellow to-blob-yellow-accent rounded-full flex items-center justify-center shadow-2xl">
-                  <span className="text-6xl font-bold text-black">YB</span>
-                </div>
-                <motion.div
-                  className="absolute inset-0 bg-blob-yellow rounded-full blur-xl opacity-30"
-                  animate={{ 
-                    scale: [1, 1.2, 1],
-                    opacity: [0.3, 0.6, 0.3]
-                  }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                />
-              </motion.div>
-            </FloatingElement>
-          </motion.div>
-
-          {/* Enhanced Main Headline */}
+          {/* Main Title */}
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-black leading-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight"
             variants={fadeInUp}
           >
-            <span className="text-gray-900">Transform Your Business</span>
+            <span className="text-gray-900">The Open Network</span>
             <br />
-            <span className="gradient-text">with Innovation</span>
+            <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+              for creator
+            </span>
           </motion.h1>
 
-          {/* Enhanced Subtitle */}
+          {/* Description */}
           <motion.p
-            className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             variants={fadeInUp}
           >
-            Discover cutting-edge solutions that revolutionize how you work, 
-            built with the latest technology and designed for the future.
+            A decentralized and open internet designed to onboard 500M people on-chain,
+            built by the community using technology developed by Telegram.
           </motion.p>
 
-          {/* Enhanced CTA Buttons */}
+          {/* CTA Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center"
             variants={fadeInUp}
           >
-            <motion.a
-              href="#contact"
-              className="group flex items-center space-x-3 bg-blob-yellow text-black px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200 relative overflow-hidden"
-              variants={buttonHover}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <span className="relative z-10 flex items-center space-x-2">
-                <span>Get Started</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-              </span>
-              <motion.div
-                className="absolute inset-0 bg-white"
-                initial={{ x: '-100%' }}
-                whileHover={{ x: 0 }}
-                transition={{ duration: 0.3 }}
-              />
-            </motion.a>
-
-            <motion.a
-              href="#learn-more"
-              className="group flex items-center space-x-3 border-2 border-blob-yellow text-blob-yellow px-8 py-4 rounded-full font-semibold text-lg hover:bg-blob-yellow hover:text-black transition-all duration-200"
-              variants={buttonHover}
+              <Button
+                size="lg"
+                className="bg-gray-800 hover:bg-gray-900 text-white px-8 py-4 text-lg font-medium"
+              >
+                Explore wallets
+              </Button>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <span>Learn More</span>
-            </motion.a>
-
-
-          </motion.div>
-
-          {/* Simple Scroll Indicator */}
-          <motion.div
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 0.6 }}
-          >
-            <div className="flex flex-col items-center space-y-2">
-              <span className="text-xs text-gray-400 font-medium">Scroll to explore</span>
-              <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-                <div className="w-1 h-3 bg-gray-400 rounded-full mt-2" />
-              </div>
-            </div>
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white px-8 py-4 text-lg font-medium"
+              >
+                Build on TON
+              </Button>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

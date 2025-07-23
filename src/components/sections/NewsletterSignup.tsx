@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { Mail, CheckCircle, Bell, Zap, Shield, ArrowRight } from 'lucide-react';
 import { useState } from 'react';

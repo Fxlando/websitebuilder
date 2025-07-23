@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Twitter, Github, Linkedin, Instagram, Youtube } from 'lucide-react';
+import { Menu, X, Twitter } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export const Header = () => {

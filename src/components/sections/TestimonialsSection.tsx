@@ -101,7 +101,7 @@ export const TestimonialsSection = () => {
             <span className="gradient-text">Customers Say</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Don't just take our word for it. Here's what our customers have to say about their experience.
+            Don&apos;t just take our word for it. Here&apos;s what our customers have to say about their experience.
           </p>
         </motion.div>
 
@@ -137,7 +137,7 @@ export const TestimonialsSection = () => {
 
                 {/* Content */}
                 <blockquote className="text-gray-700 leading-relaxed mb-6">
-                  "{testimonial.content}"
+                  &ldquo;{testimonial.content}&rdquo;
                 </blockquote>
 
                 {/* Author */}

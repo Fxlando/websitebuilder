@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { Twitter, ArrowRight } from 'lucide-react';
-import { BlobIcon } from '../icons/BlobIcon';
+import { ArrowRight } from 'lucide-react';
 import { FloatingElement } from '../ui/FloatingElement';
 
 export const HeroSection = () => {

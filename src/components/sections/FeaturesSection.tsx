@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Target, TrendingUp, Shield, Eye, BarChart3, Zap, Users, Rocket } from 'lucide-react';
+import { Target, TrendingUp, Shield, BarChart3, Zap, Users, Rocket } from 'lucide-react';
 import { TiltedCard } from '../ui/TiltedCard';
 
 export const FeaturesSection = () => {
@@ -121,7 +121,7 @@ export const FeaturesSection = () => {
             <span className="gradient-text">Our Platform</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover the features that set us apart and help your business thrive in today's competitive landscape.
+            Discover the features that set us apart and help your business thrive in today&apos;s competitive landscape.
           </p>
         </motion.div>
 

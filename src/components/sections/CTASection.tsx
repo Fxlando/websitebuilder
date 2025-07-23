@@ -51,7 +51,7 @@ export const CTASection = () => {
               Your Business?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-12">
-              Let's discuss how our solutions can help you achieve your goals. Our team is ready to answer your questions and get you started.
+              Let&apos;s discuss how our solutions can help you achieve your goals. Our team is ready to answer your questions and get you started.
             </p>
           </motion.div>
 
@@ -164,7 +164,7 @@ export const CTASection = () => {
                 </div>
                 <div>
                   <div className="text-blob-yellow font-semibold mb-2">✓ Ongoing Support</div>
-                  <p className="text-sm">We're here for you every step</p>
+                  <p className="text-sm">We&apos;re here for you every step</p>
                 </div>
               </div>
             </div>

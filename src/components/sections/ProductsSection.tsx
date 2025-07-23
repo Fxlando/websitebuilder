@@ -202,7 +202,7 @@ export const ProductsSection = () => {
           viewport={{ once: true }}
         >
           <p className="text-gray-600 mb-6">
-            Need a custom solution? Let's talk about your specific requirements.
+            Need a custom solution? Let&apos;s talk about your specific requirements.
           </p>
           <motion.a
             href="#contact"

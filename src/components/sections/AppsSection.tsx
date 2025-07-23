@@ -12,7 +12,7 @@ export const AppsSection = () => {
       title: 'Narrative Strength Score',
       subtitle: 'Current meta strength (1-10) and estimated time remaining',
       bgColor: 'bg-orange-500',
-      textColor: 'text-white'
+      textColor: 'text-black'
     },
     {
       icon: '🎯',
@@ -28,7 +28,7 @@ export const AppsSection = () => {
       title: 'Optimal entry/exit timing',
       subtitle: 'Identifies optimal timing based on current degen market psychology.',
       bgColor: 'bg-orange-500',
-      textColor: 'text-white'
+      textColor: 'text-black'
     },
     {
       icon: '🔍',
@@ -52,7 +52,7 @@ export const AppsSection = () => {
       title: 'Real-time notifications',
       subtitle: 'Get notified immediately when opportunities arise.',
       bgColor: 'bg-orange-500',
-      textColor: 'text-white'
+      textColor: 'text-black'
     }
   ];
 

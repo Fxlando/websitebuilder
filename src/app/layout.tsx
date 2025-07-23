@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://blobtoken.com'),
   title: "$BLOB Token - Blob Has Awakened",
   description: "Born from memes. Built for traders. Advanced trading tools and meme coin innovation.",
   keywords: "BLOB, token, meme coin, trading tools, cryptocurrency, DeFi",

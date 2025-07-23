@@ -11,7 +11,7 @@ export const AppsSection = () => {
       badge: 'Narrative Score',
       title: 'Narrative Strength Score',
       subtitle: 'Current meta strength (1-10) and estimated time remaining',
-      bgColor: 'bg-blue-500',
+      bgColor: 'bg-orange-500',
       textColor: 'text-white'
     },
     {
@@ -27,7 +27,7 @@ export const AppsSection = () => {
       badge: 'Opportunity Windows',
       title: 'Optimal entry/exit timing',
       subtitle: 'Identifies optimal timing based on current degen market psychology.',
-      bgColor: 'bg-blue-500',
+      bgColor: 'bg-orange-500',
       textColor: 'text-white'
     },
     {
@@ -51,7 +51,7 @@ export const AppsSection = () => {
       badge: 'Instant Alerts',
       title: 'Real-time notifications',
       subtitle: 'Get notified immediately when opportunities arise.',
-      bgColor: 'bg-blue-500',
+      bgColor: 'bg-orange-500',
       textColor: 'text-white'
     }
   ];

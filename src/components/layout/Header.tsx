@@ -45,11 +45,11 @@ export const Header = () => {
           >
             <Link href="/" className="flex items-center space-x-2">
               <motion.div
-                className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
+                className="w-8 h-8 bg-orange-400 rounded-full flex items-center justify-center"
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
               >
-                <span className="text-gray-900 font-bold text-sm">🟡</span>
+                <span className="text-gray-900 font-bold text-sm">🟠</span>
               </motion.div>
               <span className="font-bold text-xl text-gray-900">BLOBSY</span>
             </Link>
@@ -70,7 +70,7 @@ export const Header = () => {
           <div className="flex items-center">
             <Button 
               variant="outline" 
-              className="text-gray-700 hover:text-yellow-600 border-yellow-400 hover:border-yellow-500"
+              className="text-gray-700 hover:text-orange-600 border-orange-400 hover:border-orange-500"
               onClick={() => window.open('https://x.com/bl0bsy', '_blank')}
             >
               Follow X

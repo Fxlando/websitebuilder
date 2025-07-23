@@ -86,7 +86,7 @@ export const CryptoSection = () => {
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
                     <motion.div
-                      className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mr-4"
+                      className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mr-4"
                       whileHover={{ rotate: 360, scale: 1.1 }}
                       transition={{ duration: 0.6 }}
                     >

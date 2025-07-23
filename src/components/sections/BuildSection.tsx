@@ -49,9 +49,9 @@ export const BuildSection = () => {
             Ready for God Mode Vision?
           </h2>
           <div className="flex justify-center space-x-8 text-lg font-medium">
-            <span className="text-yellow-600">Live Tracking</span>
-            <span className="text-yellow-600">Market Intelligence</span>
-            <span className="text-yellow-600">Pattern Recognition</span>
+            <span className="text-orange-600">Live Tracking</span>
+            <span className="text-orange-600">Market Intelligence</span>
+            <span className="text-orange-600">Pattern Recognition</span>
           </div>
         </motion.div>
 
@@ -66,7 +66,7 @@ export const BuildSection = () => {
           {/* Left Sidebar */}
           <motion.div className="space-y-8" variants={itemVariants}>
             <div className="text-sm text-gray-600">
-              Join the <span className="text-yellow-600">NarrativeScope</span> community and get access to comprehensive market intelligence.
+              Join the <span className="text-orange-600">NarrativeScope</span> community and get access to comprehensive market intelligence.
             </div>
 
             <div className="space-y-6">
@@ -78,7 +78,7 @@ export const BuildSection = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <motion.div
-                    className="w-8 h-8 bg-yellow-500 rounded-lg flex items-center justify-center"
+                    className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >

@@ -36,7 +36,7 @@ export const HeroSection = () => {
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-gray-50 relative overflow-hidden">
       {/* Animated background blob */}
       <motion.div
-        className="absolute top-1/4 right-1/4 w-96 h-96 bg-yellow-200 rounded-full opacity-20 blur-3xl"
+        className="absolute top-1/4 right-1/4 w-96 h-96 bg-orange-200 rounded-full opacity-20 blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.2, 0.3, 0.2],
@@ -61,8 +61,8 @@ export const HeroSection = () => {
             variants={blobAnimation}
             animate="animate"
           >
-            <div className="w-24 h-24 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center shadow-2xl">
-              <span className="text-4xl">🟡</span>
+            <div className="w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center shadow-2xl">
+              <span className="text-4xl">🟠</span>
             </div>
           </motion.div>
 
@@ -73,7 +73,7 @@ export const HeroSection = () => {
           >
             <span className="text-gray-900">Blob Has</span>
             <br />
-            <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
               Awakened
             </span>
           </motion.h1>

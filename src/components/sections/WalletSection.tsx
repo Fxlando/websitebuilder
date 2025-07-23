@@ -32,7 +32,7 @@ export const WalletSection = () => {
     {
       title: 'Meta Analysis identifies which narrative is currently dominating',
       icon: '🎯',
-      bgColor: 'bg-yellow-500',
+      bgColor: 'bg-orange-500',
       textColor: 'text-white',
       mockupBg: 'bg-gray-900',
       balance: 'AI Agents'

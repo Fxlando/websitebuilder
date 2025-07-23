@@ -27,30 +27,6 @@ export const FeaturesSection = () => {
       status: "Available Now",
       color: "from-green-500 to-emerald-500",
       delay: 0.3
-    },
-    {
-      title: "24/7 Support",
-      description: "Round-the-clock expert support to ensure your business runs smoothly.",
-      icon: Users,
-      status: "Available Now",
-      color: "from-orange-500 to-red-500",
-      delay: 0.4
-    },
-    {
-      title: "Analytics Dashboard",
-      description: "Comprehensive insights and analytics to track your business performance.",
-      icon: BarChart3,
-      status: "Available Now",
-      color: "from-indigo-500 to-purple-500",
-      delay: 0.5
-    },
-    {
-      title: "Custom Solutions",
-      description: "Tailored solutions designed specifically for your unique business needs.",
-      icon: Target,
-      status: "Available Now",
-      color: "from-teal-500 to-blue-500",
-      delay: 0.6
     }
   ];
 
@@ -125,9 +101,9 @@ export const FeaturesSection = () => {
           </p>
         </motion.div>
 
-        {/* Enhanced Features Grid with Premium Tilted Cards */}
+        {/* Simple Features Grid */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

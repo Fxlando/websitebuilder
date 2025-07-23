@@ -3,10 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "git:setup": "powershell -ExecutionPolicy Bypass -File scripts/setup-git.ps1",
+    "git:commit": "powershell -ExecutionPolicy Bypass -File scripts/git-auto-commit.ps1",
+    "git:commit:force": "powershell -ExecutionPolicy Bypass -File scripts/git-auto-commit.ps1 -Force",
+    "git:commit:custom": "powershell -ExecutionPolicy Bypass -File scripts/git-auto-commit.ps1 -CommitMessage",
+    "postbuild": "npm run git:commit",
+    "postdev": "npm run git:commit"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

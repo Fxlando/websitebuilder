@@ -1,210 +1,125 @@
-# $BLOB Token Landing Page
+# Blob Token Landing Page
 
-A modern, animated landing page for the $BLOB token built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
+A modern, responsive landing page for the Blob Token project built with Next.js, TypeScript, and Tailwind CSS.
 
-## 🚀 Features
+## 🚀 Automatic Git Upload System
 
-- **Modern Design**: Clean, TON.org-inspired design with custom yellow/black/white palette
-- **Smooth Animations**: Framer Motion animations throughout the site
-- **Responsive**: Fully responsive design for all devices
-- **Performance Optimized**: Fast loading with optimized images and code
-- **SEO Ready**: Proper meta tags and structured data
+This project includes an automated Git upload system that ensures all changes are automatically committed and pushed to GitHub after tasks are completed.
 
-## 🛠 Tech Stack
+### Quick Setup
 
-- **Framework**: Next.js 14 with TypeScript
-- **Styling**: Tailwind CSS with custom design system
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Fonts**: Chakra Petch (primary), Space Grotesk (fallback)
+1. **Initialize Git Repository:**
+   ```bash
+   npm run git:setup
+   ```
 
-## 🎨 Design System
+2. **Set up Remote Repository:**
+   ```bash
+   git remote add origin <your-github-repo-url>
+   ```
 
-### Colors
-- **Primary Yellow**: `#FFCE3D` (Blob Yellow)
-- **Accent Yellow**: `#FFC93C`
-- **Light Yellow**: `#FFE799`
-- **Background**: `#FFFFFF`
-- **Text Black**: `#111111`
-- **Text Gray**: `#666666`
+### Automatic Uploads
 
-### Typography
-- **Primary Font**: Chakra Petch
-- **Fallback Font**: Space Grotesk
-- **Weights**: 400 (Regular), 600 (Semi-bold), 700 (Bold)
+The system automatically uploads to GitHub in the following scenarios:
 
-## 📁 Project Structure
+- **After Development:** When you run `npm run dev`, changes are automatically committed and pushed
+- **After Build:** When you run `npm run build`, changes are automatically committed and pushed
+- **Manual Upload:** Run `npm run git:commit` to manually trigger an upload
 
-```
-src/
-├── pages/                 # Next.js pages
-│   ├── index.tsx         # Main landing page
-│   ├── _app.tsx          # App wrapper
-│   └── _document.tsx     # Document head
-├── components/
-│   ├── sections/         # Page sections
-│   │   ├── HeroSection.tsx
-│   │   ├── LoreSection.tsx
-│   │   ├── FeaturesSection.tsx
-│   │   ├── LaunchTimeline.tsx
-│   │   └── NewsletterSignup.tsx
-│   ├── layout/           # Layout components
-│   │   ├── Header.tsx
-│   │   └── Footer.tsx
-│   ├── icons/            # Custom icons
-│   │   └── BlobIcon.tsx
-│   └── ui/               # Reusable UI components
-├── lib/                  # Utility functions
-│   └── utils.ts
-└── styles/               # Global styles
-    └── globals.css
-```
+### Available Commands
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd blob-token-landing
+# Setup Git repository and configuration
+npm run git:setup
+
+# Automatic commit and push with default message
+npm run git:commit
+
+# Force push (use with caution)
+npm run git:commit:force
+
+# Custom commit message
+npm run git:commit:custom "Your custom message"
 ```
 
-2. Install dependencies:
+### Manual Script Usage
+
+You can also run the scripts directly:
+
+```powershell
+# Setup script
+.\scripts\setup-git.ps1
+
+# Auto-commit script
+.\scripts\git-auto-commit.ps1
+
+# With custom message
+.\scripts\git-auto-commit.ps1 -CommitMessage "Your message"
+
+# Force push
+.\scripts\git-auto-commit.ps1 -Force
+```
+
+### Features
+
+- ✅ **Automatic Detection:** Detects when changes are made
+- ✅ **Smart Committing:** Only commits when there are actual changes
+- ✅ **Error Handling:** Provides helpful error messages and suggestions
+- ✅ **Force Push Protection:** Uses `--force-with-lease` for safety
+- ✅ **Integration:** Works with npm scripts for seamless workflow
+
+### Configuration
+
+The system automatically:
+- Initializes Git repository if not present
+- Sets up user configuration
+- Creates appropriate `.gitignore` file
+- Handles branch management
+- Provides helpful feedback and error messages
+
+## Development
+
 ```bash
+# Install dependencies
 npm install
-```
 
-3. Run the development server:
-```bash
+# Start development server
 npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm run start
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+## Project Structure
 
-## 📝 Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run type-check` - Run TypeScript type checking
-
-## 🎯 Sections
-
-### Hero Section
-- Full viewport height
-- Animated blob SVG
-- Main headline: "Blob Has Awakened"
-- CTA buttons for social media
-- Smooth scroll indicator
-
-### Lore Section
-- Three storytelling cards
-- "The Awakening", "The Moon Plan", "The Mutation"
-- Hover animations and gradients
-
-### Features Section
-- Trading tools showcase
-- Glass/blur card effects
-- "Coming Soon" badges
-- Responsive grid layout
-
-### Launch Timeline
-- Vertical timeline design
-- Three phases with status indicators
-- Animated timeline dots
-
-### Newsletter Signup
-- Email capture form
-- Success states
-- Form validation
-
-## 🎨 Customization
-
-### Colors
-Update the color palette in `tailwind.config.ts` and `src/styles/globals.css`:
-
-```css
-:root {
-  --blob-yellow: #FFCE3D;
-  --blob-yellow-accent: #FFC93C;
-  --blob-yellow-light: #FFE799;
-  /* ... other colors */
-}
+```
+blob-token-landing/
+├── src/
+│   ├── components/
+│   │   ├── icons/
+│   │   ├── layout/
+│   │   ├── sections/
+│   │   └── ui/
+│   ├── lib/
+│   └── styles/
+├── scripts/
+│   ├── git-auto-commit.ps1
+│   └── setup-git.ps1
+├── public/
+└── package.json
 ```
 
-### Content
-Update content in the respective component files:
-- `HeroSection.tsx` - Main headline and CTAs
-- `LoreSection.tsx` - Story cards
-- `FeaturesSection.tsx` - Tool descriptions
-- `LaunchTimeline.tsx` - Timeline phases
+## Technologies Used
 
-### Animations
-Customize animations in component files using Framer Motion:
+- **Next.js** - React framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **Framer Motion** - Animations
+- **Lucide React** - Icons
 
-```typescript
-const animation = {
-  initial: { opacity: 0, y: 60 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
-};
-```
+## License
 
-## 🚀 Deployment
-
-### Vercel (Recommended)
-1. Push code to GitHub
-2. Connect repository to Vercel
-3. Deploy automatically
-
-### Netlify
-1. Push code to GitHub
-2. Connect repository to Netlify
-3. Build settings are already configured in `netlify.toml`
-4. Deploy automatically
-
-### Other Platforms
-- AWS Amplify
-- DigitalOcean App Platform
-
-## 📱 Responsive Design
-
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: > 1024px
-
-All components are fully responsive with mobile-first design.
-
-## 🔧 Future Enhancements
-
-- [ ] Live token price ticker
-- [ ] Wallet connection integration
-- [ ] Real-time trading tools interface
-- [ ] Community leaderboard
-- [ ] Meme gallery/generator
-- [ ] Staking interface
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## 📞 Support
-
-For support, email support@blobtoken.com or join our Telegram community.
-
----
-
-**$BLOB Token** - Born from memes. Built for traders. 🚀
+MIT License

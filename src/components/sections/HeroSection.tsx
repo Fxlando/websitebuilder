@@ -25,55 +25,25 @@ export const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-gray-100">
-      {/* Enhanced Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <FloatingElement duration={4} delay={0}>
-          <motion.div 
-            className="absolute top-20 left-20 w-32 h-32 bg-blob-yellow rounded-full blur-3xl"
-            animate={{ 
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.6, 0.3]
-            }}
-            transition={{ duration: 4, repeat: Infinity }}
-          />
-        </FloatingElement>
-        <FloatingElement duration={4} delay={2}>
-          <motion.div 
-            className="absolute bottom-20 right-20 w-40 h-40 bg-blob-yellow rounded-full blur-3xl"
-            animate={{ 
-              scale: [1.2, 1, 1.2],
-              opacity: [0.6, 0.3, 0.6]
-            }}
-            transition={{ duration: 4, repeat: Infinity, delay: 2 }}
-          />
-        </FloatingElement>
-        <FloatingElement duration={3} delay={1}>
-          <motion.div 
-            className="absolute top-1/2 left-1/3 w-24 h-24 bg-blob-yellow rounded-full blur-2xl"
-            animate={{ 
-              y: [0, -20, 0],
-              opacity: [0.2, 0.5, 0.2]
-            }}
-            transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-          />
-        </FloatingElement>
+      {/* Simple Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <motion.div 
+          className="absolute top-20 left-20 w-32 h-32 bg-blob-yellow rounded-full blur-3xl"
+          animate={{ 
+            scale: [1, 1.1, 1],
+            opacity: [0.2, 0.4, 0.2]
+          }}
+          transition={{ duration: 6, repeat: Infinity }}
+        />
+        <motion.div 
+          className="absolute bottom-20 right-20 w-40 h-40 bg-blob-yellow rounded-full blur-3xl"
+          animate={{ 
+            scale: [1.1, 1, 1.1],
+            opacity: [0.4, 0.2, 0.4]
+          }}
+          transition={{ duration: 6, repeat: Infinity, delay: 3 }}
+        />
       </div>
-
-      {/* Premium Floating Elements */}
-      <FloatingElement duration={2} delay={0}>
-        <motion.div
-          className="absolute top-1/4 right-1/4 w-2 h-2 bg-blob-yellow rounded-full"
-          animate={{ y: [0, -10, 0], opacity: [0.5, 1, 0.5] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        />
-      </FloatingElement>
-      <FloatingElement duration={2.5} delay={0.5}>
-        <motion.div
-          className="absolute bottom-1/3 left-1/4 w-1 h-1 bg-blob-yellow rounded-full"
-          animate={{ y: [0, 15, 0], opacity: [0.3, 0.8, 0.3] }}
-          transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
-        />
-      </FloatingElement>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <motion.div
@@ -166,64 +136,19 @@ export const HeroSection = () => {
 
           </motion.div>
 
-          {/* Enhanced Stats Section */}
-          <motion.div
-            className="flex flex-wrap justify-center gap-8 mt-12"
-            variants={fadeInUp}
-          >
-            <motion.div
-              className="text-center"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-            >
-              <div className="text-2xl md:text-3xl font-bold text-black">500+</div>
-              <div className="text-sm text-gray-500">Happy Clients</div>
-            </motion.div>
-            <motion.div
-              className="text-center"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-            >
-              <div className="text-2xl md:text-3xl font-bold text-black">99%</div>
-              <div className="text-sm text-gray-500">Success Rate</div>
-            </motion.div>
-            <motion.div
-              className="text-center"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-            >
-              <div className="text-2xl md:text-3xl font-bold text-black">24/7</div>
-              <div className="text-sm text-gray-500">Support</div>
-            </motion.div>
-          </motion.div>
-
-          {/* Enhanced Scroll Indicator */}
+          {/* Simple Scroll Indicator */}
           <motion.div
             className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.6 }}
           >
-            <FloatingElement duration={2} delay={0}>
-              <motion.div
-                className="flex flex-col items-center space-y-2"
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                <span className="text-xs text-gray-400 font-medium">Scroll to explore</span>
-                <motion.div
-                  className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center"
-                  animate={{ y: [0, 10, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  <motion.div
-                    className="w-1 h-3 bg-gray-400 rounded-full mt-2"
-                    animate={{ y: [0, 12, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  />
-                </motion.div>
-              </motion.div>
-            </FloatingElement>
+            <div className="flex flex-col items-center space-y-2">
+              <span className="text-xs text-gray-400 font-medium">Scroll to explore</span>
+              <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
+                <div className="w-1 h-3 bg-gray-400 rounded-full mt-2" />
+              </div>
+            </div>
           </motion.div>
         </motion.div>
       </div>

@@ -46,12 +46,12 @@ export const BuildSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            Build your product for a global audience
+            Ready for God Mode Vision?
           </h2>
           <div className="flex justify-center space-x-8 text-lg font-medium">
-            <span className="text-blue-400">Mini Apps</span>
-            <span className="text-blue-400">GameFi</span>
-            <span className="text-blue-400">DeFi</span>
+            <span className="text-blue-400">Live Tracking</span>
+            <span className="text-blue-400">Market Intelligence</span>
+            <span className="text-blue-400">Pattern Recognition</span>
           </div>
         </motion.div>
 
@@ -66,7 +66,7 @@ export const BuildSection = () => {
           {/* Left Sidebar */}
           <motion.div className="space-y-8" variants={itemVariants}>
             <div className="text-sm text-gray-400">
-              Check out the <span className="text-blue-400">roadmap</span> to discover upcoming opportunities.
+              Join the <span className="text-blue-400">NarrativeScope</span> community and get access to comprehensive market intelligence.
             </div>
 
             <div className="space-y-6">
@@ -93,13 +93,11 @@ export const BuildSection = () => {
           {/* Right Content */}
           <motion.div variants={itemVariants}>
             <h3 className="text-2xl font-bold mb-6">
-              Unlock access to millions of Telegram users
+              See patterns that individual traders miss in the chaos
             </h3>
             <p className="text-gray-300 leading-relaxed mb-8">
-              Your app can unlock access to millions of Telegram users with one-click app launch,
-              direct advertising, along with viral and retention mechanics based in the messenger.
-              Millions of users have been onboarded to TON via{' '}
-              <span className="text-blue-400">@wallet</span>.
+              NarrativeScope gives you "god mode" vision into the chaotic world of Solana meme coin degeneracy. 
+              Track narratives, predict rotations, and identify optimal entry/exit windows that others miss.
             </p>
             <motion.div
               whileHover={{ scale: 1.05 }}

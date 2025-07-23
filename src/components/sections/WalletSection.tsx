@@ -30,29 +30,29 @@ export const WalletSection = () => {
 
   const cardData = [
     {
-      title: 'Wallet gives direct and easy access to TON from Telegram',
-      icon: '💳',
+      title: 'Meta Analysis identifies which narrative is currently dominating',
+      icon: '🎯',
       bgColor: 'bg-blue-500',
       textColor: 'text-white',
       mockupBg: 'bg-gray-900',
-      balance: '$225.64'
+      balance: 'AI Agents'
     },
     {
-      title: 'Enjoy commission-free crypto transfers to any Telegram user',
+      title: 'Narrative Rotation Predictor spots when current meta is getting stale',
       icon: '🔄',
       bgColor: 'bg-white',
       textColor: 'text-gray-900',
       mockupBg: 'bg-green-500',
-      balance: '$100',
-      subtitle: 'TON USDT'
+      balance: 'Cult Coins',
+      subtitle: 'Next Shift'
     },
     {
-      title: 'Retain full control of your Toncoin and other digital assets with TON Space',
-      icon: '🔐',
+      title: 'Sub-Narrative Detection finds emerging micro-trends within larger narratives',
+      icon: '🔍',
       bgColor: 'bg-gray-900',
       textColor: 'text-white',
       mockupBg: 'bg-gray-800',
-      balance: '$1,114.05'
+      balance: 'Animal Season'
     }
   ];
 
@@ -68,18 +68,18 @@ export const WalletSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Getting started is easy:
+            Live Narrative Tracker:
           </h2>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
-            <span className="text-gray-900">all you need is </span>
-            <span className="text-blue-500">📱 Telegram</span>
+            <span className="text-gray-900">Meta Analysis identifies which narrative is currently </span>
+            <span className="text-blue-500">dominating</span>
           </h2>
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <Button className="bg-gray-800 hover:bg-gray-900 text-white px-8 py-3">
-              Get Wallet
+              Access Intelligence
             </Button>
           </motion.div>
         </motion.div>
@@ -110,13 +110,13 @@ export const WalletSection = () => {
                       <span className="text-2xl">{card.icon}</span>
                     </motion.div>
                     <h3 className="text-xl font-semibold mb-2">
-                      {card.title.includes('commission-free') ? (
+                      {card.title.includes('Rotation Predictor') ? (
                         <>
-                          Enjoy <span className="text-blue-500">commission-free</span> crypto transfers to any Telegram user
+                          Narrative <span className="text-blue-500">Rotation Predictor</span> spots when current meta is getting stale
                         </>
-                      ) : card.title.includes('full control') ? (
+                      ) : card.title.includes('Sub-Narrative') ? (
                         <>
-                          Retain <span className="text-blue-400">full control</span> of your Toncoin and other digital assets with TON Space
+                          <span className="text-blue-400">Sub-Narrative Detection</span> finds emerging micro-trends within larger narratives
                         </>
                       ) : (
                         card.title

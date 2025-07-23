@@ -7,50 +7,50 @@ import { Button } from '../ui/Button';
 export const AppsSection = () => {
   const apps = [
     {
-      icon: '📱',
-      badge: 'Mobile',
-      title: 'Fast, Secure, Global',
-      subtitle: 'Internet eSIM for Home & Travel',
+      icon: '📊',
+      badge: 'Narrative Score',
+      title: 'Narrative Strength Score',
+      subtitle: 'Current meta strength (1-10) and estimated time remaining',
       bgColor: 'bg-blue-500',
       textColor: 'text-white'
     },
     {
-      icon: '🌐',
-      badge: 'DNS',
-      title: 'Easy-to-remember address',
-      subtitle: 'Your wallet or website can be easily found in the TON network.',
+      icon: '🎯',
+      badge: 'Market Phase',
+      title: 'Bull-degen, Bear-degen, Rotation, or Dead-cat phases',
+      subtitle: 'Specifically for meme coins with market phase detection.',
       bgColor: 'bg-gray-900',
       textColor: 'text-white'
     },
     {
-      icon: '⭐',
-      badge: 'Tribute',
-      title: 'Monetize your audience',
-      subtitle: 'Earn from subscriptions and donations to your community.',
+      icon: '⏰',
+      badge: 'Opportunity Windows',
+      title: 'Optimal entry/exit timing',
+      subtitle: 'Identifies optimal timing based on current degen market psychology.',
       bgColor: 'bg-blue-500',
       textColor: 'text-white'
     },
     {
-      icon: '💎',
-      badge: 'FRAGMENT',
-      title: 'Buy Telegram Premium',
-      subtitle: 'Use your crypto wallet to pay for subscriptions for you & friends.',
+      icon: '🔍',
+      badge: 'Real-Time Feed',
+      title: 'Live intelligence updates',
+      subtitle: 'Continuous monitoring and alerts for market opportunities.',
       bgColor: 'bg-gray-900',
       textColor: 'text-white'
     },
     {
-      icon: '💕',
-      badge: 'TON Dating',
-      title: 'Find a match',
-      subtitle: 'Private dating community for the crypto generation.',
+      icon: '📈',
+      badge: 'Pattern Recognition',
+      title: 'Market psychology analysis',
+      subtitle: 'Advanced pattern recognition for degen market behavior.',
       bgColor: 'bg-gray-900',
       textColor: 'text-white'
     },
     {
-      icon: '🎨',
-      badge: 'Getgems',
-      title: 'Unique collectibles',
-      subtitle: 'Explore, buy and sell collectibles used in games and services.',
+      icon: '⚡',
+      badge: 'Instant Alerts',
+      title: 'Real-time notifications',
+      subtitle: 'Get notified immediately when opportunities arise.',
       bgColor: 'bg-blue-500',
       textColor: 'text-white'
     }

@@ -71,10 +71,10 @@ export const HeroSection = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight"
             variants={fadeInUp}
           >
-            <span className="text-gray-900">Blob Has</span>
+            <span className="text-gray-900">The Degen Trench</span>
             <br />
             <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-              Awakened
+              Intelligence System
             </span>
           </motion.h1>
 
@@ -83,18 +83,38 @@ export const HeroSection = () => {
             className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             variants={fadeInUp}
           >
-            On a mission. Headed to find the tool that will save his trading future.
+            "NarrativeScope" - A comprehensive Solana meme coin market intelligence tool that reads the entire degen ecosystem in real-time.
           </motion.p>
 
-          {/* Contract Address */}
+          {/* Getting Started Section */}
           <motion.div
-            className="bg-gray-100 rounded-lg p-4 max-w-md mx-auto"
+            className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-6 max-w-4xl mx-auto border border-yellow-200"
             variants={fadeInUp}
           >
-            <p className="text-sm text-gray-500 mb-1">Contract Address</p>
-            <p className="font-mono text-sm text-gray-700 break-all">
-              0x1234...5678
+            <p className="text-sm text-gray-600 mb-3 font-semibold">🚀 Getting started is easy:</p>
+            <p className="text-sm text-gray-700 leading-relaxed mb-4">
+              All you need is 📱 Telegram to access the NarrativeScope intelligence system
             </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+              <div className="bg-white p-4 rounded-lg border border-yellow-200">
+                <p className="font-semibold text-gray-800 mb-2">💳 Get Wallet</p>
+                <p className="text-gray-600 text-xs">Direct and easy access to Solana from Telegram</p>
+                <p className="text-yellow-600 font-bold mt-2">Balance: $225.64</p>
+              </div>
+              
+              <div className="bg-white p-4 rounded-lg border border-yellow-200">
+                <p className="font-semibold text-gray-800 mb-2">🔄 Commission-Free</p>
+                <p className="text-gray-600 text-xs">Enjoy commission-free crypto transfers to any Telegram user</p>
+                <p className="text-yellow-600 font-bold mt-2">$100 USDT</p>
+              </div>
+              
+              <div className="bg-white p-4 rounded-lg border border-yellow-200">
+                <p className="font-semibold text-gray-800 mb-2">🔐 Full Control</p>
+                <p className="text-gray-600 text-xs">Retain full control of your Solana and other digital assets</p>
+                <p className="text-yellow-600 font-bold mt-2">$1,114.05</p>
+              </div>
+            </div>
           </motion.div>
 
           {/* CTA Buttons */}

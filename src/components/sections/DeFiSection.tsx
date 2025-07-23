@@ -7,45 +7,45 @@ import { Button } from '../ui/Button';
 export const DeFiSection = () => {
   const features = [
     {
-      icon: '🏆',
-      title: 'Nominator pools',
-      description: 'Use Toncoin for contribution to network security.',
-      linkText: 'Explore options →',
+      icon: '🚀',
+      title: 'New Launch Velocity',
+      description: 'Tracks rate of new token deployments and quality indicators.',
+      linkText: 'View launches →',
       bgColor: 'bg-gray-50'
     },
     {
-      icon: '🔄',
-      title: 'Buy and trade',
-      description: 'Swap currencies on decentralized exchanges.',
-      linkText: 'Swap currencies →',
+      icon: '🐋',
+      title: 'Whale Activity Patterns',
+      description: 'Identifies which known degen whales are active and their rotation patterns.',
+      linkText: 'Track whales →',
       bgColor: 'bg-gray-50'
     },
     {
-      icon: '🌉',
-      title: 'Cross-Chain Bridges',
-      description: 'Transfer your assets from other networks.',
-      linkText: 'Explore bridges →',
+      icon: '📱',
+      title: 'Social Engagement Quality',
+      description: 'Distinguishes between genuine organic growth vs bot/shill activity.',
+      linkText: 'Analyze engagement →',
       bgColor: 'bg-gray-50'
     },
     {
-      icon: '✅',
-      title: 'Accept payments effortlessly',
-      description: 'You are able to accept Toncoin worldwide, directly and at low fees.',
-      linkText: 'Accept payments →',
+      icon: '📊',
+      title: 'Market Health Metrics',
+      description: 'Measures ecosystem vitality and sustainability indicators.',
+      linkText: 'View metrics →',
       bgColor: 'bg-gray-50'
     },
     {
-      icon: '🎯',
-      title: 'Mint your token',
-      description: 'Create your own cryptocurrency in few clicks.',
-      linkText: 'Learn more →',
+      icon: '🔍',
+      title: 'Quality Indicators',
+      description: 'Analyzes token quality and potential for success.',
+      linkText: 'Check quality →',
       bgColor: 'bg-gray-50'
     },
     {
-      icon: '💵',
-      title: 'USDT on TON',
-      description: 'Explore stablecoin usage.',
-      linkText: 'Learn more →',
+      icon: '⚡',
+      title: 'Real-Time Monitoring',
+      description: 'Continuous ecosystem health tracking and alerts.',
+      linkText: 'Monitor now →',
       bgColor: 'bg-gray-50'
     }
   ];
@@ -96,7 +96,7 @@ export const DeFiSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Unlocking freedom with Decentralized Finance
+            Ecosystem Health Monitor
           </h2>
         </motion.div>
 

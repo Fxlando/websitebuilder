@@ -41,9 +41,9 @@ export const CryptoSection = () => {
   };
 
   const statsData = [
-    { label: 'Rank ⓘ', value: '#21' },
-    { label: 'Market Cap', value: '$8.28B' },
-    { label: 'Volume', value: '$714.52M' }
+    { label: 'Risk Appetite', value: 'High' },
+    { label: 'Liquidity Flow', value: '$2.1B' },
+    { label: 'Attention Span', value: '48h' }
   ];
 
   return (
@@ -59,12 +59,11 @@ export const CryptoSection = () => {
           {/* Left Content */}
           <motion.div variants={leftVariants}>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Cryptocurrency<br />
-              is the heart of TON
+              Market Condition<br />
+              Dashboard
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Toncoin is TON&apos;s native cryptocurrency. It is used for network operations,
-              transactions, games or collectibles built on TON.
+              Degen Liquidity Flow tracks total available "ape money" flowing between meme coins vs flowing out to majors/stablecoins with risk appetite gauge.
             </p>
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -72,7 +71,7 @@ export const CryptoSection = () => {
               transition={{ duration: 0.2 }}
             >
               <Button className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3">
-                Get Toncoin
+                View Dashboard
               </Button>
             </motion.div>
           </motion.div>
@@ -91,10 +90,10 @@ export const CryptoSection = () => {
                       whileHover={{ rotate: 360, scale: 1.1 }}
                       transition={{ duration: 0.6 }}
                     >
-                      <span className="text-white font-bold">T</span>
+                      <span className="text-white font-bold">📊</span>
                     </motion.div>
                     <div>
-                      <div className="font-semibold text-gray-600">Toncoin (TON)</div>
+                      <div className="font-semibold text-gray-600">Degen Liquidity Flow</div>
                       <motion.div
                         className="text-3xl font-bold text-gray-900"
                         initial={{ scale: 1 }}

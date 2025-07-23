@@ -40,7 +40,7 @@ export const FutureSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Dive into the future of internet
+            "God Mode" Vision into the Chaos
           </h2>
         </motion.div>
 
@@ -58,12 +58,12 @@ export const FutureSection = () => {
               <CardContent className="p-8 lg:p-12">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                   <div>
-                    <div className="text-sm font-medium mb-2 opacity-90">VERSION 1.0</div>
+                    <div className="text-sm font-medium mb-2 opacity-90">NARRATIVESCOPE 1.0</div>
                     <h3 className="text-3xl lg:text-4xl font-bold mb-6">
-                      TON Sites, TON Proxy, TON WWW
+                      Comprehensive Market Intelligence
                     </h3>
                     <p className="text-lg mb-8 opacity-90 leading-relaxed">
-                      Try the decentralized, secure, reliable Internet of the future with TON services.
+                      Blobsy finds this tool can essentially give him "god mode" vision into the chaotic world of Solana meme coin degeneracy, seeing patterns that individual traders miss in the chaos.
                     </p>
                     <motion.div
                       whileHover={{ scale: 1.05 }}
@@ -94,7 +94,7 @@ export const FutureSection = () => {
                             whileHover={{ scale: 1.2, rotate: 10 }}
                             transition={{ duration: 0.3 }}
                           >
-                            🌐
+                            🔍
                           </motion.span>
                         </motion.div>
                       </motion.div>

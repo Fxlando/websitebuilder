@@ -68,10 +68,10 @@ export const WalletSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Live Narrative Tracker:
+            Live Narrative Tracker
           </h2>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
-            <span className="text-gray-900">Meta Analysis identifies which narrative is currently </span>
+            <span className="text-gray-900">Meta Analysis tool that identifies which narrative is currently </span>
             <span className="text-orange-500">dominating</span>
           </h2>
           <motion.div

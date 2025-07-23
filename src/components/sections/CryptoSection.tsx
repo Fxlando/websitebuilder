@@ -58,7 +58,7 @@ export const CryptoSection = () => {
         >
           {/* Left Content */}
           <motion.div variants={leftVariants}>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
               Market Condition<br />
               Dashboard
             </h2>

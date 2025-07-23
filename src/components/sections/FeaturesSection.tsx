@@ -119,7 +119,7 @@ export const FeaturesSection = () => {
             <span className="text-sm font-semibold text-blob-yellow">Trading Tools</span>
           </motion.div>
           
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
             Tools Built for{' '}
             <span className="gradient-text">Traders</span>
           </h2>

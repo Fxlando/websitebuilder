@@ -114,7 +114,7 @@ export const LaunchTimeline = () => {
             <span className="text-sm font-semibold text-blob-yellow">Roadmap</span>
           </motion.div>
           
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
             Launch <span className="gradient-text">Timeline</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">

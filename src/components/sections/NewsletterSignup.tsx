@@ -64,7 +64,7 @@ export const NewsletterSignup = () => {
             <span className="text-sm font-semibold text-blob-yellow">Early Access</span>
           </motion.div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
             Get <span className="gradient-text">Alerts</span> When $BLOB Launches
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">

@@ -72,7 +72,7 @@ export const WalletSection = () => {
           </h2>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
             <span className="text-gray-900">Meta Analysis identifies which narrative is currently </span>
-            <span className="text-blue-500">dominating</span>
+            <span className="text-orange-500">dominating</span>
           </h2>
           <motion.div
             whileHover={{ scale: 1.05 }}

@@ -3,6 +3,19 @@
 import { motion } from 'framer-motion';
 
 export const BlobAvatar = () => {
+  const resurrectionAnimation = {
+    animate: {
+      y: [50, -10, 10, -10],
+      rotate: [0, 360, 5, -5, 0],
+      scale: [0.1, 1.2, 1, 1.05, 1],
+      opacity: [0, 1, 1, 1, 1],
+      transition: {
+        duration: 3,
+        ease: "easeOut"
+      }
+    }
+  };
+
   const floatingAnimation = {
     animate: {
       y: [-10, 10, -10],
@@ -42,8 +55,19 @@ export const BlobAvatar = () => {
   return (
     <motion.div
       className="w-24 h-24 relative"
-      variants={floatingAnimation}
-      animate="animate"
+      initial={{ y: 50, scale: 0.1, opacity: 0 }}
+      animate={{
+        y: [-10, 10, -10],
+        rotate: [0, 5, -5, 0],
+        scale: [1, 1.05, 1],
+        opacity: 1,
+      }}
+      transition={{
+        y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+        rotate: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+        scale: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+        opacity: { duration: 0.5, delay: 0.5 },
+      }}
     >
       {/* Main Blob Body */}
       <motion.svg
@@ -52,12 +76,12 @@ export const BlobAvatar = () => {
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.3 }}
       >
-        {/* Blob Body */}
+        {/* Blob Body - More pear-shaped like the image */}
         <motion.path
-          d="M50 15 C70 15, 85 30, 85 50 C85 70, 70 85, 50 85 C30 85, 15 70, 15 50 C15 30, 30 15, 50 15 Z"
+          d="M50 20 C65 20, 80 35, 80 55 C80 75, 65 90, 50 90 C35 90, 20 75, 20 55 C20 35, 35 20, 50 20 Z"
           fill="url(#blobGradient)"
           stroke="#8B4513"
-          strokeWidth="2"
+          strokeWidth="2.5"
         />
 
         {/* Gradient Definition */}
@@ -69,78 +93,14 @@ export const BlobAvatar = () => {
           </linearGradient>
         </defs>
 
-        {/* Left Arm */}
+        {/* Left Arm - More rounded and stubby */}
         <motion.path
-          d="M25 45 Q15 40, 20 35 Q25 30, 30 35 Q35 40, 30 45 Z"
+          d="M22 50 Q12 45, 18 40 Q22 35, 28 40 Q32 45, 28 50 Z"
           fill="url(#blobGradient)"
-          stroke="#8B4513"
-          strokeWidth="1.5"
-          variants={armAnimation}
-          animate="animate"
-        />
-
-        {/* Right Arm */}
-        <motion.path
-          d="M75 45 Q85 40, 80 35 Q75 30, 70 35 Q65 40, 70 45 Z"
-          fill="url(#blobGradient)"
-          stroke="#8B4513"
-          strokeWidth="1.5"
-          variants={armAnimation}
-          animate="animate"
-        />
-
-        {/* Left Leg */}
-        <motion.path
-          d="M40 85 Q35 95, 40 100 Q45 95, 40 85 Z"
-          fill="url(#blobGradient)"
-          stroke="#8B4513"
-          strokeWidth="1.5"
-        />
-
-        {/* Right Leg */}
-        <motion.path
-          d="M60 85 Q65 95, 60 100 Q55 95, 60 85 Z"
-          fill="url(#blobGradient)"
-          stroke="#8B4513"
-          strokeWidth="1.5"
-        />
-
-        {/* Left Eye */}
-        <motion.g>
-          <ellipse cx="35" cy="40" rx="6" ry="8" fill="white" stroke="#8B4513" strokeWidth="1.5" />
-          <ellipse cx="35" cy="40" rx="3" ry="4" fill="#8B4513" />
-          <ellipse cx="33" cy="38" rx="1" ry="1.5" fill="white" />
-          <motion.rect
-            x="32" y="38" width="6" height="4" fill="white"
-            variants={blinkAnimation}
-            animate="animate"
-          />
-        </motion.g>
-
-        {/* Right Eye */}
-        <motion.g>
-          <ellipse cx="65" cy="40" rx="6" ry="8" fill="white" stroke="#8B4513" strokeWidth="1.5" />
-          <ellipse cx="65" cy="40" rx="3" ry="4" fill="#8B4513" />
-          <ellipse cx="63" cy="38" rx="1" ry="1.5" fill="white" />
-          <motion.rect
-            x="62" y="38" width="6" height="4" fill="white"
-            variants={blinkAnimation}
-            animate="animate"
-          />
-        </motion.g>
-
-        {/* Eyebrows */}
-        <path d="M30 32 Q35 30, 40 32" stroke="#8B4513" strokeWidth="1.5" fill="none" />
-        <path d="M60 32 Q65 30, 70 32" stroke="#8B4513" strokeWidth="1.5" fill="none" />
-
-        {/* Smile */}
-        <motion.path
-          d="M40 55 Q50 65, 60 55"
           stroke="#8B4513"
           strokeWidth="2"
-          fill="none"
           animate={{
-            d: ["M40 55 Q50 65, 60 55", "M40 55 Q50 68, 60 55", "M40 55 Q50 65, 60 55"],
+            rotate: [0, 15, -15, 0],
           }}
           transition={{
             duration: 2,
@@ -149,22 +109,112 @@ export const BlobAvatar = () => {
           }}
         />
 
-        {/* Nose */}
-        <circle cx="50" cy="50" r="0.5" fill="#8B4513" />
-
-        {/* Blush - Left */}
-        <motion.circle
-          cx="25" cy="45" r="2" fill="#FFB6C1" opacity="0.6"
-          animate={{ opacity: [0.6, 0.8, 0.6] }}
-          transition={{ duration: 2, repeat: Infinity }}
+        {/* Right Arm - More rounded and stubby */}
+        <motion.path
+          d="M78 50 Q88 45, 82 40 Q78 35, 72 40 Q68 45, 72 50 Z"
+          fill="url(#blobGradient)"
+          stroke="#8B4513"
+          strokeWidth="2"
+          animate={{
+            rotate: [0, -15, 15, 0],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
         />
 
-        {/* Blush - Right */}
-        <motion.circle
-          cx="75" cy="45" r="2" fill="#FFB6C1" opacity="0.6"
-          animate={{ opacity: [0.6, 0.8, 0.6] }}
-          transition={{ duration: 2, repeat: Infinity }}
+        {/* Left Leg - More rounded and stubby */}
+        <motion.path
+          d="M38 90 Q33 100, 38 105 Q43 100, 38 90 Z"
+          fill="url(#blobGradient)"
+          stroke="#8B4513"
+          strokeWidth="2"
         />
+
+        {/* Right Leg - More rounded and stubby */}
+        <motion.path
+          d="M62 90 Q67 100, 62 105 Q57 100, 62 90 Z"
+          fill="url(#blobGradient)"
+          stroke="#8B4513"
+          strokeWidth="2"
+        />
+
+        {/* Left Eye - Larger and more anime-style */}
+        <motion.g>
+          <ellipse cx="32" cy="45" rx="7" ry="9" fill="white" stroke="#8B4513" strokeWidth="2" />
+          <ellipse cx="32" cy="45" rx="4" ry="5" fill="#8B4513" />
+          <ellipse cx="30" cy="43" rx="1.5" ry="2" fill="white" />
+          <motion.rect
+            x="29" y="43" width="6" height="4" fill="white"
+            animate={{
+              scaleY: [1, 0.1, 1],
+            }}
+            transition={{
+              duration: 0.3,
+              repeat: Infinity,
+              repeatDelay: 3,
+              ease: "easeInOut"
+            }}
+          />
+        </motion.g>
+
+        {/* Right Eye - Larger and more anime-style */}
+        <motion.g>
+          <ellipse cx="68" cy="45" rx="7" ry="9" fill="white" stroke="#8B4513" strokeWidth="2" />
+          <ellipse cx="68" cy="45" rx="4" ry="5" fill="#8B4513" />
+          <ellipse cx="66" cy="43" rx="1.5" ry="2" fill="white" />
+          <motion.rect
+            x="65" y="43" width="6" height="4" fill="white"
+            animate={{
+              scaleY: [1, 0.1, 1],
+            }}
+            transition={{
+              duration: 0.3,
+              repeat: Infinity,
+              repeatDelay: 3,
+              ease: "easeInOut"
+            }}
+          />
+        </motion.g>
+
+        {/* Eyebrows - More curved and expressive */}
+        <path d="M28 37 Q33 35, 38 37" stroke="#8B4513" strokeWidth="2" fill="none" />
+        <path d="M62 37 Q67 35, 72 37" stroke="#8B4513" strokeWidth="2" fill="none" />
+
+        {/* Smile - More gentle and friendly */}
+        <motion.path
+          d="M35 60 Q50 70, 65 60"
+          stroke="#8B4513"
+          strokeWidth="2.5"
+          fill="none"
+          animate={{
+            d: ["M35 60 Q50 70, 65 60", "M35 60 Q50 73, 65 60", "M35 60 Q50 70, 65 60"],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+
+        {/* Nose - Tiny dot like in the image */}
+        <circle cx="50" cy="58" r="0.8" fill="#8B4513" />
+
+        {/* Blush - Left - Three lines like in the image */}
+        <motion.g>
+          <line x1="20" y1="50" x2="22" y2="50" stroke="#FFB6C1" strokeWidth="1.5" opacity="0.8" />
+          <line x1="20" y1="52" x2="22" y2="52" stroke="#FFB6C1" strokeWidth="1.5" opacity="0.8" />
+          <line x1="20" y1="54" x2="22" y2="54" stroke="#FFB6C1" strokeWidth="1.5" opacity="0.8" />
+        </motion.g>
+
+        {/* Blush - Right - Three lines like in the image */}
+        <motion.g>
+          <line x1="78" y1="50" x2="80" y2="50" stroke="#FFB6C1" strokeWidth="1.5" opacity="0.8" />
+          <line x1="78" y1="52" x2="80" y2="52" stroke="#FFB6C1" strokeWidth="1.5" opacity="0.8" />
+          <line x1="78" y1="54" x2="80" y2="54" stroke="#FFB6C1" strokeWidth="1.5" opacity="0.8" />
+        </motion.g>
       </motion.svg>
     </motion.div>
   );

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Target, TrendingUp, Shield, BarChart3, Zap, Users, Rocket } from 'lucide-react';
 import { TiltedCard } from '../ui/TiltedCard';
+import { Card, CardContent } from '../ui/Card';
 
 export const FeaturesSection = () => {
   const features = [
@@ -118,45 +119,48 @@ export const FeaturesSection = () => {
             >
               <TiltedCard intensity={8}>
                 <motion.div
-                  className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 relative overflow-hidden h-full"
                   variants={cardHover}
                   whileHover="whileHover"
                 >
-                  {/* Gradient Overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
-                  
-                  {/* Coming Soon Badge */}
-                  <div className="absolute top-4 right-4">
-                    <motion.span 
-                      className="bg-blob-yellow text-black px-3 py-1 rounded-full text-xs font-semibold shadow-sm"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      {feature.status}
-                    </motion.span>
-                  </div>
+                  <Card className="bg-white/90 backdrop-blur-sm hover:shadow-xl transition-all duration-300 relative overflow-hidden h-full">
+                    {/* Gradient Overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
+                    
+                    {/* Coming Soon Badge */}
+                    <div className="absolute top-4 right-4">
+                      <motion.span 
+                        className="bg-blob-yellow text-black px-3 py-1 rounded-full text-xs font-semibold shadow-sm"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {feature.status}
+                      </motion.span>
+                    </div>
 
-                  {/* Enhanced Icon */}
-                  <motion.div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300`}
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </motion.div>
+                    <CardContent className="p-8">
+                      {/* Enhanced Icon */}
+                      <motion.div
+                        className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300`}
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <feature.icon className="w-8 h-8 text-white" />
+                      </motion.div>
 
-                  {/* Content */}
-                  <h3 className="text-xl font-bold text-black mb-4 group-hover:text-blob-yellow transition-colors duration-200">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {feature.description}
-                  </p>
+                      {/* Content */}
+                      <h3 className="text-xl font-bold text-black mb-4 group-hover:text-blob-yellow transition-colors duration-200">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </CardContent>
 
-                  {/* Hover Effect */}
-                  <motion.div
-                    className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blob-yellow to-yellow-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
-                  />
+                    {/* Hover Effect */}
+                    <motion.div
+                      className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blob-yellow to-yellow-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+                    />
+                  </Card>
                 </motion.div>
               </TiltedCard>
             </motion.div>

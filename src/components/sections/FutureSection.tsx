@@ -40,7 +40,7 @@ export const FutureSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-['Space_Grotesk']">
-            "God Mode" Vision into the Chaos
+            "<span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">God Mode</span>" Vision into the Chaos
           </h2>
         </motion.div>
 

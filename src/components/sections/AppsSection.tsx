@@ -11,8 +11,9 @@ export const AppsSection = () => {
       badge: 'Narrative Score',
       title: 'Narrative Strength Score',
       subtitle: 'Current meta strength (1-10) and estimated time remaining',
-      bgColor: 'bg-orange-500',
-      textColor: 'text-black'
+      bgColor: 'bg-gradient-to-br from-orange-400 to-orange-600',
+      textColor: 'text-black',
+      isOrange: true
     },
     {
       icon: '🎯',
@@ -20,15 +21,17 @@ export const AppsSection = () => {
       title: 'Bull-degen, Bear-degen, Rotation, or Dead-cat phases',
       subtitle: 'Specifically for meme coins with market phase detection.',
       bgColor: 'bg-gray-900',
-      textColor: 'text-white'
+      textColor: 'text-white',
+      isOrange: false
     },
     {
       icon: '⏰',
       badge: 'Opportunity Windows',
       title: 'Optimal entry/exit timing',
       subtitle: 'Identifies optimal timing based on current degen market psychology.',
-      bgColor: 'bg-orange-500',
-      textColor: 'text-black'
+      bgColor: 'bg-gradient-to-br from-orange-400 to-orange-600',
+      textColor: 'text-black',
+      isOrange: true
     },
     {
       icon: '🔍',
@@ -36,7 +39,8 @@ export const AppsSection = () => {
       title: 'Live intelligence updates',
       subtitle: 'Continuous monitoring and alerts for market opportunities.',
       bgColor: 'bg-gray-900',
-      textColor: 'text-white'
+      textColor: 'text-white',
+      isOrange: false
     },
     {
       icon: '📈',
@@ -44,15 +48,17 @@ export const AppsSection = () => {
       title: 'Market psychology analysis',
       subtitle: 'Advanced pattern recognition for degen market behavior.',
       bgColor: 'bg-gray-900',
-      textColor: 'text-white'
+      textColor: 'text-white',
+      isOrange: false
     },
     {
       icon: '⚡',
       badge: 'Instant Alerts',
       title: 'Real-time notifications',
       subtitle: 'Get notified immediately when opportunities arise.',
-      bgColor: 'bg-orange-500',
-      textColor: 'text-black'
+      bgColor: 'bg-gradient-to-br from-orange-400 to-orange-600',
+      textColor: 'text-black',
+      isOrange: true
     }
   ];
 
@@ -130,7 +136,7 @@ export const AppsSection = () => {
               className="group"
             >
               <Card 
-                className={`${app.bgColor} ${app.textColor} border-0 hover:shadow-lg transition-shadow cursor-pointer overflow-hidden`}
+                className={`${app.bgColor} ${app.textColor} border-0 hover:shadow-lg transition-all duration-300 cursor-pointer overflow-hidden group ${app.isOrange ? 'hover:bg-white hover:text-gray-900' : ''}`}
                 {...cardHover}
               >
                 <CardContent className="p-8">
@@ -155,11 +161,11 @@ export const AppsSection = () => {
 
                   {/* Mock App Screenshot */}
                   <motion.div 
-                    className="bg-white/10 rounded-lg p-4 mt-8"
+                    className={`${app.isOrange ? 'bg-white/10 group-hover:bg-gray-100' : 'bg-white/10'} rounded-lg p-4 mt-8`}
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="bg-white/20 rounded-lg h-32 flex items-center justify-center">
+                    <div className={`${app.isOrange ? 'bg-white/20 group-hover:bg-gray-200' : 'bg-white/20'} rounded-lg h-32 flex items-center justify-center`}>
                       <span className="text-4xl opacity-50">{app.icon}</span>
                     </div>
                   </motion.div>

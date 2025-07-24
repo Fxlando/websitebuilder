@@ -114,7 +114,7 @@ export const FutureSection = () => {
 
           {/* TON Storage Card */}
           <motion.div variants={cardVariants} whileHover={{ y: -5 }}>
-            <Card className="bg-gradient-to-r from-purple-600 to-blue-500 text-white border-0 overflow-hidden">
+            <Card className="bg-gradient-to-r from-orange-500 to-orange-600 text-white border-0 overflow-hidden">
               <CardContent className="p-8 lg:p-12">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                   <div>
@@ -132,7 +132,7 @@ export const FutureSection = () => {
                       >
                         <Button
                           variant="secondary"
-                          className="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3"
+                          className="bg-white text-orange-600 hover:bg-gray-100 px-6 py-3"
                         >
                           Access Intelligence
                         </Button>
@@ -143,7 +143,7 @@ export const FutureSection = () => {
                       >
                         <Button
                           variant="outline"
-                          className="border-white text-white hover:bg-white hover:text-purple-600 px-6 py-3"
+                          className="border-white text-white hover:bg-white hover:text-orange-600 px-6 py-3"
                         >
                           View Live Feed →
                         </Button>
@@ -154,7 +154,7 @@ export const FutureSection = () => {
                       >
                         <Button
                           variant="outline"
-                          className="border-white text-white hover:bg-white hover:text-purple-600 px-6 py-3"
+                          className="border-white text-white hover:bg-white hover:text-orange-600 px-6 py-3"
                         >
                           Get Alerts →
                         </Button>

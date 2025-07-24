@@ -8,6 +8,23 @@ export const SITE_CONFIG = {
     twitter: process.env.NEXT_PUBLIC_TWITTER_URL || "https://x.com/bl0bsy",
     telegram: process.env.NEXT_PUBLIC_TELEGRAM_URL || "https://t.me/blobtoken",
     discord: process.env.NEXT_PUBLIC_DISCORD_URL || "https://discord.gg/blobtoken",
+    blog: process.env.NEXT_PUBLIC_BLOG_URL || "https://blog.blobsy.com",
+    whitepaper: process.env.NEXT_PUBLIC_WHITEPAPER_URL || "https://docs.blobsy.com",
+    contract: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || "0x1234567890123456789012345678901234567890",
+    audit: process.env.NEXT_PUBLIC_AUDIT_URL || "https://audit.blobsy.com",
+    faq: process.env.NEXT_PUBLIC_FAQ_URL || "/faq",
+    support: process.env.NEXT_PUBLIC_SUPPORT_URL || "mailto:support@blobsy.com",
+    privacy: process.env.NEXT_PUBLIC_PRIVACY_URL || "/privacy",
+    terms: process.env.NEXT_PUBLIC_TERMS_URL || "/terms",
+    cookies: process.env.NEXT_PUBLIC_COOKIES_URL || "/cookies",
+    disclaimer: process.env.NEXT_PUBLIC_DISCLAIMER_URL || "/disclaimer",
+    // Trading tools
+    snipeScanner: process.env.NEXT_PUBLIC_SNIPE_SCANNER_URL || "/tools",
+    memeOracle: process.env.NEXT_PUBLIC_MEME_ORACLE_URL || "/tools",
+    rugRadar: process.env.NEXT_PUBLIC_RUG_RADAR_URL || "/tools",
+    liquidityWatcher: process.env.NEXT_PUBLIC_LIQUIDITY_WATCHER_URL || "/tools",
+    memeTracker: process.env.NEXT_PUBLIC_MEME_TRACKER_URL || "/tools",
+    analytics: process.env.NEXT_PUBLIC_ANALYTICS_URL || "/tools",
   },
 };
 

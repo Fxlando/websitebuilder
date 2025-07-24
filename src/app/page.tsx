@@ -1,4 +1,5 @@
 import { Header } from '@/components/layout/Header';
+import { BackToTop } from '@/components/ui/BackToTop';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { WalletSection } from '@/components/sections/WalletSection';
 import { CryptoSection } from '@/components/sections/CryptoSection';
@@ -36,8 +37,12 @@ export default function Home() {
         <section id="newsletter">
           <NewsletterSignup />
         </section>
+        <section id="tokenomics">
+          {/* Tokenomics section can be added here later */}
+        </section>
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 } 

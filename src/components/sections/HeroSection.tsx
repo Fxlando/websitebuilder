@@ -92,13 +92,13 @@ export const HeroSection = () => {
           >
             <p className="text-sm text-gray-500 mb-1">Contract Address</p>
             <p className="font-mono text-sm text-gray-700 break-all">
-              0x1234...5678
+              {SITE_CONFIG.links.contract}
             </p>
           </motion.div>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <motion.div
-            className="flex justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center"
             variants={fadeInUp}
           >
             <motion.div
@@ -108,6 +108,19 @@ export const HeroSection = () => {
               <Button
                 size="lg"
                 className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-4 text-lg font-medium shadow-lg"
+                onClick={() => window.open(`https://app.uniswap.org/#/swap?outputCurrency=${SITE_CONFIG.links.contract}`, '_blank')}
+              >
+                Buy Now
+              </Button>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-yellow-400 text-yellow-600 hover:bg-yellow-50 px-8 py-4 text-lg font-medium shadow-lg"
                 onClick={() => window.open(SITE_CONFIG.links.twitter, '_blank')}
               >
                 Follow on X

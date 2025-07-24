@@ -9,43 +9,43 @@ export const Footer = () => {
     {
       title: 'Trading Tools',
       links: [
-        'Snipe Scanner',
-        'Meme Signal Oracle',
-        'Rug Radar',
-        'Auto-Liquidity Watcher',
-        'MemeCoin Tracker',
-        'BLOBSY Analytics'
+        { name: 'Snipe Scanner', href: SITE_CONFIG.links.snipeScanner },
+        { name: 'Meme Signal Oracle', href: SITE_CONFIG.links.memeOracle },
+        { name: 'Rug Radar', href: SITE_CONFIG.links.rugRadar },
+        { name: 'Auto-Liquidity Watcher', href: SITE_CONFIG.links.liquidityWatcher },
+        { name: 'MemeCoin Tracker', href: SITE_CONFIG.links.memeTracker },
+        { name: 'BLOBSY Analytics', href: SITE_CONFIG.links.analytics }
       ]
     },
     {
       title: 'Community',
       links: [
-        'Telegram',
-        'Twitter',
-        'Discord',
-        'Blog',
-        'Roadmap',
-        'Whitepaper'
+        { name: 'Telegram', href: SITE_CONFIG.links.telegram },
+        { name: 'Twitter', href: SITE_CONFIG.links.twitter },
+        { name: 'Discord', href: SITE_CONFIG.links.discord },
+        { name: 'Blog', href: SITE_CONFIG.links.blog },
+        { name: 'Roadmap', href: '#timeline' },
+        { name: 'Whitepaper', href: SITE_CONFIG.links.whitepaper }
       ]
     },
     {
       title: 'Resources',
       links: [
-        'Contract Address',
-        'Tokenomics',
-        'Security Audit',
-        'FAQ',
-        'Support',
-        'Bug Report'
+        { name: 'Contract Address', href: `https://etherscan.io/address/${SITE_CONFIG.links.contract}` },
+        { name: 'Tokenomics', href: '#tokenomics' },
+        { name: 'Security Audit', href: SITE_CONFIG.links.audit },
+        { name: 'FAQ', href: SITE_CONFIG.links.faq },
+        { name: 'Support', href: SITE_CONFIG.links.support },
+        { name: 'Bug Report', href: SITE_CONFIG.links.support }
       ]
     },
     {
       title: 'Legal',
       links: [
-        'Privacy Policy',
-        'Terms of Service',
-        'Cookie Policy',
-        'Disclaimer'
+        { name: 'Privacy Policy', href: SITE_CONFIG.links.privacy },
+        { name: 'Terms of Service', href: SITE_CONFIG.links.terms },
+        { name: 'Cookie Policy', href: SITE_CONFIG.links.cookies },
+        { name: 'Disclaimer', href: SITE_CONFIG.links.disclaimer }
       ]
     }
   ];
@@ -93,12 +93,21 @@ export const Footer = () => {
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <motion.a
-                      href="#"
+                      href={link.href}
                       className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
                       whileHover={{ x: 5 }}
                       transition={{ duration: 0.2 }}
+                      target={link.href.startsWith('http') ? '_blank' : undefined}
+                      rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      onClick={link.href.startsWith('#') ? (e) => {
+                        e.preventDefault();
+                        const element = document.querySelector(link.href);
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      } : undefined}
                     >
-                      {link}
+                      {link.name}
                     </motion.a>
                   </li>
                 ))}
@@ -134,6 +143,7 @@ export const Footer = () => {
             <div className="flex space-x-4">
               {[
                 { icon: '🐦', href: SITE_CONFIG.links.twitter, label: 'Twitter' },
+                { icon: '📱', href: SITE_CONFIG.links.telegram, label: 'Telegram' },
                 { icon: '🎮', href: SITE_CONFIG.links.discord, label: 'Discord' }
               ].map((social) => (
                 <motion.div

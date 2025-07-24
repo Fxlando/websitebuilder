@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '../ui/Button';
+import { BlobLogo } from '../ui/BlobLogo';
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -43,14 +44,8 @@ export const Header = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <Link href="/" className="flex items-center space-x-2">
-              <motion.div
-                className="w-8 h-8 bg-orange-400 rounded-full flex items-center justify-center"
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.6 }}
-              >
-                <span className="text-gray-900 font-bold text-sm">🟠</span>
-              </motion.div>
+            <Link href="/" className="flex items-center space-x-3">
+              <BlobLogo size={36} />
               <span className="font-bold text-xl text-gray-900">BLOBSY</span>
             </Link>
           </motion.div>

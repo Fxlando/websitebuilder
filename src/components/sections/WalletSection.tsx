@@ -32,10 +32,11 @@ export const WalletSection = () => {
     {
       title: 'Meta Analysis identifies which narrative is currently dominating',
       icon: '🎯',
-      bgColor: 'bg-orange-500',
+      bgColor: 'bg-gradient-to-br from-orange-400 to-orange-600',
       textColor: 'text-white',
       mockupBg: 'bg-gray-900',
-      balance: 'AI Agents'
+      balance: 'AI Agents',
+      isOrange: true
     },
     {
       title: 'Narrative Rotation Predictor spots when current meta is getting stale',
@@ -44,7 +45,8 @@ export const WalletSection = () => {
       textColor: 'text-gray-900',
       mockupBg: 'bg-green-500',
       balance: 'Cult Coins',
-      subtitle: 'Next Shift'
+      subtitle: 'Next Shift',
+      isOrange: false
     },
     {
       title: 'Sub-Narrative Detection finds emerging micro-trends within larger narratives',
@@ -52,7 +54,8 @@ export const WalletSection = () => {
       bgColor: 'bg-gray-900',
       textColor: 'text-white',
       mockupBg: 'bg-gray-800',
-      balance: 'Animal Season'
+      balance: 'Animal Season',
+      isOrange: false
     }
   ];
 
@@ -99,7 +102,7 @@ export const WalletSection = () => {
               whileHover={{ y: -5, scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <Card className={`${card.bgColor} ${card.textColor} border-0 h-full`}>
+              <Card className={`${card.bgColor} ${card.textColor} border-0 h-full transition-all duration-300 group ${card.isOrange ? 'hover:bg-white hover:text-gray-900' : ''}`}>
                 <CardContent className="p-8">
                   <div className="mb-6">
                     <motion.div
@@ -125,7 +128,7 @@ export const WalletSection = () => {
                   </div>
                   
                   <motion.div
-                    className={`${card.bgColor === 'bg-white' ? 'bg-gray-100' : 'bg-white/10'} rounded-lg p-4 mt-8`}
+                    className={`${card.bgColor === 'bg-white' ? 'bg-gray-100' : card.isOrange ? 'bg-white/10 group-hover:bg-gray-100' : 'bg-white/10'} rounded-lg p-4 mt-8`}
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
                   >
@@ -135,7 +138,7 @@ export const WalletSection = () => {
                         <div className="text-sm">{card.subtitle}</div>
                       </div>
                     ) : (
-                      <div className={`${card.mockupBg} rounded-lg p-4 text-center`}>
+                      <div className={`${card.isOrange ? 'group-hover:bg-gray-200' : ''} ${card.mockupBg} rounded-lg p-4 text-center`}>
                         <div className="text-sm text-gray-400 mb-2">
                           {card.bgColor === 'bg-blue-500' ? 'Balance' : ''}
                         </div>

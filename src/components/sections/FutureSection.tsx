@@ -120,10 +120,10 @@ export const FutureSection = () => {
                   <div>
                     <div className="text-sm font-medium mb-2 opacity-90">PHASE 2.0</div>
                     <h3 className="text-3xl lg:text-4xl font-bold mb-6">
-                      BLOBSY Analytics
+                      Live Narrative Tracker
                     </h3>
                     <p className="text-lg mb-8 opacity-90 leading-relaxed">
-                      Advanced trading analytics powered by the BLOBSY community. Get insights from thousands of traders and make data-driven decisions.
+                      Real-time intelligence system that identifies which narrative is currently dominating the market. Get live updates on meta shifts and emerging trends.
                     </p>
                     <div className="flex flex-wrap gap-4">
                       <motion.div
@@ -134,7 +134,7 @@ export const FutureSection = () => {
                           variant="secondary"
                           className="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3"
                         >
-                          View Analytics
+                          Access Intelligence
                         </Button>
                       </motion.div>
                       <motion.div
@@ -145,7 +145,7 @@ export const FutureSection = () => {
                           variant="outline"
                           className="border-white text-white hover:bg-white hover:text-purple-600 px-6 py-3"
                         >
-                          Roadmap →
+                          View Live Feed →
                         </Button>
                       </motion.div>
                       <motion.div
@@ -156,7 +156,7 @@ export const FutureSection = () => {
                           variant="outline"
                           className="border-white text-white hover:bg-white hover:text-purple-600 px-6 py-3"
                         >
-                          Join Community →
+                          Get Alerts →
                         </Button>
                       </motion.div>
                     </div>
@@ -178,7 +178,7 @@ export const FutureSection = () => {
                             whileHover={{ scale: 1.2, rotate: -10 }}
                             transition={{ duration: 0.3 }}
                           >
-                            📊
+                            🎯
                           </motion.span>
                         </motion.div>
                       </motion.div>
@@ -187,7 +187,7 @@ export const FutureSection = () => {
                         whileHover={{ scale: 1.2, rotate: -360 }}
                         transition={{ duration: 0.6 }}
                       >
-                        <span className="text-2xl">📈</span>
+                        <span className="text-2xl">🔄</span>
                       </motion.div>
                     </div>
                   </div>

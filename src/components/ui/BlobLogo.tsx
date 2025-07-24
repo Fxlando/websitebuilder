@@ -9,96 +9,106 @@ interface BlobLogoProps {
 
 export const BlobLogo = ({ size = 32, className = "" }: BlobLogoProps) => {
   return (
-    <motion.svg
-      width={size}
-      height={size}
-      viewBox="0 0 100 100"
-      className={className}
+    <motion.div
+      className={`flex items-center justify-center ${className}`}
+      style={{ width: size, height: size }}
       whileHover={{ scale: 1.1, rotate: 5 }}
       whileTap={{ scale: 0.95 }}
       transition={{ duration: 0.3 }}
     >
-      {/* Main blob body with gradient */}
-      <defs>
-        <radialGradient id="blobGradient" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#FFB347" />
-          <stop offset="70%" stopColor="#FF8C00" />
-          <stop offset="100%" stopColor="#FF6B35" />
-        </radialGradient>
-      </defs>
-      
-      {/* Blob body */}
-      <path
-        d="M20 30 Q15 20, 25 15 Q35 10, 45 12 Q55 10, 65 15 Q75 20, 80 30 Q85 45, 80 60 Q75 75, 65 80 Q55 85, 45 85 Q35 85, 25 80 Q15 75, 20 60 Q18 45, 20 30 Z"
-        fill="url(#blobGradient)"
-        stroke="#8B4513"
-        strokeWidth="2"
-      />
-      
-      {/* Belly highlight */}
-      <ellipse
-        cx="50"
-        cy="55"
-        rx="15"
-        ry="20"
-        fill="#FFD700"
-        opacity="0.3"
-      />
-      
-      {/* Left arm */}
-      <ellipse
-        cx="25"
-        cy="45"
-        rx="8"
-        ry="12"
-        fill="url(#blobGradient)"
-        stroke="#8B4513"
-        strokeWidth="1.5"
-      />
-      
-      {/* Right arm */}
-      <ellipse
-        cx="75"
-        cy="45"
-        rx="8"
-        ry="12"
-        fill="url(#blobGradient)"
-        stroke="#8B4513"
-        strokeWidth="1.5"
-      />
-      
-      {/* Eyes */}
-      <circle cx="40" cy="35" r="4" fill="#000000" />
-      <circle cx="60" cy="35" r="4" fill="#000000" />
-      
-      {/* Eye highlights */}
-      <circle cx="41" cy="34" r="1.5" fill="#FFFFFF" />
-      <circle cx="61" cy="34" r="1.5" fill="#FFFFFF" />
-      
-      {/* Smile */}
-      <path
-        d="M35 45 Q50 55, 65 45"
-        stroke="#8B4513"
-        strokeWidth="2"
-        fill="none"
-        strokeLinecap="round"
-      />
-      
-      {/* Blush marks */}
-      <path
-        d="M30 32 Q28 30, 26 32"
-        stroke="#FF6B6B"
-        strokeWidth="1.5"
-        fill="none"
-        strokeLinecap="round"
-      />
-      <path
-        d="M70 32 Q72 30, 74 32"
-        stroke="#FF6B6B"
-        strokeWidth="1.5"
-        fill="none"
-        strokeLinecap="round"
-      />
-    </motion.svg>
+      <div 
+        className="relative"
+        style={{ width: size * 0.8, height: size * 0.8 }}
+      >
+        {/* Main blob body */}
+        <div 
+          className="absolute inset-0 rounded-full bg-gradient-to-br from-orange-300 via-orange-400 to-orange-500 border-2 border-orange-700"
+          style={{ 
+            borderRadius: '60% 40% 50% 50% / 60% 50% 50% 40%',
+            transform: 'rotate(-5deg)'
+          }}
+        />
+        
+        {/* Belly highlight */}
+        <div 
+          className="absolute inset-0 rounded-full bg-yellow-200 opacity-30"
+          style={{ 
+            borderRadius: '60% 40% 50% 50% / 60% 50% 50% 40%',
+            transform: 'rotate(-5deg) translate(2px, 4px)',
+            width: '70%',
+            height: '70%',
+            left: '15%',
+            top: '15%'
+          }}
+        />
+        
+        {/* Left arm */}
+        <div 
+          className="absolute bg-gradient-to-br from-orange-300 to-orange-400 border border-orange-700 rounded-full"
+          style={{
+            width: size * 0.2,
+            height: size * 0.3,
+            left: '-10%',
+            top: '35%',
+            transform: 'rotate(-20deg)'
+          }}
+        />
+        
+        {/* Right arm */}
+        <div 
+          className="absolute bg-gradient-to-br from-orange-300 to-orange-400 border border-orange-700 rounded-full"
+          style={{
+            width: size * 0.2,
+            height: size * 0.3,
+            right: '-10%',
+            top: '35%',
+            transform: 'rotate(20deg)'
+          }}
+        />
+        
+        {/* Eyes */}
+        <div 
+          className="absolute w-2 h-2 bg-black rounded-full"
+          style={{ left: '30%', top: '25%' }}
+        />
+        <div 
+          className="absolute w-2 h-2 bg-black rounded-full"
+          style={{ right: '30%', top: '25%' }}
+        />
+        
+        {/* Eye highlights */}
+        <div 
+          className="absolute w-1 h-1 bg-white rounded-full"
+          style={{ left: '31%', top: '26%' }}
+        />
+        <div 
+          className="absolute w-1 h-1 bg-white rounded-full"
+          style={{ right: '31%', top: '26%' }}
+        />
+        
+        {/* Smile */}
+        <div 
+          className="absolute border-b-2 border-orange-700 rounded-full"
+          style={{
+            width: '40%',
+            height: '20%',
+            left: '30%',
+            top: '45%',
+            borderBottomWidth: '2px',
+            borderBottomColor: '#8B4513'
+          }}
+        />
+        
+        {/* Blush marks */}
+        <div 
+          className="absolute w-1 h-1 bg-pink-300 rounded-full opacity-60"
+          style={{ left: '20%', top: '20%' }}
+        />
+        <div 
+          className="absolute w-1 h-1 bg-pink-300 rounded-full opacity-60"
+          style={{ right: '20%', top: '20%' }}
+        />
+      </div>
+    </motion.div>
   );
 }; 

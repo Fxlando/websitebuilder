@@ -101,23 +101,15 @@ export const AppsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
-          className="flex justify-between items-center mb-12"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-['Space_Grotesk']">
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent font-['Space_Grotesk']">
             Explore services
           </h2>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          >
-            <Button variant="link" className="text-orange-500 hover:text-orange-600 font-medium">
-              Explore all ecosystem →
-            </Button>
-          </motion.div>
         </motion.div>
 
         {/* Apps Grid */}

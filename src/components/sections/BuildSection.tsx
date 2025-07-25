@@ -135,38 +135,7 @@ export const BuildSection = () => {
           </motion.div>
         </motion.div>
 
-        {/* Developer Center */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          whileHover={{ y: -5 }}
-        >
-          <Card className="bg-gray-800 border-gray-700 cursor-pointer hover:shadow-xl transition-all duration-300">
-            <CardContent className="p-8">
-              <div className="flex items-center">
-                <div className="mr-6">
-                  <motion.div
-                    className="w-16 h-16 bg-blue-500 rounded-lg flex items-center justify-center mb-4"
-                    whileHover={{ rotate: 360, scale: 1.1 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    <span className="text-2xl">👨‍💻</span>
-                  </motion.div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">
-                    Developers center
-                  </h3>
-                  <p className="text-gray-300">
-                    Quick start and deep dive into development on TON.
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
+
       </div>
     </section>
   );

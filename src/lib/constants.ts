@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
     discord: process.env.NEXT_PUBLIC_DISCORD_URL || "https://discord.gg/blobtoken",
     blog: process.env.NEXT_PUBLIC_BLOG_URL || "https://blog.blobsy.com",
     whitepaper: process.env.NEXT_PUBLIC_WHITEPAPER_URL || "https://docs.blobsy.com",
-    contract: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || "0x1234567890123456789012345678901234567890",
+    contract: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || "Dropping Soon",
     audit: process.env.NEXT_PUBLIC_AUDIT_URL || "https://audit.blobsy.com",
     faq: process.env.NEXT_PUBLIC_FAQ_URL || "https://blobsyonsol.xyz/faq",
     support: process.env.NEXT_PUBLIC_SUPPORT_URL || "mailto:support@blobsy.com",

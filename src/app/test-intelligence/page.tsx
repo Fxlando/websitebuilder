@@ -21,6 +21,11 @@ export default function TestIntelligencePage() {
     }, 2000);
   };
 
+  const handleRedirectToDemo = () => {
+    console.log('Redirecting to demo...');
+    window.location.href = '/tools';
+  };
+
   const intelligenceFeatures = [
     {
       name: "Real-time Market Analysis",
@@ -159,6 +164,26 @@ export default function TestIntelligencePage() {
                     disabled={isLoading}
                   >
                     {isLoading ? 'Loading...' : 'Access Intelligence'}
+                  </button>
+                </div>
+                
+                {/* Redirect Button - Takes you to demo */}
+                <div className="mt-4">
+                  <a 
+                    href="/tools"
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring shadow h-9 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
+                  >
+                    Go to Tools Demo
+                  </a>
+                </div>
+                
+                {/* Immediate Redirect Button */}
+                <div className="mt-4">
+                  <button 
+                    onClick={handleRedirectToDemo}
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring shadow h-9 bg-green-600 hover:bg-green-700 text-white px-8 py-3"
+                  >
+                    Access Intelligence (Redirect)
                   </button>
                 </div>
                 

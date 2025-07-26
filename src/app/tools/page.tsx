@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowLeft, Zap, Shield, TrendingUp, Eye, BarChart3, Activity } from 'lucide-react';
+import { ArrowLeft, Zap, Shield, TrendingUp, Eye, BarChart3, Activity, Brain } from 'lucide-react';
 import Link from 'next/link';
 import { SITE_CONFIG } from '@/lib/constants';
 
@@ -139,27 +139,39 @@ export default function ToolsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-8 border border-yellow-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Get Early Access
-            </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Be among the first to access these powerful trading tools. 
-              Join our community and stay updated on tool releases.
-            </p>
-            
-            <motion.a
-              href={SITE_CONFIG.links.twitter}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 bg-black text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span>Follow for Updates</span>
-              <Zap className="w-5 h-5" />
-            </motion.a>
-          </div>
+                      <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-8 border border-yellow-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Get Early Access
+              </h3>
+              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                Be among the first to access these powerful trading tools. 
+                Join our community and stay updated on tool releases.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.a
+                  href={SITE_CONFIG.links.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 bg-black text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span>Follow for Updates</span>
+                  <Zap className="w-5 h-5" />
+                </motion.a>
+                
+                <motion.a
+                  href="/test-intelligence"
+                  className="inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span>Try Intelligence Demo</span>
+                  <Brain className="w-5 h-5" />
+                </motion.a>
+              </div>
+            </div>
         </motion.div>
       </main>
     </div>

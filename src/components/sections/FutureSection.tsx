@@ -132,6 +132,7 @@ export const FutureSection = () => {
                       <Button
                         variant="secondary"
                         className="bg-white text-orange-600 hover:bg-gray-100 px-6 py-3"
+                        onClick={() => window.location.href = '/test-intelligence'}
                       >
                         Access Intelligence
                       </Button>

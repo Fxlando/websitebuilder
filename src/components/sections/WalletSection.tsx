@@ -81,7 +81,10 @@ export const WalletSection = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Button className="bg-gray-800 hover:bg-gray-900 text-white px-8 py-3">
+            <Button 
+              className="bg-gray-800 hover:bg-gray-900 text-white px-8 py-3"
+              onClick={() => window.location.href = '/test-intelligence'}
+            >
               Access Intelligence
             </Button>
           </motion.div>

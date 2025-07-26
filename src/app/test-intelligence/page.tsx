@@ -3,12 +3,19 @@
 import { motion } from 'framer-motion';
 import { ArrowLeft, Brain, TrendingUp, Shield, Eye, BarChart3, Zap, Lock, Unlock, AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function TestIntelligencePage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showDemo, setShowDemo] = useState(false);
+
+  // Debug logging
+  useEffect(() => {
+    console.log('Test Intelligence Page Loaded!');
+    console.log('Page URL:', window.location.href);
+    console.log('User Agent:', navigator.userAgent);
+  }, []);
 
   const handleAccessIntelligence = () => {
     console.log('Button clicked!');
@@ -24,6 +31,11 @@ export default function TestIntelligencePage() {
   const handleRedirectToDemo = () => {
     console.log('Redirecting to demo...');
     window.location.href = '/tools';
+  };
+
+  const handleSimpleTest = () => {
+    console.log('Simple test button clicked!');
+    alert('Simple test works!');
   };
 
   const intelligenceFeatures = [
@@ -184,6 +196,16 @@ export default function TestIntelligencePage() {
                     className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring shadow h-9 bg-green-600 hover:bg-green-700 text-white px-8 py-3"
                   >
                     Access Intelligence (Redirect)
+                  </button>
+                </div>
+                
+                {/* Simple Test Button */}
+                <div className="mt-4">
+                  <button 
+                    onClick={handleSimpleTest}
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring shadow h-9 bg-red-600 hover:bg-red-700 text-white px-8 py-3"
+                  >
+                    Simple Test Button
                   </button>
                 </div>
                 

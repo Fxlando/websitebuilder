@@ -18,14 +18,10 @@ export default function TestIntelligencePage() {
   }, []);
 
   const handleAccessIntelligence = () => {
-    console.log('Button clicked!');
-    alert('Button clicked!');
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsAuthenticated(true);
-      setIsLoading(false);
-      setShowDemo(true);
-    }, 2000);
+    console.log('Access Intelligence button clicked!');
+    alert('Accessing Intelligence...');
+    // Redirect to tools page instead of showing demo
+    window.location.href = '/tools';
   };
 
   const handleRedirectToDemo = () => {
@@ -188,9 +184,8 @@ export default function TestIntelligencePage() {
                   <button 
                     className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow h-9 bg-gray-800 hover:bg-gray-900 text-white px-8 py-3"
                     onClick={handleAccessIntelligence}
-                    disabled={isLoading}
                   >
-                    {isLoading ? 'Loading...' : 'Access Intelligence'}
+                    Access Intelligence
                   </button>
                 </div>
                 

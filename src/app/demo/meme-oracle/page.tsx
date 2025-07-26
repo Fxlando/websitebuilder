@@ -5,9 +5,31 @@ import { ArrowLeft, Zap, TrendingUp, AlertTriangle, CheckCircle, Clock, MessageC
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
+interface SocialSignal {
+  meme: string;
+  platform: string;
+  mentions: number;
+  sentiment: 'Bullish' | 'Neutral' | 'Bearish';
+  time: string;
+}
+
+interface Predictions {
+  nextViral: string;
+  confidence: string;
+  timeframe: string;
+}
+
+interface OracleData {
+  sentimentScore: number;
+  trendingMemes: number;
+  viralPredictions: number;
+  socialSignals: SocialSignal[];
+  predictions: Predictions;
+}
+
 export default function MemeOracleDemo() {
   const [isLoading, setIsLoading] = useState(true);
-  const [oracleData, setOracleData] = useState<any>(null);
+  const [oracleData, setOracleData] = useState<OracleData | null>(null);
 
   useEffect(() => {
     // Simulate loading oracle data
@@ -113,7 +135,7 @@ export default function MemeOracleDemo() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-400 text-sm">Sentiment Score</p>
-                    <p className="text-2xl font-bold text-green-400">{oracleData.sentimentScore}%</p>
+                    <p className="text-2xl font-bold text-green-400">{oracleData?.sentimentScore}%</p>
                   </div>
                   <BarChart3 className="w-8 h-8 text-green-400" />
                 </div>
@@ -128,7 +150,7 @@ export default function MemeOracleDemo() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-400 text-sm">Trending Memes</p>
-                    <p className="text-2xl font-bold text-white">{oracleData.trendingMemes}</p>
+                    <p className="text-2xl font-bold text-white">{oracleData?.trendingMemes}</p>
                   </div>
                   <TrendingUp className="w-8 h-8 text-blue-400" />
                 </div>
@@ -143,7 +165,7 @@ export default function MemeOracleDemo() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-400 text-sm">Viral Predictions</p>
-                    <p className="text-2xl font-bold text-purple-400">{oracleData.viralPredictions}</p>
+                    <p className="text-2xl font-bold text-purple-400">{oracleData?.viralPredictions}</p>
                   </div>
                   <Zap className="w-8 h-8 text-purple-400" />
                 </div>
@@ -158,7 +180,7 @@ export default function MemeOracleDemo() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-400 text-sm">Next Viral</p>
-                    <p className="text-2xl font-bold text-yellow-400">{oracleData.predictions.nextViral}</p>
+                    <p className="text-2xl font-bold text-yellow-400">{oracleData?.predictions.nextViral}</p>
                   </div>
                   <Activity className="w-8 h-8 text-yellow-400" />
                 </div>
@@ -178,7 +200,7 @@ export default function MemeOracleDemo() {
               </h3>
               
               <div className="space-y-4">
-                {oracleData.socialSignals.map((signal: any, index: number) => (
+                {oracleData?.socialSignals.map((signal, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: 20 }}
@@ -240,7 +262,7 @@ export default function MemeOracleDemo() {
                     <span className="text-gray-400">Next Viral</span>
                     <CheckCircle className="w-5 h-5 text-green-400" />
                   </div>
-                  <p className="text-2xl font-bold text-green-400">{oracleData.predictions.nextViral}</p>
+                  <p className="text-2xl font-bold text-green-400">{oracleData?.predictions.nextViral}</p>
                 </div>
                 
                 <div className="bg-white/5 rounded-xl p-6">
@@ -248,7 +270,7 @@ export default function MemeOracleDemo() {
                     <span className="text-gray-400">Confidence</span>
                     <TrendingUp className="w-5 h-5 text-blue-400" />
                   </div>
-                  <p className="text-2xl font-bold text-blue-400">{oracleData.predictions.confidence}</p>
+                  <p className="text-2xl font-bold text-blue-400">{oracleData?.predictions.confidence}</p>
                 </div>
                 
                 <div className="bg-white/5 rounded-xl p-6">
@@ -256,7 +278,7 @@ export default function MemeOracleDemo() {
                     <span className="text-gray-400">Timeframe</span>
                     <Activity className="w-5 h-5 text-yellow-400" />
                   </div>
-                  <p className="text-2xl font-bold text-yellow-400">{oracleData.predictions.timeframe}</p>
+                  <p className="text-2xl font-bold text-yellow-400">{oracleData?.predictions.timeframe}</p>
                 </div>
               </div>
             </motion.div>

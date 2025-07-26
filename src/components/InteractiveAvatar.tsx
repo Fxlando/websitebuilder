@@ -295,9 +295,19 @@ const InteractiveAvatar: React.FC<InteractiveAvatarProps> = ({
       const mount = mountRef.current;
       const renderer = rendererRef.current;
       if (renderer && mount) {
-        mount.removeChild(renderer.domElement);
+        // Use a callback to ensure the ref is still valid
+        const cleanup = () => {
+          if (mount && renderer) {
+            try {
+              mount.removeChild(renderer.domElement);
+            } catch (error) {
+              // Element might already be removed
+            }
+          }
+          renderer?.dispose();
+        };
+        cleanup();
       }
-      renderer?.dispose();
     };
   }, [initScene]);
 

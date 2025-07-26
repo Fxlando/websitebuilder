@@ -5,9 +5,31 @@ import { ArrowLeft, Target, TrendingUp, AlertTriangle, CheckCircle, Clock, Dolla
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
+interface TokenDetection {
+  name: string;
+  address: string;
+  potential: 'High' | 'Medium' | 'Low';
+  time: string;
+  price: string;
+}
+
+interface MarketTrends {
+  sentiment: string;
+  volume: string;
+  momentum: string;
+}
+
+interface ScannerData {
+  activeScans: number;
+  tokensFound: number;
+  highPotential: number;
+  recentDetections: TokenDetection[];
+  marketTrends: MarketTrends;
+}
+
 export default function SnipeScannerDemo() {
   const [isLoading, setIsLoading] = useState(true);
-  const [scannerData, setScannerData] = useState<any>(null);
+  const [scannerData, setScannerData] = useState<ScannerData | null>(null);
 
   useEffect(() => {
     // Simulate loading scanner data
@@ -113,7 +135,7 @@ export default function SnipeScannerDemo() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-400 text-sm">Active Scans</p>
-                    <p className="text-2xl font-bold text-white">{scannerData.activeScans}</p>
+                    <p className="text-2xl font-bold text-white">{scannerData?.activeScans}</p>
                   </div>
                   <Activity className="w-8 h-8 text-green-400" />
                 </div>
@@ -128,7 +150,7 @@ export default function SnipeScannerDemo() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-400 text-sm">Tokens Found</p>
-                    <p className="text-2xl font-bold text-white">{scannerData.tokensFound}</p>
+                    <p className="text-2xl font-bold text-white">{scannerData?.tokensFound}</p>
                   </div>
                   <Target className="w-8 h-8 text-blue-400" />
                 </div>
@@ -143,7 +165,7 @@ export default function SnipeScannerDemo() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-400 text-sm">High Potential</p>
-                    <p className="text-2xl font-bold text-green-400">{scannerData.highPotential}</p>
+                    <p className="text-2xl font-bold text-green-400">{scannerData?.highPotential}</p>
                   </div>
                   <TrendingUp className="w-8 h-8 text-yellow-400" />
                 </div>
@@ -158,7 +180,7 @@ export default function SnipeScannerDemo() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-400 text-sm">Market Trend</p>
-                    <p className="text-2xl font-bold text-green-400">{scannerData.marketTrends.sentiment}</p>
+                    <p className="text-2xl font-bold text-green-400">{scannerData?.marketTrends.sentiment}</p>
                   </div>
                   <TrendingUp className="w-8 h-8 text-green-400" />
                 </div>
@@ -178,7 +200,7 @@ export default function SnipeScannerDemo() {
               </h3>
               
               <div className="space-y-4">
-                {scannerData.recentDetections.map((token: any, index: number) => (
+                {scannerData?.recentDetections.map((token, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: 20 }}
@@ -240,7 +262,7 @@ export default function SnipeScannerDemo() {
                     <span className="text-gray-400">Sentiment</span>
                     <CheckCircle className="w-5 h-5 text-green-400" />
                   </div>
-                  <p className="text-2xl font-bold text-green-400">{scannerData.marketTrends.sentiment}</p>
+                  <p className="text-2xl font-bold text-green-400">{scannerData?.marketTrends.sentiment}</p>
                 </div>
                 
                 <div className="bg-white/5 rounded-xl p-6">
@@ -248,7 +270,7 @@ export default function SnipeScannerDemo() {
                     <span className="text-gray-400">Volume</span>
                     <TrendingUp className="w-5 h-5 text-blue-400" />
                   </div>
-                  <p className="text-2xl font-bold text-blue-400">{scannerData.marketTrends.volume}</p>
+                  <p className="text-2xl font-bold text-blue-400">{scannerData?.marketTrends.volume}</p>
                 </div>
                 
                 <div className="bg-white/5 rounded-xl p-6">
@@ -256,7 +278,7 @@ export default function SnipeScannerDemo() {
                     <span className="text-gray-400">Momentum</span>
                     <Activity className="w-5 h-5 text-yellow-400" />
                   </div>
-                  <p className="text-2xl font-bold text-yellow-400">{scannerData.marketTrends.momentum}</p>
+                  <p className="text-2xl font-bold text-yellow-400">{scannerData?.marketTrends.momentum}</p>
                 </div>
               </div>
             </motion.div>

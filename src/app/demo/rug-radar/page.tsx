@@ -5,9 +5,32 @@ import { ArrowLeft, Shield, AlertTriangle, CheckCircle, Clock, Activity, BarChar
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
+interface SecurityScan {
+  name: string;
+  address: string;
+  risk: 'Low' | 'Medium' | 'High';
+  score: number;
+  time: string;
+}
+
+interface SecurityMetrics {
+  liquidityLocked: string;
+  contractVerified: string;
+  honeypotDetected: string;
+}
+
+interface RadarData {
+  scannedTokens: number;
+  highRisk: number;
+  mediumRisk: number;
+  safeTokens: number;
+  recentScans: SecurityScan[];
+  securityMetrics: SecurityMetrics;
+}
+
 export default function RugRadarDemo() {
   const [isLoading, setIsLoading] = useState(true);
-  const [radarData, setRadarData] = useState<any>(null);
+  const [radarData, setRadarData] = useState<RadarData | null>(null);
 
   useEffect(() => {
     // Simulate loading radar data
@@ -114,7 +137,7 @@ export default function RugRadarDemo() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-400 text-sm">Scanned Tokens</p>
-                    <p className="text-2xl font-bold text-white">{radarData.scannedTokens}</p>
+                    <p className="text-2xl font-bold text-white">{radarData?.scannedTokens}</p>
                   </div>
                   <Eye className="w-8 h-8 text-blue-400" />
                 </div>
@@ -129,7 +152,7 @@ export default function RugRadarDemo() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-400 text-sm">High Risk</p>
-                    <p className="text-2xl font-bold text-red-400">{radarData.highRisk}</p>
+                    <p className="text-2xl font-bold text-red-400">{radarData?.highRisk}</p>
                   </div>
                   <AlertTriangle className="w-8 h-8 text-red-400" />
                 </div>
@@ -144,7 +167,7 @@ export default function RugRadarDemo() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-400 text-sm">Safe Tokens</p>
-                    <p className="text-2xl font-bold text-green-400">{radarData.safeTokens}</p>
+                    <p className="text-2xl font-bold text-green-400">{radarData?.safeTokens}</p>
                   </div>
                   <CheckCircle className="w-8 h-8 text-green-400" />
                 </div>
@@ -179,7 +202,7 @@ export default function RugRadarDemo() {
               </h3>
               
               <div className="space-y-4">
-                {radarData.recentScans.map((scan: any, index: number) => (
+                {radarData?.recentScans.map((scan, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: 20 }}
@@ -245,7 +268,7 @@ export default function RugRadarDemo() {
                     <span className="text-gray-400">Liquidity Locked</span>
                     <CheckCircle className="w-5 h-5 text-green-400" />
                   </div>
-                  <p className="text-2xl font-bold text-green-400">{radarData.securityMetrics.liquidityLocked}</p>
+                  <p className="text-2xl font-bold text-green-400">{radarData?.securityMetrics.liquidityLocked}</p>
                 </div>
                 
                 <div className="bg-white/5 rounded-xl p-6">
@@ -253,7 +276,7 @@ export default function RugRadarDemo() {
                     <span className="text-gray-400">Contract Verified</span>
                     <CheckCircle className="w-5 h-5 text-blue-400" />
                   </div>
-                  <p className="text-2xl font-bold text-blue-400">{radarData.securityMetrics.contractVerified}</p>
+                  <p className="text-2xl font-bold text-blue-400">{radarData?.securityMetrics.contractVerified}</p>
                 </div>
                 
                 <div className="bg-white/5 rounded-xl p-6">
@@ -261,7 +284,7 @@ export default function RugRadarDemo() {
                     <span className="text-gray-400">Honeypot Detected</span>
                     <XCircle className="w-5 h-5 text-red-400" />
                   </div>
-                  <p className="text-2xl font-bold text-red-400">{radarData.securityMetrics.honeypotDetected}</p>
+                  <p className="text-2xl font-bold text-red-400">{radarData?.securityMetrics.honeypotDetected}</p>
                 </div>
               </div>
             </motion.div>

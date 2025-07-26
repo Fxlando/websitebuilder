@@ -30,12 +30,27 @@ export default function TestIntelligencePage() {
 
   const handleRedirectToDemo = () => {
     console.log('Redirecting to demo...');
-    window.location.href = '/tools';
+    alert('Redirecting to tools page...');
+    // Try multiple redirect methods
+    try {
+      window.location.href = '/tools';
+    } catch (error) {
+      console.error('Redirect failed:', error);
+      // Fallback
+      window.open('/tools', '_self');
+    }
   };
 
   const handleSimpleTest = () => {
     console.log('Simple test button clicked!');
     alert('Simple test works!');
+  };
+
+  const handleDirectLink = () => {
+    console.log('Direct link clicked!');
+    alert('Direct link clicked!');
+    // Use Next.js Link component approach
+    window.location.pathname = '/tools';
   };
 
   const intelligenceFeatures = [
@@ -206,6 +221,16 @@ export default function TestIntelligencePage() {
                     className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring shadow h-9 bg-red-600 hover:bg-red-700 text-white px-8 py-3"
                   >
                     Simple Test Button
+                  </button>
+                </div>
+                
+                {/* Direct Link Button */}
+                <div className="mt-4">
+                  <button 
+                    onClick={handleDirectLink}
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring shadow h-9 bg-purple-600 hover:bg-purple-700 text-white px-8 py-3"
+                  >
+                    Direct Link to Tools
                   </button>
                 </div>
                 

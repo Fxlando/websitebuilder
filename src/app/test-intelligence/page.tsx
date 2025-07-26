@@ -153,9 +153,15 @@ export default function TestIntelligencePage() {
                 </div>
                 
                 <button
-                  onClick={handleAccessIntelligence}
+                  type="button"
+                  onClick={() => {
+                    console.log('Button clicked!');
+                    alert('Button clicked!'); // Immediate feedback
+                    handleAccessIntelligence();
+                  }}
                   disabled={isLoading}
                   className="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50 shadow h-12 bg-gray-800 hover:bg-gray-900 text-white px-8 py-3 w-full cursor-pointer"
+                  style={{ pointerEvents: 'auto' }}
                 >
                   {isLoading ? (
                     <>
@@ -176,11 +182,25 @@ export default function TestIntelligencePage() {
                 
                 {/* Test button */}
                 <button
-                  onClick={() => console.log('Test button clicked!')}
+                  onClick={() => {
+                    console.log('Test button clicked!');
+                    alert('Test button clicked!');
+                  }}
                   className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium"
                 >
                   Test Button (Debug)
                 </button>
+                
+                {/* Clickable div test */}
+                <div
+                  onClick={() => {
+                    console.log('Div clicked!');
+                    alert('Div clicked!');
+                  }}
+                  className="mt-4 w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm font-medium text-center cursor-pointer"
+                >
+                  Clickable Div Test
+                </div>
               </div>
             </motion.div>
           </motion.div>

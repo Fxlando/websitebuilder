@@ -11,9 +11,11 @@ export default function TestIntelligencePage() {
   const [showDemo, setShowDemo] = useState(false);
 
   const handleAccessIntelligence = () => {
+    console.log('Button clicked!'); // Debug log
     setIsLoading(true);
     // Simulate authentication process
     setTimeout(() => {
+      console.log('Authentication complete!'); // Debug log
       setIsAuthenticated(true);
       setIsLoading(false);
       setShowDemo(true);
@@ -153,7 +155,7 @@ export default function TestIntelligencePage() {
                 <button
                   onClick={handleAccessIntelligence}
                   disabled={isLoading}
-                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow h-12 bg-gray-800 hover:bg-gray-900 text-white px-8 py-3 w-full"
+                  className="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50 shadow h-12 bg-gray-800 hover:bg-gray-900 text-white px-8 py-3 w-full cursor-pointer"
                 >
                   {isLoading ? (
                     <>
@@ -171,6 +173,14 @@ export default function TestIntelligencePage() {
                 <p className="text-xs text-gray-500 text-center mt-4">
                   This is a demo. In production, this would require wallet connection and token verification.
                 </p>
+                
+                {/* Test button */}
+                <button
+                  onClick={() => console.log('Test button clicked!')}
+                  className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium"
+                >
+                  Test Button (Debug)
+                </button>
               </div>
             </motion.div>
           </motion.div>

@@ -108,7 +108,7 @@ export const HeroSection = () => {
               <Button
                 size="lg"
                 className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-4 text-lg font-medium shadow-lg"
-                onClick={() => window.open(`https://app.uniswap.org/#/swap?outputCurrency=${SITE_CONFIG.links.contract}`, '_blank')}
+                onClick={() => window.open(`https://raydium.io/swap/?inputCurrency=sol&outputCurrency=${SITE_CONFIG.links.contract}`, '_blank')}
               >
                 Buy Now
               </Button>

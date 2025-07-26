@@ -1,98 +1,89 @@
-"use client";
+'use client';
 
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
-import { BackToTop } from '@/components/ui/BackToTop';
 import { motion } from 'framer-motion';
+import { ArrowLeft, Cookie } from 'lucide-react';
+import Link from 'next/link';
 
 export default function CookiesPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      <main>
-        <section className="pt-20 pb-16 bg-gradient-to-br from-white to-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+    <div className="min-h-screen bg-gradient-to-br from-white to-gray-50">
+      {/* Header */}
+      <header className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex items-center justify-between">
+            <Link 
+              href="/" 
+              className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
             >
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Cookie Policy
-              </h1>
-              <p className="text-lg text-gray-600 mb-8">
-                Last updated: {new Date().toLocaleDateString()}
-              </p>
-              
-              <div className="prose prose-lg max-w-none">
-                <h2>What Are Cookies</h2>
-                <p>
-                  Cookies are small text files that are placed on your device when you visit our website. 
-                  They help us provide you with a better experience and understand how you use our site.
-                </p>
-                
-                <h2>How We Use Cookies</h2>
-                <p>
-                  We use cookies to:
-                </p>
-                <ul>
-                  <li>Remember your preferences and settings</li>
-                  <li>Analyze how our website is used</li>
-                  <li>Improve our website's performance and functionality</li>
-                  <li>Provide personalized content and features</li>
-                </ul>
-                
-                <h2>Types of Cookies We Use</h2>
-                <h3>Essential Cookies</h3>
-                <p>
-                  These cookies are necessary for the website to function properly. They enable basic 
-                  functions like page navigation and access to secure areas of the website.
-                </p>
-                
-                <h3>Analytics Cookies</h3>
-                <p>
-                  These cookies help us understand how visitors interact with our website by collecting 
-                  and reporting information anonymously.
-                </p>
-                
-                <h3>Functional Cookies</h3>
-                <p>
-                  These cookies enable enhanced functionality and personalization, such as remembering 
-                  your preferences and settings.
-                </p>
-                
-                <h2>Managing Cookies</h2>
-                <p>
-                  You can control and manage cookies through your browser settings. Most browsers allow 
-                  you to refuse cookies or to be notified when a cookie is being set.
-                </p>
-                
-                <h2>Third-Party Cookies</h2>
-                <p>
-                  Some cookies on our website are set by third-party services that we use, such as 
-                  analytics providers. These third parties have their own privacy policies.
-                </p>
-                
-                <h2>Updates to This Policy</h2>
-                <p>
-                  We may update this Cookie Policy from time to time. We will notify you of any changes 
-                  by posting the new policy on this page.
-                </p>
-                
-                <h2>Contact Us</h2>
-                <p>
-                  If you have any questions about our use of cookies, please contact us at{' '}
-                  <a href="mailto:privacy@blobsy.com" className="text-yellow-600 hover:text-yellow-700">
-                    privacy@blobsy.com
-                  </a>
-                </p>
-              </div>
-            </motion.div>
+              <ArrowLeft className="w-5 h-5" />
+              <span>Back to Home</span>
+            </Link>
+            <h1 className="text-2xl font-bold text-gray-900">Cookie Policy</h1>
           </div>
-        </section>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <motion.div
+          className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="flex items-center space-x-3 mb-8">
+            <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+              <Cookie className="w-6 h-6 text-orange-600" />
+            </div>
+            <h2 className="text-3xl font-bold text-gray-900">Cookie Policy</h2>
+          </div>
+
+          <div className="prose prose-lg max-w-none">
+            <p className="text-gray-600 mb-6">
+              Last updated: {new Date().toLocaleDateString()}
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">What Are Cookies</h3>
+            <p className="text-gray-600 mb-6">
+              Cookies are small text files that are placed on your device when you visit our website. 
+              They help us provide you with a better experience and understand how you use our site.
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">How We Use Cookies</h3>
+            <p className="text-gray-600 mb-6">
+              We use cookies to improve your browsing experience, analyze site traffic, 
+              and understand where our visitors are coming from.
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Types of Cookies We Use</h3>
+            <ul className="text-gray-600 mb-6 list-disc pl-6 space-y-2">
+              <li><strong>Essential Cookies:</strong> Required for the website to function properly</li>
+              <li><strong>Analytics Cookies:</strong> Help us understand how visitors use our website</li>
+              <li><strong>Preference Cookies:</strong> Remember your settings and preferences</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Managing Cookies</h3>
+            <p className="text-gray-600 mb-6">
+              You can control and manage cookies through your browser settings. 
+              However, disabling certain cookies may affect the functionality of our website.
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Third-Party Cookies</h3>
+            <p className="text-gray-600 mb-6">
+              Some cookies may be placed by third-party services that appear on our pages. 
+              We do not control these cookies and they are subject to the third party's privacy policy.
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Contact Us</h3>
+            <p className="text-gray-600 mb-6">
+              If you have any questions about our Cookie Policy, please contact us at{' '}
+              <a href="mailto:support@blobsy.com" className="text-blue-600 hover:text-blue-700">
+                support@blobsy.com
+              </a>
+            </p>
+          </div>
+        </motion.div>
       </main>
-      <Footer />
-      <BackToTop />
     </div>
   );
 } 

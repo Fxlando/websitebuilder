@@ -1,121 +1,94 @@
-"use client";
+'use client';
 
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
-import { BackToTop } from '@/components/ui/BackToTop';
 import { motion } from 'framer-motion';
+import { ArrowLeft, AlertTriangle } from 'lucide-react';
+import Link from 'next/link';
 
 export default function DisclaimerPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      <main>
-        <section className="pt-20 pb-16 bg-gradient-to-br from-white to-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+    <div className="min-h-screen bg-gradient-to-br from-white to-gray-50">
+      {/* Header */}
+      <header className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex items-center justify-between">
+            <Link 
+              href="/" 
+              className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
             >
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Disclaimer
-              </h1>
-              <p className="text-lg text-gray-600 mb-8">
-                Last updated: {new Date().toLocaleDateString()}
-              </p>
-              
-              <div className="prose prose-lg max-w-none">
-                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
-                  <h2 className="text-yellow-800 font-bold mb-2">⚠️ Important Notice</h2>
-                  <p className="text-yellow-700">
-                    Cryptocurrency investments carry significant risks. Please read this disclaimer carefully 
-                    before making any investment decisions.
-                  </p>
-                </div>
-                
-                <h2>Investment Risks</h2>
-                <p>
-                  Cryptocurrency investments, including BLOBSY tokens, are highly speculative and involve 
-                  substantial risk of loss. The value of cryptocurrencies can be extremely volatile and 
-                  may result in significant financial losses.
-                </p>
-                
-                <h2>No Financial Advice</h2>
-                <p>
-                  The information provided on this website is for informational purposes only and does not 
-                  constitute financial advice, investment advice, or any other type of advice. We strongly 
-                  recommend consulting with a qualified financial advisor before making any investment decisions.
-                </p>
-                
-                <h2>Market Volatility</h2>
-                <p>
-                  Cryptocurrency markets are known for their extreme volatility. Prices can fluctuate 
-                  dramatically in short periods, and there is no guarantee of profit or protection against loss.
-                </p>
-                
-                <h2>Regulatory Risks</h2>
-                <p>
-                  Cryptocurrency regulations are evolving and vary by jurisdiction. Changes in regulations 
-                  may affect the value and legality of cryptocurrency investments.
-                </p>
-                
-                <h2>Technical Risks</h2>
-                <p>
-                  Cryptocurrencies rely on blockchain technology, which may be subject to technical failures, 
-                  security breaches, or other technological issues that could result in loss of funds.
-                </p>
-                
-                <h2>No Guarantees</h2>
-                <p>
-                  We make no guarantees regarding the future performance of BLOBSY tokens or any other 
-                  cryptocurrency. Past performance does not indicate future results.
-                </p>
-                
-                <h2>Liquidity Risks</h2>
-                <p>
-                  Cryptocurrency markets may have limited liquidity, which could make it difficult to buy 
-                  or sell tokens at desired prices or quantities.
-                </p>
-                
-                <h2>Tax Implications</h2>
-                <p>
-                  Cryptocurrency transactions may have tax implications. We recommend consulting with a 
-                  qualified tax professional to understand your tax obligations.
-                </p>
-                
-                <h2>Third-Party Services</h2>
-                <p>
-                  Our website may link to third-party services, exchanges, or platforms. We are not 
-                  responsible for the content, security, or practices of these third-party services.
-                </p>
-                
-                <h2>Limitation of Liability</h2>
-                <p>
-                  To the maximum extent permitted by law, BLOBSY and its team shall not be liable for 
-                  any direct, indirect, incidental, special, consequential, or punitive damages arising 
-                  from your use of this website or investment in cryptocurrencies.
-                </p>
-                
-                <h2>Acceptance of Risk</h2>
-                <p>
-                  By using this website and considering investments in BLOBSY tokens, you acknowledge 
-                  that you understand and accept the risks associated with cryptocurrency investments.
-                </p>
-                
-                <h2>Contact Information</h2>
-                <p>
-                  If you have questions about this disclaimer, please contact us at{' '}
-                  <a href="mailto:legal@blobsy.com" className="text-yellow-600 hover:text-yellow-700">
-                    legal@blobsy.com
-                  </a>
-                </p>
-              </div>
-            </motion.div>
+              <ArrowLeft className="w-5 h-5" />
+              <span>Back to Home</span>
+            </Link>
+            <h1 className="text-2xl font-bold text-gray-900">Disclaimer</h1>
           </div>
-        </section>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <motion.div
+          className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="flex items-center space-x-3 mb-8">
+            <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+              <AlertTriangle className="w-6 h-6 text-red-600" />
+            </div>
+            <h2 className="text-3xl font-bold text-gray-900">Disclaimer</h2>
+          </div>
+
+          <div className="prose prose-lg max-w-none">
+            <p className="text-gray-600 mb-6">
+              Last updated: {new Date().toLocaleDateString()}
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Risk Disclosure</h3>
+            <p className="text-gray-600 mb-6">
+              Cryptocurrency trading involves substantial risk and may result in the loss of your invested capital. 
+              You should not invest more than you can afford to lose. The value of cryptocurrencies can go down 
+              as well as up, and you may not get back the amount you invested.
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">No Investment Advice</h3>
+            <p className="text-gray-600 mb-6">
+              The information provided on this website is for informational purposes only and should not be 
+              construed as investment advice. We do not provide financial, legal, or tax advice. 
+              Always conduct your own research and consult with qualified professionals before making 
+              investment decisions.
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">No Guarantees</h3>
+            <p className="text-gray-600 mb-6">
+              Past performance does not guarantee future results. The performance of cryptocurrencies 
+              can be highly volatile and unpredictable. There is no guarantee that any investment 
+              will achieve its objectives or that any investment strategy will be successful.
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Regulatory Notice</h3>
+            <p className="text-gray-600 mb-6">
+              Cryptocurrency regulations vary by jurisdiction and may change over time. 
+              It is your responsibility to ensure compliance with applicable laws and regulations 
+              in your jurisdiction.
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Third-Party Content</h3>
+            <p className="text-gray-600 mb-6">
+              This website may contain links to third-party websites and content. 
+              We do not endorse or take responsibility for any third-party content, 
+              products, or services.
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Contact Us</h3>
+            <p className="text-gray-600 mb-6">
+              If you have any questions about this disclaimer, please contact us at{' '}
+              <a href="mailto:support@blobsy.com" className="text-blue-600 hover:text-blue-700">
+                support@blobsy.com
+              </a>
+            </p>
+          </div>
+        </motion.div>
       </main>
-      <Footer />
-      <BackToTop />
     </div>
   );
 } 

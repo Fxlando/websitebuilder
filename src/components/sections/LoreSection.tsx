@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Zap, Moon, Dna, Sparkles, BookOpen, Users } from 'lucide-react';
+import { SITE_CONFIG } from '@/lib/constants';
 
 export const LoreSection = () => {
   const loreCards = [
@@ -173,7 +174,7 @@ export const LoreSection = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.a
-                href="https://x.com/BL0BSY"
+                href={SITE_CONFIG.links.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 bg-black text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-200 group"

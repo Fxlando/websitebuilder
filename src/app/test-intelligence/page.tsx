@@ -1,345 +1,198 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowLeft, Brain, TrendingUp, Shield, Eye, BarChart3, Zap, Lock, Unlock, AlertTriangle } from 'lucide-react';
+import { ArrowLeft, Target, Zap, Shield, Eye, BarChart3, TrendingUp, Brain, Activity, AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
 
 export default function TestIntelligencePage() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [showDemo, setShowDemo] = useState(false);
-
-  // Debug logging
-  useEffect(() => {
-    console.log('Test Intelligence Page Loaded!');
-    console.log('Page URL:', window.location.href);
-    console.log('User Agent:', navigator.userAgent);
-  }, []);
-
-  const handleAccessIntelligence = () => {
-    console.log('Access Intelligence button clicked!');
-    alert('Accessing Intelligence...');
-    // Redirect to tools page instead of showing demo
-    window.location.href = '/tools';
-  };
-
-  const handleRedirectToDemo = () => {
-    console.log('Redirecting to demo...');
-    alert('Redirecting to tools page...');
-    // Try multiple redirect methods
-    try {
-      window.location.href = '/tools';
-    } catch (error) {
-      console.error('Redirect failed:', error);
-      // Fallback
-      window.open('/tools', '_self');
-    }
-  };
-
-  const handleSimpleTest = () => {
-    console.log('Simple test button clicked!');
-    alert('Simple test works!');
-  };
-
-  const handleDirectLink = () => {
-    console.log('Direct link clicked!');
-    alert('Direct link clicked!');
-    // Use Next.js Link component approach
-    window.location.pathname = '/tools';
-  };
-
-  const intelligenceFeatures = [
+  const integrationFeatures = [
     {
-      name: "Real-time Market Analysis",
-      description: "Live sentiment analysis and market trend predictions",
-      icon: TrendingUp,
-      status: "Active",
-      color: "from-green-500 to-emerald-600"
+      id: 'snipe-scanner',
+      title: 'Snipe Scanner',
+      description: 'Advanced token detection system that identifies promising new launches before they moon.',
+      icon: Target,
+      color: 'from-yellow-400 to-orange-500',
+      status: 'Live Demo'
     },
     {
-      name: "Risk Assessment",
-      description: "Advanced security scanning and rug pull detection",
+      id: 'meme-oracle',
+      title: 'Meme Signal Oracle',
+      description: 'AI-powered sentiment analysis that tracks social media buzz and predicts viral memes.',
+      icon: Zap,
+      color: 'from-blue-400 to-purple-500',
+      status: 'Live Demo'
+    },
+    {
+      id: 'rug-radar',
+      title: 'Rug Radar',
+      description: 'Real-time security scanner that detects potential rug pulls and suspicious activity.',
       icon: Shield,
-      status: "Active",
-      color: "from-blue-500 to-cyan-600"
+      color: 'from-red-400 to-pink-500',
+      status: 'Live Demo'
     },
     {
-      name: "Whale Tracking",
-      description: "Monitor large wallet movements and liquidity changes",
+      id: 'liquidity-watcher',
+      title: 'Auto-Liquidity Watcher',
+      description: 'Monitor liquidity movements and detect when whales are accumulating or dumping.',
       icon: Eye,
-      status: "Active",
-      color: "from-purple-500 to-pink-600"
+      color: 'from-green-400 to-teal-500',
+      status: 'Live Demo'
     },
     {
-      name: "Portfolio Analytics",
-      description: "Comprehensive portfolio tracking and performance metrics",
+      id: 'meme-tracker',
+      title: 'MemeCoin Tracker',
+      description: 'Comprehensive dashboard tracking all meme coins, performance, and community sentiment.',
       icon: BarChart3,
-      status: "Active",
-      color: "from-orange-500 to-red-600"
+      color: 'from-purple-400 to-indigo-500',
+      status: 'Live Demo'
+    },
+    {
+      id: 'analytics',
+      title: 'Blob Analytics',
+      description: 'Advanced trading analytics powered by the Blob community with data-driven insights.',
+      icon: TrendingUp,
+      color: 'from-yellow-500 to-yellow-600',
+      status: 'Live Demo'
     }
   ];
 
-  const demoData = {
-    marketSentiment: "Bullish",
-    confidence: "87%",
-    riskLevel: "Low",
-    activeAlerts: 3,
-    recentSignals: [
-      { token: "BLOB", action: "BUY", confidence: "92%", time: "2 min ago" },
-      { token: "PEPE", action: "HOLD", confidence: "78%", time: "5 min ago" },
-      { token: "DOGE", action: "SELL", confidence: "85%", time: "8 min ago" }
-    ]
+  const handleFeatureClick = (featureId: string) => {
+    // Redirect to the specific feature demo page
+    window.location.href = `/demo/${featureId}`;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Header */}
-      <header className="bg-gray-900/50 backdrop-blur-sm border-b border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center justify-between">
-            <Link 
-              href="/" 
-              className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors"
-            >
-              <ArrowLeft className="w-5 h-5" />
-              <span>Back to Home</span>
-            </Link>
-            <h1 className="text-2xl font-bold text-white">BLOBSY Intelligence</h1>
-          </div>
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {!isAuthenticated ? (
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+      <div className="container mx-auto px-4 py-8">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex items-center justify-between mb-8"
+        >
+          <Link 
+            href="/"
+            className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
           >
-            {/* Hero Section */}
-            <motion.div
-              className="mb-12"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-8">
-                <Brain className="w-12 h-12 text-white" />
-              </div>
-              
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Trading Intelligence
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Access advanced AI-powered trading tools and market intelligence. 
-                Get real-time signals, risk assessments, and portfolio analytics.
-              </p>
-            </motion.div>
+            <ArrowLeft className="w-5 h-5" />
+            <span>Back to Home</span>
+          </Link>
+        </motion.div>
 
-            {/* Features Grid */}
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-center mb-16"
+        >
+          <div className="flex items-center justify-center mb-6">
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              {intelligenceFeatures.map((feature, index) => (
-                <motion.div
-                  key={feature.name}
-                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 * index }}
-                >
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center mb-4`}>
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{feature.name}</h3>
-                  <p className="text-gray-400 text-sm mb-3">{feature.description}</p>
-                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">
-                    {feature.status}
-                  </span>
-                </motion.div>
-              ))}
-            </motion.div>
-
-            {/* Simple Working Button */}
-            <motion.div
-              className="flex flex-col items-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 max-w-md">
-                <div className="flex items-center justify-center space-x-2 mb-6">
-                  <Lock className="w-6 h-6 text-gray-400" />
-                  <span className="text-gray-300 font-medium">Secure Access Required</span>
-                </div>
-                
-                {/* Simple Button - Guaranteed to Work */}
-                <div tabIndex={0} style={{ transform: 'none' }}>
-                  <button 
-                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow h-9 bg-gray-800 hover:bg-gray-900 text-white px-8 py-3"
-                    onClick={handleAccessIntelligence}
-                  >
-                    Access Intelligence
-                  </button>
-                </div>
-                
-                {/* Redirect Button - Takes you to demo */}
-                <div className="mt-4">
-                  <a 
-                    href="/tools"
-                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring shadow h-9 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
-                  >
-                    Go to Tools Demo
-                  </a>
-                </div>
-                
-                {/* Immediate Redirect Button */}
-                <div className="mt-4">
-                  <button 
-                    onClick={handleRedirectToDemo}
-                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring shadow h-9 bg-green-600 hover:bg-green-700 text-white px-8 py-3"
-                  >
-                    Access Intelligence (Redirect)
-                  </button>
-                </div>
-                
-                {/* Simple Test Button */}
-                <div className="mt-4">
-                  <button 
-                    onClick={handleSimpleTest}
-                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring shadow h-9 bg-red-600 hover:bg-red-700 text-white px-8 py-3"
-                  >
-                    Simple Test Button
-                  </button>
-                </div>
-                
-                {/* Direct Link Button */}
-                <div className="mt-4">
-                  <button 
-                    onClick={handleDirectLink}
-                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring shadow h-9 bg-purple-600 hover:bg-purple-700 text-white px-8 py-3"
-                  >
-                    Direct Link to Tools
-                  </button>
-                </div>
-                
-                <p className="text-xs text-gray-500 text-center mt-4">
-                  This is a demo. In production, this would require wallet connection and token verification.
-                </p>
-              </div>
-            </motion.div>
-          </motion.div>
-        ) : (
-          <motion.div
-            className="space-y-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-          >
-            {/* Success Header */}
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
+              className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mr-4"
+              whileHover={{ scale: 1.1, rotate: 360 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Unlock className="w-8 h-8 text-white" />
-              </div>
-              <h2 className="text-3xl font-bold text-white mb-2">Access Granted</h2>
-              <p className="text-gray-300">Welcome to BLOBSY Intelligence Dashboard</p>
+              <Brain className="w-8 h-8 text-black" />
             </motion.div>
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+              Blob Intelligence
+            </h1>
+          </div>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Access our suite of advanced trading tools and intelligence features. 
+            Click on any integration below to test the live demo.
+          </p>
+        </motion.div>
 
-            {/* Live Dashboard */}
-            {showDemo && (
-              <motion.div
-                className="grid grid-cols-1 lg:grid-cols-3 gap-6"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-              >
-                {/* Market Overview */}
-                <div className="lg:col-span-2 bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
-                  <h3 className="text-xl font-semibold text-white mb-4">Market Overview</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div className="bg-gray-700/50 rounded-lg p-4">
-                      <p className="text-gray-400 text-sm">Sentiment</p>
-                      <p className="text-green-400 font-bold text-lg">{demoData.marketSentiment}</p>
-                    </div>
-                    <div className="bg-gray-700/50 rounded-lg p-4">
-                      <p className="text-gray-400 text-sm">Confidence</p>
-                      <p className="text-blue-400 font-bold text-lg">{demoData.confidence}</p>
-                    </div>
-                    <div className="bg-gray-700/50 rounded-lg p-4">
-                      <p className="text-gray-400 text-sm">Risk Level</p>
-                      <p className="text-yellow-400 font-bold text-lg">{demoData.riskLevel}</p>
-                    </div>
-                    <div className="bg-gray-700/50 rounded-lg p-4">
-                      <p className="text-gray-400 text-sm">Alerts</p>
-                      <p className="text-red-400 font-bold text-lg">{demoData.activeAlerts}</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Recent Signals */}
-                <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
-                  <h3 className="text-xl font-semibold text-white mb-4">Recent Signals</h3>
-                  <div className="space-y-3">
-                    {demoData.recentSignals.map((signal, index) => (
-                      <motion.div
-                        key={index}
-                        className="bg-gray-700/50 rounded-lg p-3"
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.3, delay: 0.1 * index }}
-                      >
-                        <div className="flex items-center justify-between">
-                          <span className="text-white font-medium">{signal.token}</span>
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${
-                            signal.action === 'BUY' ? 'bg-green-500/20 text-green-400' :
-                            signal.action === 'SELL' ? 'bg-red-500/20 text-red-400' :
-                            'bg-yellow-500/20 text-yellow-400'
-                          }`}>
-                            {signal.action}
-                          </span>
-                        </div>
-                        <div className="flex items-center justify-between mt-1">
-                          <span className="text-gray-400 text-sm">{signal.confidence}</span>
-                          <span className="text-gray-500 text-xs">{signal.time}</span>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            )}
-
-            {/* Demo Notice */}
+        {/* Features Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
+        >
+          {integrationFeatures.map((feature, index) => (
             <motion.div
-              className="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-6"
+              key={feature.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.1 * index }}
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 cursor-pointer group"
+              onClick={() => handleFeatureClick(feature.id)}
             >
-              <div className="flex items-center space-x-3 mb-3">
-                <AlertTriangle className="w-5 h-5 text-yellow-400" />
-                <h3 className="text-lg font-semibold text-yellow-400">Demo Mode</h3>
+              <div className="flex items-start justify-between mb-4">
+                <motion.div
+                  className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center`}
+                  whileHover={{ scale: 1.1, rotate: 10 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <feature.icon className="w-6 h-6 text-white" />
+                </motion.div>
+                <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full">
+                  {feature.status}
+                </span>
               </div>
-              <p className="text-yellow-300 text-sm">
-                This is a demonstration of the BLOBSY Intelligence platform. In the real version, 
-                you would have access to live market data, advanced analytics, and real-time trading signals. 
-                The actual platform would require wallet connection and token verification.
+              
+              <h3 className="text-xl font-bold mb-3 text-white group-hover:text-yellow-400 transition-colors">
+                {feature.title}
+              </h3>
+              
+              <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                {feature.description}
               </p>
+              
+              <div className="flex items-center justify-between">
+                <span className="text-yellow-400 text-sm font-medium">
+                  Click to Test →
+                </span>
+                <motion.div
+                  className="w-6 h-6 text-gray-400 group-hover:text-yellow-400 transition-colors"
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  →
+                </motion.div>
+              </div>
             </motion.div>
-          </motion.div>
-        )}
-      </main>
+          ))}
+        </motion.div>
+
+        {/* Info Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"
+        >
+          <div className="text-center">
+            <h3 className="text-2xl font-bold mb-4 text-white">
+              🚀 Ready to Experience the Future of Trading?
+            </h3>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Each integration represents a powerful tool in our trading intelligence suite. 
+              Click on any feature above to access the live demo and see how these tools can 
+              revolutionize your trading strategy.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+              <div className="flex items-center space-x-2">
+                <Activity className="w-4 h-4 text-green-400" />
+                <span>Real-time Data</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Shield className="w-4 h-4 text-blue-400" />
+                <span>Secure Access</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <AlertTriangle className="w-4 h-4 text-yellow-400" />
+                <span>Demo Mode</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 } 

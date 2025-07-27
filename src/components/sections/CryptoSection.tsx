@@ -70,7 +70,10 @@ export const CryptoSection = () => {
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
             >
-              <Button className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3">
+              <Button 
+                className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3"
+                onClick={() => window.location.href = '/demo/dashboard'}
+              >
                 View Dashboard
               </Button>
             </motion.div>

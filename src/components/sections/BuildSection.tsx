@@ -104,7 +104,10 @@ export const BuildSection = () => {
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
             >
-              <Button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 mb-8">
+              <Button 
+                className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 mb-8"
+                onClick={() => window.location.href = '/demo/mini-app-builder'}
+              >
                 Build Mini App
               </Button>
             </motion.div>

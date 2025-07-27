@@ -292,21 +292,22 @@ const InteractiveAvatar: React.FC<InteractiveAvatarProps> = ({
     initScene();
     
     return () => {
+      // Capture refs in closure to avoid stale refs
       const mount = mountRef.current;
       const renderer = rendererRef.current;
+      
       if (renderer && mount) {
-        // Use a callback to ensure the ref is still valid
-        const cleanup = () => {
-          if (mount && renderer) {
-            try {
-              mount.removeChild(renderer.domElement);
-            } catch (error) {
-              // Element might already be removed
-            }
+        try {
+          // Check if the element is still in the DOM
+          if (mount.contains(renderer.domElement)) {
+            mount.removeChild(renderer.domElement);
           }
-          renderer?.dispose();
-        };
-        cleanup();
+        } catch (error) {
+          // Element might already be removed or not a child
+        }
+        
+        // Always dispose the renderer
+        renderer.dispose();
       }
     };
   }, [initScene]);

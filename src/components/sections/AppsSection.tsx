@@ -158,7 +158,13 @@ export const AppsSection = () => {
                     transition={{ duration: 0.2 }}
                   >
                     <div className="rounded-lg h-32 flex items-center justify-center">
-                      <span className="text-4xl opacity-50">{app.icon}</span>
+                      <motion.span 
+                        className="text-4xl opacity-50"
+                        whileHover={{ scale: 1.2, rotate: 10 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {app.icon}
+                      </motion.span>
                     </div>
                   </motion.div>
                 </CardContent>

@@ -22,7 +22,7 @@ export const Header = () => {
 
   const navItems = [
     { name: 'Lore', href: '#lore' },
-    { name: 'Tools', href: '#features' },
+    { name: 'Tools', href: '#tools' },
     { name: 'Roadmap', href: '#timeline' },
     { name: 'Community', href: '#newsletter' },
   ];

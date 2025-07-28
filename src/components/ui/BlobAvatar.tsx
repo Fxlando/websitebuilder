@@ -90,87 +90,58 @@ export const BlobAvatar = () => {
           </linearGradient>
         </defs>
 
-        {/* Main Blob Body - BLOBSY logo style */}
+        {/* Main Blob Body - Exact BLOBSY logo style */}
         <motion.ellipse
-          cx="50" cy="65" rx="25" ry="35"
+          cx="50" cy="60" rx="30" ry="40"
           fill="url(#blobGradient)"
           stroke="#8B4513"
           strokeWidth="2"
         />
 
-        {/* Blob Arms - Simple blob extensions */}
+        {/* Cream Belly - Large oval on front */}
+        <motion.ellipse
+          cx="50" cy="65" rx="18" ry="25"
+          fill="#FFE4B5"
+          stroke="#8B4513"
+          strokeWidth="1"
+        />
+
+        {/* Blob Arms - Stubby extensions */}
         <motion.g>
           {/* Left Arm */}
-          <ellipse cx="25" cy="60" rx="8" ry="12" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
-          <ellipse cx="20" cy="75" rx="6" ry="10" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
+          <ellipse cx="25" cy="55" rx="6" ry="8" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
         </motion.g>
 
         <motion.g>
           {/* Right Arm */}
-          <ellipse cx="75" cy="60" rx="8" ry="12" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
-          <ellipse cx="80" cy="75" rx="6" ry="10" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
+          <ellipse cx="75" cy="55" rx="6" ry="8" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
         </motion.g>
 
-        {/* Blob Legs - Simple blob extensions */}
-        <motion.g>
-          {/* Left Leg */}
-          <ellipse cx="40" cy="95" rx="7" ry="15" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
-          <ellipse cx="40" cy="110" rx="6" ry="12" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
-        </motion.g>
-
-        <motion.g>
-          {/* Right Leg */}
-          <ellipse cx="60" cy="95" rx="7" ry="15" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
-          <ellipse cx="60" cy="110" rx="6" ry="12" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
-        </motion.g>
-
-        {/* Blob Eyes - Simple and cute */}
+        {/* BLOBSY Logo Eyes - Perfect circles with highlights */}
         <motion.g>
           {/* Left Eye */}
-          <ellipse cx="42" cy="55" rx="4" ry="6" fill="white" stroke="#8B4513" strokeWidth="1" />
-          <ellipse cx="42" cy="55" rx="2" ry="3" fill="#8B4513" />
-          <motion.ellipse
-            cx="42" cy="53" rx="2" ry="1"
-            fill="white"
-            animate={{
-              scaleY: [1, 0.1, 1],
-            }}
-            transition={{
-              duration: 0.3,
-              repeat: Infinity,
-              repeatDelay: 3,
-              ease: "easeInOut"
-            }}
-          />
+          <ellipse cx="42" cy="45" rx="5" ry="5" fill="#8B4513" stroke="#8B4513" strokeWidth="1" />
+          <ellipse cx="41" cy="44" rx="1.5" ry="1.5" fill="white" />
         </motion.g>
 
         <motion.g>
           {/* Right Eye */}
-          <ellipse cx="58" cy="55" rx="4" ry="6" fill="white" stroke="#8B4513" strokeWidth="1" />
-          <ellipse cx="58" cy="55" rx="2" ry="3" fill="#8B4513" />
-          <motion.ellipse
-            cx="58" cy="53" rx="2" ry="1"
-            fill="white"
-            animate={{
-              scaleY: [1, 0.1, 1],
-            }}
-            transition={{
-              duration: 0.3,
-              repeat: Infinity,
-              repeatDelay: 3,
-              ease: "easeInOut"
-            }}
-          />
+          <ellipse cx="58" cy="45" rx="5" ry="5" fill="#8B4513" stroke="#8B4513" strokeWidth="1" />
+          <ellipse cx="57" cy="44" rx="1.5" ry="1.5" fill="white" />
         </motion.g>
 
-        {/* Blob Smile - Simple and friendly */}
+        {/* BLOBSY Logo Eyebrows - Short curved lines */}
+        <path d="M38 38 Q40 36 42 38" stroke="#8B4513" strokeWidth="2" fill="none" />
+        <path d="M58 38 Q60 36 62 38" stroke="#8B4513" strokeWidth="2" fill="none" />
+
+        {/* BLOBSY Logo Smile - Simple curved line */}
         <motion.path
-          d="M40 65 Q50 70 60 65"
+          d="M40 52 Q50 55 60 52"
           stroke="#8B4513"
           strokeWidth="2"
           fill="none"
           animate={{
-            d: ["M40 65 Q50 70 60 65", "M40 65 Q50 72 60 65", "M40 65 Q50 70 60 65"],
+            d: ["M40 52 Q50 55 60 52", "M40 52 Q50 57 60 52", "M40 52 Q50 55 60 52"],
           }}
           transition={{
             duration: 2,
@@ -179,38 +150,50 @@ export const BlobAvatar = () => {
           }}
         />
 
-        {/* Blob Nose - Simple dot */}
-        <ellipse cx="50" cy="62" rx="1" ry="1" fill="#8B4513" />
-
-        {/* Blob Blush - Simple circles */}
-        <ellipse cx="35" cy="60" rx="3" ry="2" fill="#FFB6C1" opacity="0.6" />
-        <ellipse cx="65" cy="60" rx="3" ry="2" fill="#FFB6C1" opacity="0.6" />
-
-        {/* Animated arm movement */}
-        <motion.g
+        {/* BLOBSY Logo Hair Tuft - Small wavy tuft */}
+        <motion.path
+          d="M48 25 Q50 20 52 25"
+          stroke="#8B4513"
+          strokeWidth="2"
+          fill="none"
           animate={{
-            rotate: [0, 15, -15, 0],
+            d: ["M48 25 Q50 20 52 25", "M48 25 Q50 22 52 25", "M48 25 Q50 20 52 25"],
           }}
           transition={{
-            duration: 2,
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+
+        {/* BLOBSY Logo Shadow */}
+        <ellipse cx="50" cy="105" rx="25" ry="8" fill="#FF8C00" opacity="0.3" />
+
+        {/* Gentle BLOBSY Logo Animations */}
+        <motion.g
+          animate={{
+            rotate: [0, 2, -2, 0],
+          }}
+          transition={{
+            duration: 3,
             repeat: Infinity,
             ease: "easeInOut"
           }}
         >
-          {/* Left arm movement */}
+          {/* Left arm gentle movement */}
         </motion.g>
 
         <motion.g
           animate={{
-            rotate: [0, -15, 15, 0],
+            rotate: [0, -2, 2, 0],
           }}
           transition={{
-            duration: 2,
+            duration: 3,
             repeat: Infinity,
             ease: "easeInOut"
           }}
         >
-          {/* Right arm movement */}
+          {/* Right arm gentle movement */}
         </motion.g>
       </motion.svg>
     </motion.div>

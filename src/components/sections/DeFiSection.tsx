@@ -10,42 +10,42 @@ export const DeFiSection = () => {
       icon: '🚀',
       title: 'New Launch Velocity',
       description: 'Tracks rate of new token deployments and quality indicators.',
-      linkText: 'View launches →',
+      linkText: 'Coming Soon',
       bgColor: 'bg-gray-50'
     },
     {
       icon: '🐋',
       title: 'Whale Activity Patterns',
       description: 'Identifies which known degen whales are active and their rotation patterns.',
-      linkText: 'Track whales →',
+      linkText: 'Coming Soon',
       bgColor: 'bg-gray-50'
     },
     {
       icon: '📱',
       title: 'Social Engagement Quality',
       description: 'Distinguishes between genuine organic growth vs bot/shill activity.',
-      linkText: 'Analyze engagement →',
+      linkText: 'Coming Soon',
       bgColor: 'bg-gray-50'
     },
     {
       icon: '📊',
       title: 'Market Health Metrics',
       description: 'Measures ecosystem vitality and sustainability indicators.',
-      linkText: 'View metrics →',
+      linkText: 'Coming Soon',
       bgColor: 'bg-gray-50'
     },
     {
       icon: '🔍',
       title: 'Quality Indicators',
       description: 'Analyzes token quality and potential for success.',
-      linkText: 'Check quality →',
+      linkText: 'Coming Soon',
       bgColor: 'bg-gray-50'
     },
     {
       icon: '⚡',
       title: 'Real-Time Monitoring',
       description: 'Continuous ecosystem health tracking and alerts.',
-      linkText: 'Monitor now →',
+      linkText: 'Coming Soon',
       bgColor: 'bg-gray-50'
     }
   ];

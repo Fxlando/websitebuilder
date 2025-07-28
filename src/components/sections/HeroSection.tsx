@@ -70,10 +70,8 @@ export const HeroSection = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight"
             variants={fadeInUp}
           >
-            <span className="text-gray-900">Blob Has</span>
-            <br />
             <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
-              Awakened
+              Blobsy Has Awoken
             </span>
           </motion.h1>
 

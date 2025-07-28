@@ -3,8 +3,10 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '../ui/Card';
 import { Button } from '../ui/Button';
+import { useState } from 'react';
 
 export const FutureSection = () => {
+  const [showReadMore, setShowReadMore] = useState(false);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -72,8 +74,9 @@ export const FutureSection = () => {
                       <Button
                         variant="secondary"
                         className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3"
+                        onClick={() => setShowReadMore(!showReadMore)}
                       >
-                        Read more
+                        {showReadMore ? 'Show less' : 'Read more'}
                       </Button>
                     </motion.div>
                   </div>
@@ -111,6 +114,104 @@ export const FutureSection = () => {
               </CardContent>
             </Card>
           </motion.div>
+
+          {/* Expanded Read More Section */}
+          {showReadMore && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="mb-8"
+            >
+              <Card className="bg-gradient-to-r from-blue-600 to-blue-700 text-white border-0 overflow-hidden">
+                <CardContent className="p-8 lg:p-12">
+                  <div className="grid lg:grid-cols-2 gap-8">
+                    <div>
+                      <h4 className="text-2xl font-bold mb-6">Advanced Market Intelligence Features</h4>
+                      
+                      <div className="space-y-6">
+                        <div className="bg-white/10 rounded-lg p-6">
+                          <h5 className="text-lg font-semibold mb-3 flex items-center">
+                            <span className="mr-3">🔍</span>
+                            Pattern Recognition Engine
+                          </h5>
+                          <p className="text-blue-100 leading-relaxed">
+                            Advanced AI algorithms that identify trading patterns invisible to the human eye. 
+                            Tracks whale movements, liquidity flows, and market sentiment shifts in real-time.
+                          </p>
+                        </div>
+
+                        <div className="bg-white/10 rounded-lg p-6">
+                          <h5 className="text-lg font-semibold mb-3 flex items-center">
+                            <span className="mr-3">📊</span>
+                            Multi-Dimensional Analysis
+                          </h5>
+                          <p className="text-blue-100 leading-relaxed">
+                            Combines social media sentiment, on-chain data, and market metrics to provide 
+                            comprehensive insights into meme coin dynamics and rotation patterns.
+                          </p>
+                        </div>
+
+                        <div className="bg-white/10 rounded-lg p-6">
+                          <h5 className="text-lg font-semibold mb-3 flex items-center">
+                            <span className="mr-3">⚡</span>
+                            Real-Time Alerts
+                          </h5>
+                          <p className="text-blue-100 leading-relaxed">
+                            Instant notifications for emerging narratives, whale movements, and market shifts. 
+                            Stay ahead of the curve with predictive analytics and trend forecasting.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="text-2xl font-bold mb-6">Technical Capabilities</h4>
+                      
+                      <div className="space-y-4">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                          <span className="text-blue-100">Real-time data processing from 50+ sources</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                          <span className="text-blue-100">AI-powered sentiment analysis</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                          <span className="text-blue-100">Whale wallet tracking & analysis</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                          <span className="text-blue-100">Liquidity flow monitoring</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                          <span className="text-blue-100">Narrative shift detection</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                          <span className="text-blue-100">Predictive market modeling</span>
+                        </div>
+                      </div>
+
+                      <div className="mt-8 p-6 bg-white/10 rounded-lg">
+                        <h5 className="text-lg font-semibold mb-3">🎯 Use Cases</h5>
+                        <ul className="text-blue-100 space-y-2">
+                          <li>• Identify emerging meme coin narratives before they moon</li>
+                          <li>• Track whale accumulation patterns and rotation signals</li>
+                          <li>• Monitor social media sentiment and community engagement</li>
+                          <li>• Predict market shifts and optimal entry/exit points</li>
+                          <li>• Analyze historical patterns for future predictions</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          )}
 
           {/* Live Narrative Tracker Card */}
           <motion.div variants={cardVariants} whileHover={{ y: -5 }}>

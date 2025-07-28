@@ -90,78 +90,85 @@ export const BlobAvatar = () => {
           </linearGradient>
         </defs>
 
-        {/* Head - More human-like round head */}
-        <motion.ellipse
-          cx="50" cy="35" rx="20" ry="25"
+        {/* Head - More character-like with better proportions */}
+        <motion.path
+          d="M30 20 Q50 15 70 20 Q75 35 70 50 Q50 55 30 50 Q25 35 30 20 Z"
           fill="url(#skinGradient)"
           stroke="#8B4513"
           strokeWidth="2"
         />
 
-        {/* Neck */}
-        <rect x="45" y="55" width="10" height="8" fill="url(#skinGradient)" stroke="#8B4513" strokeWidth="1" />
+        {/* Neck - More natural connection */}
+        <motion.path
+          d="M40 50 Q50 52 60 50 L58 58 Q50 60 42 58 Z"
+          fill="url(#skinGradient)"
+          stroke="#8B4513"
+          strokeWidth="1"
+        />
 
-        {/* Body/Torso - More human-like proportions */}
-        <motion.ellipse
-          cx="50" cy="75" rx="18" ry="25"
+        {/* Body/Torso - More character-like with clothing */}
+        <motion.path
+          d="M35 58 Q50 55 65 58 L68 85 Q50 90 32 85 Z"
           fill="url(#blobGradient)"
           stroke="#8B4513"
           strokeWidth="2"
         />
 
-        {/* Left Arm - More human-like with shoulder */}
+        {/* Left Arm - More natural with clothing */}
         <motion.g>
           {/* Shoulder */}
-          <ellipse cx="25" cy="65" rx="8" ry="12" fill="url(#skinGradient)" stroke="#8B4513" strokeWidth="1" />
+          <path d="M32 60 Q25 65 22 70 Q25 75 32 70 Z" fill="url(#skinGradient)" stroke="#8B4513" strokeWidth="1" />
           {/* Upper Arm */}
-          <ellipse cx="20" cy="80" rx="6" ry="15" fill="url(#skinGradient)" stroke="#8B4513" strokeWidth="1" />
+          <path d="M20 70 Q15 80 18 90 Q25 85 28 75 Z" fill="url(#skinGradient)" stroke="#8B4513" strokeWidth="1" />
           {/* Lower Arm */}
-          <ellipse cx="15" cy="95" rx="5" ry="12" fill="url(#skinGradient)" stroke="#8B4513" strokeWidth="1" />
+          <path d="M15 90 Q12 100 15 110 Q20 105 22 95 Z" fill="url(#skinGradient)" stroke="#8B4513" strokeWidth="1" />
           {/* Hand */}
-          <ellipse cx="12" cy="105" rx="4" ry="6" fill="url(#skinGradient)" stroke="#8B4513" strokeWidth="1" />
+          <path d="M12 110 Q10 115 12 120 Q15 118 16 112 Z" fill="url(#skinGradient)" stroke="#8B4513" strokeWidth="1" />
         </motion.g>
 
-        {/* Right Arm - More human-like with shoulder */}
+        {/* Right Arm - More natural with clothing */}
         <motion.g>
           {/* Shoulder */}
-          <ellipse cx="75" cy="65" rx="8" ry="12" fill="url(#skinGradient)" stroke="#8B4513" strokeWidth="1" />
+          <path d="M68 60 Q75 65 78 70 Q75 75 68 70 Z" fill="url(#skinGradient)" stroke="#8B4513" strokeWidth="1" />
           {/* Upper Arm */}
-          <ellipse cx="80" cy="80" rx="6" ry="15" fill="url(#skinGradient)" stroke="#8B4513" strokeWidth="1" />
+          <path d="M80 70 Q85 80 82 90 Q75 85 72 75 Z" fill="url(#skinGradient)" stroke="#8B4513" strokeWidth="1" />
           {/* Lower Arm */}
-          <ellipse cx="85" cy="95" rx="5" ry="12" fill="url(#skinGradient)" stroke="#8B4513" strokeWidth="1" />
+          <path d="M85 90 Q88 100 85 110 Q80 105 78 95 Z" fill="url(#skinGradient)" stroke="#8B4513" strokeWidth="1" />
           {/* Hand */}
-          <ellipse cx="88" cy="105" rx="4" ry="6" fill="url(#skinGradient)" stroke="#8B4513" strokeWidth="1" />
+          <path d="M88 110 Q90 115 88 120 Q85 118 84 112 Z" fill="url(#skinGradient)" stroke="#8B4513" strokeWidth="1" />
         </motion.g>
 
-        {/* Left Leg */}
+        {/* Left Leg - More natural with pants */}
         <motion.g>
           {/* Upper Leg */}
-          <ellipse cx="40" cy="105" rx="7" ry="15" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
+          <path d="M35 85 Q40 90 38 105 Q35 100 32 90 Z" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
           {/* Lower Leg */}
-          <ellipse cx="40" cy="120" rx="6" ry="12" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
+          <path d="M35 105 Q38 115 36 125 Q33 120 32 110 Z" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
           {/* Foot */}
-          <ellipse cx="40" cy="130" rx="8" ry="4" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
+          <path d="M32 125 Q30 130 35 132 Q38 130 36 125 Z" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
         </motion.g>
 
-        {/* Right Leg */}
+        {/* Right Leg - More natural with pants */}
         <motion.g>
           {/* Upper Leg */}
-          <ellipse cx="60" cy="105" rx="7" ry="15" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
+          <path d="M65 85 Q60 90 62 105 Q65 100 68 90 Z" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
           {/* Lower Leg */}
-          <ellipse cx="60" cy="120" rx="6" ry="12" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
+          <path d="M65 105 Q62 115 64 125 Q67 120 68 110 Z" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
           {/* Foot */}
-          <ellipse cx="60" cy="130" rx="8" ry="4" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
+          <path d="M68 125 Q70 130 65 132 Q62 130 64 125 Z" fill="url(#blobGradient)" stroke="#8B4513" strokeWidth="1" />
         </motion.g>
 
-        {/* Left Eye - More human-like */}
+        {/* Left Eye - More character-like with personality */}
         <motion.g>
-          <ellipse cx="42" cy="30" rx="6" ry="8" fill="white" stroke="#8B4513" strokeWidth="2" />
-          <ellipse cx="42" cy="30" rx="3" ry="4" fill="#8B4513" />
-          <ellipse cx="40" cy="28" rx="1.5" ry="2" fill="white" />
-          <motion.rect
-            x="39" y="28" width="6" height="4" fill="white"
+          <path d="M38 28 Q42 26 46 28 Q44 32 40 32 Q38 30 38 28 Z" fill="white" stroke="#8B4513" strokeWidth="2" />
+          <path d="M40 30 Q42 29 44 30 Q42 31 40 31 Q40 30 40 30 Z" fill="#8B4513" />
+          <motion.path
+            d="M38 28 Q40 27 42 28"
+            stroke="white"
+            strokeWidth="2"
+            fill="none"
             animate={{
-              scaleY: [1, 0.1, 1],
+              d: ["M38 28 Q40 27 42 28", "M38 28 Q40 26 42 28", "M38 28 Q40 27 42 28"],
             }}
             transition={{
               duration: 0.3,
@@ -172,15 +179,17 @@ export const BlobAvatar = () => {
           />
         </motion.g>
 
-        {/* Right Eye - More human-like */}
+        {/* Right Eye - More character-like with personality */}
         <motion.g>
-          <ellipse cx="58" cy="30" rx="6" ry="8" fill="white" stroke="#8B4513" strokeWidth="2" />
-          <ellipse cx="58" cy="30" rx="3" ry="4" fill="#8B4513" />
-          <ellipse cx="56" cy="28" rx="1.5" ry="2" fill="white" />
-          <motion.rect
-            x="55" y="28" width="6" height="4" fill="white"
+          <path d="M54 28 Q58 26 62 28 Q60 32 56 32 Q54 30 54 28 Z" fill="white" stroke="#8B4513" strokeWidth="2" />
+          <path d="M56 30 Q58 29 60 30 Q58 31 56 31 Q56 30 56 30 Z" fill="#8B4513" />
+          <motion.path
+            d="M54 28 Q56 27 58 28"
+            stroke="white"
+            strokeWidth="2"
+            fill="none"
             animate={{
-              scaleY: [1, 0.1, 1],
+              d: ["M54 28 Q56 27 58 28", "M54 28 Q56 26 58 28", "M54 28 Q56 27 58 28"],
             }}
             transition={{
               duration: 0.3,
@@ -191,18 +200,18 @@ export const BlobAvatar = () => {
           />
         </motion.g>
 
-        {/* Eyebrows - More expressive */}
-        <path d="M36 22 Q42 20, 48 22" stroke="#8B4513" strokeWidth="2" fill="none" />
-        <path d="M52 22 Q58 20, 64 22" stroke="#8B4513" strokeWidth="2" fill="none" />
+        {/* Eyebrows - More expressive and character-like */}
+        <path d="M36 24 Q42 22 48 24" stroke="#8B4513" strokeWidth="2" fill="none" />
+        <path d="M52 24 Q58 22 64 24" stroke="#8B4513" strokeWidth="2" fill="none" />
 
-        {/* Smile - Friendly and human-like */}
+        {/* Smile - More character-like and friendly */}
         <motion.path
-          d="M40 45 Q50 50, 60 45"
+          d="M42 38 Q50 42 58 38"
           stroke="#8B4513"
           strokeWidth="2.5"
           fill="none"
           animate={{
-            d: ["M40 45 Q50 50, 60 45", "M40 45 Q50 52, 60 45", "M40 45 Q50 50, 60 45"],
+            d: ["M42 38 Q50 42 58 38", "M42 38 Q50 44 58 38", "M42 38 Q50 42 58 38"],
           }}
           transition={{
             duration: 2,
@@ -211,22 +220,22 @@ export const BlobAvatar = () => {
           }}
         />
 
-        {/* Nose - Small and cute */}
-        <ellipse cx="50" cy="42" rx="1.5" ry="2" fill="#8B4513" />
+        {/* Nose - More character-like */}
+        <path d="M49 36 Q50 38 51 36" stroke="#8B4513" strokeWidth="1.5" fill="none" />
 
-        {/* Blush - Left */}
+        {/* Blush - Left - More natural */}
         <motion.g>
-          <ellipse cx="30" cy="40" rx="3" ry="2" fill="#FFB6C1" opacity="0.6" />
+          <path d="M28 36 Q32 35 36 36" stroke="#FFB6C1" strokeWidth="2" fill="none" opacity="0.6" />
         </motion.g>
 
-        {/* Blush - Right */}
+        {/* Blush - Right - More natural */}
         <motion.g>
-          <ellipse cx="70" cy="40" rx="3" ry="2" fill="#FFB6C1" opacity="0.6" />
+          <path d="M64 36 Q68 35 72 36" stroke="#FFB6C1" strokeWidth="2" fill="none" opacity="0.6" />
         </motion.g>
 
-        {/* Hair - Simple human-like hair */}
+        {/* Hair - More character-like with style */}
         <motion.path
-          d="M30 15 Q50 5, 70 15 Q65 25, 35 25 Z"
+          d="M28 18 Q50 12 72 18 Q68 22 32 22 Z"
           fill="url(#blobGradient)"
           stroke="#8B4513"
           strokeWidth="1"

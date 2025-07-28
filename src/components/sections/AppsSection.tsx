@@ -143,7 +143,7 @@ export const AppsSection = () => {
                       </motion.span>
                       <span className="text-sm font-medium opacity-80">{app.badge}</span>
                     </div>
-                    <h3 className="text-xl font-semibold mb-3 group-hover:text-orange-500 transition-colors duration-200">
+                    <h3 className={`text-xl font-semibold mb-3 transition-colors duration-200 ${app.isOrange ? 'group-hover:text-white' : 'group-hover:text-orange-500'}`}>
                       {app.title}
                     </h3>
                     <p className="opacity-90 leading-relaxed">

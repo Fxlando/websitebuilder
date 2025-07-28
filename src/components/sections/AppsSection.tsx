@@ -153,11 +153,11 @@ export const AppsSection = () => {
 
                   {/* Mock App Screenshot */}
                   <motion.div 
-                    className={`${app.isOrange ? 'bg-white/10 group-hover:bg-gray-100' : 'bg-white/10'} rounded-lg p-4 mt-8`}
+                    className="rounded-lg p-4 mt-8"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className={`${app.isOrange ? 'bg-white/20 group-hover:bg-gray-200' : 'bg-white/20'} rounded-lg h-32 flex items-center justify-center`}>
+                    <div className="rounded-lg h-32 flex items-center justify-center">
                       <span className="text-4xl opacity-50">{app.icon}</span>
                     </div>
                   </motion.div>

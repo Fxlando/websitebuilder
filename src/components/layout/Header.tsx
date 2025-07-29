@@ -78,9 +78,9 @@ export const Header = () => {
             <Button 
               variant="outline" 
               className="text-gray-700 hover:text-orange-600 border-orange-400 hover:border-orange-500 hidden md:flex"
-              onClick={() => window.open('https://x.com/bl0bsy', '_blank')}
+              onClick={() => window.open('https://discord.gg/eYgmC4Nc', '_blank')}
             >
-              Follow X
+              Join Discord
             </Button>
             
             {/* Mobile menu button */}
@@ -126,10 +126,10 @@ export const Header = () => {
               className="w-full text-gray-700 hover:text-orange-600 border-orange-400 hover:border-orange-500"
               onClick={() => {
                 setMobileMenuOpen(false);
-                window.open('https://x.com/bl0bsy', '_blank');
+                window.open('https://discord.gg/eYgmC4Nc', '_blank');
               }}
             >
-              Follow X
+              Join Discord
             </Button>
           </div>
         </motion.div>

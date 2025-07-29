@@ -67,7 +67,7 @@ export const HeroSection = () => {
 
           {/* Main Title */}
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight font-['Space_Grotesk']"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight font-space-grotesk"
             variants={fadeInUp}
           >
             <span className="text-gray-900">Blobsy Has</span>

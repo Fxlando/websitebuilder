@@ -41,7 +41,7 @@ export const FutureSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-['Space_Grotesk']">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-space-grotesk">
             "<span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">God Mode</span>" Vision into the Chaos
           </h2>
         </motion.div>
@@ -220,7 +220,7 @@ export const FutureSection = () => {
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                   <div>
                     <div className="text-sm font-medium mb-2 opacity-90">PHASE 2.0</div>
-                    <h3 className="text-3xl lg:text-4xl font-bold mb-6 font-['Space_Grotesk']">
+                    <h3 className="text-3xl lg:text-4xl font-bold mb-6 font-space-grotesk">
                       Live Narrative Tracker
                     </h3>
                     <p className="text-lg mb-8 opacity-90 leading-relaxed">

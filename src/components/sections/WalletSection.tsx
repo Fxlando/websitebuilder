@@ -70,7 +70,7 @@ export const WalletSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 font-['Space_Grotesk']">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 font-space-grotesk">
             Live Narrative Tracker
           </h2>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">

@@ -257,9 +257,9 @@ export const SupportPoolsSection = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="w-20 h-20 flex items-center justify-center shadow-lg border-2 border-gray-200 hover:border-orange-300 transition-all duration-300 bg-white rounded-lg">
-                {renderLogo(pool.name)}
-              </div>
+                          <div className="w-20 h-20 flex items-center justify-center shadow-lg border-2 border-gray-200 hover:border-orange-300 transition-all duration-300 bg-white rounded-full">
+              {renderLogo(pool.name)}
+            </div>
             </motion.a>
           ))}
         </motion.div>

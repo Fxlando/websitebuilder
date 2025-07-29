@@ -85,7 +85,7 @@ export const SupportPoolsSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-space-grotesk">
-            Supported by <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Leading Pools</span>
+            Supported by <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent font-space-grotesk">Leading Pools</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Trusted by the most innovative platforms in the Solana ecosystem

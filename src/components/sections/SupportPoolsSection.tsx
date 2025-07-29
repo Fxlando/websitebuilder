@@ -6,47 +6,108 @@ export const SupportPoolsSection = () => {
   const pools = [
     {
       name: "Bonk",
-      color: "bg-yellow-400",
-      bgColor: "bg-yellow-400",
-      textColor: "text-orange-600",
       url: "https://letsbonk.fun/"
     },
     {
       name: "Pump.fun",
-      color: "bg-green-500",
-      bgColor: "bg-black",
-      textColor: "text-green-500",
       url: "https://pump.fun/"
     },
     {
       name: "Raydium",
-      color: "bg-gradient-to-r from-cyan-400 to-purple-600",
-      bgColor: "bg-black",
-      textColor: "text-white",
       url: "https://raydium.io"
     },
     {
       name: "Unnamed Moon",
-      color: "bg-purple-600",
-      bgColor: "bg-black",
-      textColor: "text-pink-400",
       url: "https://moonshot.money/"
     },
     {
       name: "Beleive",
-      color: "bg-green-500",
-      bgColor: "bg-black",
-      textColor: "text-green-500",
       url: "http://believe.app/"
     },
     {
       name: "DigiByte",
-      color: "bg-pink-500",
-      bgColor: "bg-black",
-      textColor: "text-pink-500",
       url: "https://raydium.io/"
     }
   ];
+
+  const renderLogo = (poolName: string) => {
+    switch (poolName) {
+      case "Bonk":
+        return (
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="40" fill="#FFD700"/>
+            <ellipse cx="35" cy="40" rx="15" ry="18" fill="#FFA500"/>
+            <ellipse cx="30" cy="45" rx="8" ry="6" fill="white"/>
+            <ellipse cx="32" cy="35" rx="2" ry="1" fill="black"/>
+            <ellipse cx="38" cy="35" rx="2" ry="1" fill="black"/>
+            <ellipse cx="28" cy="42" rx="1.5" ry="1" fill="black"/>
+            <path d="M25 25 Q20 20 25 15 Q30 20 25 25" fill="#FFA500"/>
+            <path d="M45 25 Q50 20 45 15 Q40 20 45 25" fill="#FFA500"/>
+            <text x="55" y="25" fill="red" fontSize="12" fontWeight="bold">!!!</text>
+            <circle cx="58" cy="35" r="2" fill="red"/>
+            <circle cx="58" cy="40" r="2" fill="red"/>
+            <circle cx="58" cy="45" r="2" fill="red"/>
+          </svg>
+        );
+      case "Pump.fun":
+        return (
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" fill="black"/>
+            <ellipse cx="40" cy="40" rx="25" ry="8" fill="white" transform="rotate(45 40 40)"/>
+            <ellipse cx="40" cy="40" rx="25" ry="8" fill="#00FF88" transform="rotate(45 40 40)"/>
+            <ellipse cx="40" cy="40" rx="25" ry="8" fill="none" stroke="#008855" strokeWidth="1" transform="rotate(45 40 40)"/>
+          </svg>
+        );
+      case "Raydium":
+        return (
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" fill="black"/>
+            <defs>
+              <linearGradient id="raydiumGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#00FFFF"/>
+                <stop offset="100%" style="stop-color:#8000FF"/>
+              </linearGradient>
+            </defs>
+            <circle cx="40" cy="40" r="35" fill="url(#raydiumGradient)"/>
+            <circle cx="40" cy="40" r="35" fill="none" stroke="white" strokeWidth="1"/>
+            <polygon points="40,15 50,20 50,30 40,35 30,30 30,20" fill="white"/>
+            <path d="M35 20 L35 35 L40 35 Q45 35 45 30 L40 30 L40 25 L45 25" fill="white" stroke="white" strokeWidth="2"/>
+            <polygon points="42,18 44,19 44,21 42,22 40,21 40,19" fill="white"/>
+          </svg>
+        );
+      case "Unnamed Moon":
+        return (
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" fill="black"/>
+            <circle cx="40" cy="40" r="35" fill="#8000FF"/>
+            <path d="M15 15 Q25 10 35 15 Q45 20 40 30 Q35 40 25 35 Q15 30 15 15" fill="#FF00FF"/>
+            <path d="M20 50 Q30 45 40 40 Q50 35 55 25" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round"/>
+            <path d="M50 30 L55 25 L50 20" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        );
+      case "Beleive":
+        return (
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" fill="black"/>
+            <circle cx="40" cy="40" r="35" fill="#00FF00"/>
+            <path d="M30 20 L30 50 L40 50 Q50 50 50 40 L40 40 L40 35 L50 35 Q50 25 40 25 L30 25" fill="white" stroke="white" strokeWidth="2"/>
+            <path d="M50 40 L55 35 L50 30" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        );
+      case "DigiByte":
+        return (
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" fill="black"/>
+            <circle cx="40" cy="40" r="35" fill="#FF00FF"/>
+            <path d="M30 20 L30 50 L40 50 Q50 50 50 35 Q50 20 40 20 L30 20" fill="white" stroke="white" strokeWidth="2"/>
+            <line x1="45" y1="25" x2="48" y2="25" stroke="white" strokeWidth="2"/>
+            <line x1="45" y1="30" x2="48" y2="30" stroke="white" strokeWidth="2"/>
+          </svg>
+        );
+      default:
+        return null;
+    }
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -126,10 +187,8 @@ export const SupportPoolsSection = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className={`w-20 h-20 ${pool.color} rounded-full flex items-center justify-center shadow-lg border-2 border-gray-200 hover:border-orange-300 transition-all duration-300`}>
-                <span className={`font-bold text-lg ${pool.textColor}`}>
-                  {pool.name.split('.')[0]}
-                </span>
+              <div className="w-20 h-20 flex items-center justify-center shadow-lg border-2 border-gray-200 hover:border-orange-300 transition-all duration-300 bg-white rounded-lg">
+                {renderLogo(pool.name)}
               </div>
             </motion.a>
           ))}

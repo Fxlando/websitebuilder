@@ -6,48 +6,35 @@ export const SupportPoolsSection = () => {
   const pools = [
     {
       name: "Bonk",
-      url: "https://letsbonk.fun/"
+      url: "https://letsbonk.fun/",
+      logo: "/images/bonk-logo.png"
     },
     {
       name: "Pump.fun",
-      url: "https://pump.fun/"
+      url: "https://pump.fun/",
+      logo: "/images/pump-logo.png"
     },
     {
       name: "Raydium",
-      url: "https://raydium.io"
+      url: "https://raydium.io",
+      logo: "/images/raydium-logo.png"
     },
     {
       name: "Unnamed Moon",
-      url: "https://moonshot.money/"
+      url: "https://moonshot.money/",
+      logo: "/images/unnamedmoon-logo.png"
     },
     {
       name: "Beleive",
-      url: "http://believe.app/"
+      url: "http://believe.app/",
+      logo: "/images/beleive-logo.png"
     },
     {
       name: "DigiByte",
-      url: "https://raydium.io/"
+      url: "https://raydium.io/",
+      logo: "/images/digibyte-logo.png"
     }
   ];
-
-  const getLogoUrl = (poolName: string) => {
-    switch (poolName) {
-      case "Bonk":
-        return "/images/logos/bonk-logo.svg";
-      case "Pump.fun":
-        return "/images/logos/pump-logo.svg";
-      case "Raydium":
-        return "/images/logos/raydium-logo.svg";
-      case "Unnamed Moon":
-        return "/images/logos/unnamedmoon-logo.svg";
-      case "Beleive":
-        return "/images/logos/beleive-logo.svg";
-      case "DigiByte":
-        return "/images/logos/digibyte-logo.svg";
-      default:
-        return null;
-    }
-  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -106,46 +93,29 @@ export const SupportPoolsSection = () => {
         </motion.div>
 
         {/* Pool Logos */}
-        <motion.div
-          className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {pools.map((pool, index) => (
-            <motion.a
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
+          {pools.map((pool) => (
+            <a
               key={pool.name}
               target="_blank"
               rel="noopener noreferrer"
-              href={pool.url}
               className="transition-transform duration-200 hover:scale-110"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
+              href={pool.url}
             >
-                          <div className="w-20 h-20 flex items-center justify-center shadow-lg border-2 border-gray-200 hover:border-orange-300 transition-all duration-300 bg-white rounded-full">
               <img 
-                src={getLogoUrl(pool.name) || ''} 
                 alt={`${pool.name} Logo`}
-                className="w-16 h-16 object-contain"
-                onError={(e) => {
-                  // Fallback to a colored div if image fails to load
-                  const target = e.target as HTMLImageElement;
-                  target.style.display = 'none';
-                  const parent = target.parentElement;
-                  if (parent) {
-                    parent.innerHTML = `<div class="w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white font-bold text-lg">${pool.name.charAt(0)}</div>`;
-                  }
-                }}
+                loading="lazy"
+                width="80"
+                height="80"
+                decoding="async"
+                data-nimg="1"
+                className="object-contain"
+                src={pool.logo}
+                style={{ color: 'transparent' }}
               />
-            </div>
-            </motion.a>
+            </a>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -7,6 +7,7 @@ import { DeFiSection } from '@/components/sections/DeFiSection';
 import { AppsSection } from '@/components/sections/AppsSection';
 import { FutureSection } from '@/components/sections/FutureSection';
 import { BuildSection } from '@/components/sections/BuildSection';
+import { SupportPoolsSection } from '@/components/sections/SupportPoolsSection';
 import { LoreSection } from '@/components/sections/LoreSection';
 import { FeaturesSection } from '@/components/sections/FeaturesSection';
 import { LaunchTimeline } from '@/components/sections/LaunchTimeline';
@@ -25,6 +26,7 @@ export default function Home() {
         <AppsSection />
         <FutureSection />
         <BuildSection />
+        <SupportPoolsSection />
         <section id="lore">
           <LoreSection />
         </section>

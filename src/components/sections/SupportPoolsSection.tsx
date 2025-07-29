@@ -6,32 +6,44 @@ export const SupportPoolsSection = () => {
   const pools = [
     {
       name: "Bonk",
-      logo: "/images/bonk-logo.svg",
+      color: "bg-yellow-400",
+      bgColor: "bg-yellow-400",
+      textColor: "text-orange-600",
       url: "https://letsbonk.fun/"
     },
     {
       name: "Pump.fun",
-      logo: "/images/pump-logo.svg",
+      color: "bg-green-500",
+      bgColor: "bg-black",
+      textColor: "text-green-500",
       url: "https://pump.fun/"
     },
     {
       name: "Raydium",
-      logo: "/images/raydium-logo.svg",
+      color: "bg-gradient-to-r from-cyan-400 to-purple-600",
+      bgColor: "bg-black",
+      textColor: "text-white",
       url: "https://raydium.io"
     },
     {
       name: "Unnamed Moon",
-      logo: "/images/unnamedmoon-logo.svg",
+      color: "bg-purple-600",
+      bgColor: "bg-black",
+      textColor: "text-pink-400",
       url: "https://moonshot.money/"
     },
     {
       name: "Beleive",
-      logo: "/images/beleive-logo.svg",
+      color: "bg-green-500",
+      bgColor: "bg-black",
+      textColor: "text-green-500",
       url: "http://believe.app/"
     },
     {
       name: "DigiByte",
-      logo: "/images/digibyte-logo.svg",
+      color: "bg-pink-500",
+      bgColor: "bg-black",
+      textColor: "text-pink-500",
       url: "https://raydium.io/"
     }
   ];
@@ -114,16 +126,11 @@ export const SupportPoolsSection = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <img
-                alt={`${pool.name} Logo`}
-                loading="lazy"
-                width="80"
-                height="80"
-                decoding="async"
-                className="object-contain"
-                style={{ color: "transparent" }}
-                src={pool.logo}
-              />
+              <div className={`w-20 h-20 ${pool.color} rounded-full flex items-center justify-center shadow-lg border-2 border-gray-200 hover:border-orange-300 transition-all duration-300`}>
+                <span className={`font-bold text-lg ${pool.textColor}`}>
+                  {pool.name.split('.')[0]}
+                </span>
+              </div>
             </motion.a>
           ))}
         </motion.div>

@@ -6,32 +6,32 @@ export const SupportPoolsSection = () => {
   const pools = [
     {
       name: "Bonk",
-      color: "bg-orange-500",
+      logo: "/images/bonk-logo.png",
       url: "https://letsbonk.fun/"
     },
     {
       name: "Pump.fun",
-      color: "bg-red-500",
+      logo: "/images/pump-logo.png",
       url: "https://pump.fun/"
     },
     {
       name: "Raydium",
-      color: "bg-blue-500",
+      logo: "/images/raydium-logo.png",
       url: "https://raydium.io"
     },
     {
       name: "Unnamed Moon",
-      color: "bg-purple-500",
+      logo: "/images/unnamedmoon-logo.png",
       url: "https://moonshot.money/"
     },
     {
       name: "Beleive",
-      color: "bg-green-500",
+      logo: "/images/beleive-logo.png",
       url: "http://believe.app/"
     },
     {
       name: "DigiByte",
-      color: "bg-yellow-500",
+      logo: "/images/digibyte-logo.png",
       url: "https://raydium.io/"
     }
   ];
@@ -94,39 +94,37 @@ export const SupportPoolsSection = () => {
 
         {/* Pool Logos */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-12"
+          className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           {pools.map((pool, index) => (
-            <motion.div
+            <motion.a
               key={pool.name}
-              variants={itemVariants}
-              className="flex flex-col items-center"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={pool.url}
+              className="transition-transform duration-200 hover:scale-110"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <motion.a
-                href={pool.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative"
-                whileHover={{ scale: 1.05, y: -5 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className={`w-20 h-20 md:w-24 md:h-24 ${pool.color} rounded-2xl shadow-lg border border-gray-200 flex items-center justify-center p-4 group-hover:shadow-xl transition-all duration-300 group-hover:border-orange-300`}>
-                  <span className="text-white font-bold text-lg">
-                    {pool.name.split('.')[0]}
-                  </span>
-                </div>
-                <div className="mt-3 text-center">
-                  <p className="text-sm font-medium text-gray-700 group-hover:text-orange-600 transition-colors duration-300">
-                    {pool.name}
-                  </p>
-                </div>
-              </motion.a>
-            </motion.div>
+              <img
+                alt={`${pool.name} Logo`}
+                loading="lazy"
+                width="80"
+                height="80"
+                decoding="async"
+                className="object-contain"
+                style={{ color: "transparent" }}
+                src={pool.logo}
+              />
+            </motion.a>
           ))}
         </motion.div>
       </div>

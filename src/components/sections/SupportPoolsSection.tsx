@@ -64,8 +64,8 @@ export const SupportPoolsSection = () => {
             <rect width="80" height="80" fill="black"/>
             <defs>
               <linearGradient id="raydiumGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" style="stop-color:#00FFFF"/>
-                <stop offset="100%" style="stop-color:#8000FF"/>
+                <stop offset="0%" stopColor="#00FFFF"/>
+                <stop offset="100%" stopColor="#8000FF"/>
               </linearGradient>
             </defs>
             <circle cx="40" cy="40" r="35" fill="url(#raydiumGradient)"/>

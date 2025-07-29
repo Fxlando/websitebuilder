@@ -6,32 +6,32 @@ export const SupportPoolsSection = () => {
   const pools = [
     {
       name: "Bonk",
-      logo: "/images/bonk-logo.png",
+      logo: "/images/bonk-logo.svg",
       url: "https://letsbonk.fun/"
     },
     {
       name: "Pump.fun",
-      logo: "/images/pump-logo.png",
+      logo: "/images/pump-logo.svg",
       url: "https://pump.fun/"
     },
     {
       name: "Raydium",
-      logo: "/images/raydium-logo.png",
+      logo: "/images/raydium-logo.svg",
       url: "https://raydium.io"
     },
     {
       name: "Unnamed Moon",
-      logo: "/images/unnamedmoon-logo.png",
+      logo: "/images/unnamedmoon-logo.svg",
       url: "https://moonshot.money/"
     },
     {
       name: "Beleive",
-      logo: "/images/beleive-logo.png",
+      logo: "/images/beleive-logo.svg",
       url: "http://believe.app/"
     },
     {
       name: "DigiByte",
-      logo: "/images/digibyte-logo.png",
+      logo: "/images/digibyte-logo.svg",
       url: "https://raydium.io/"
     }
   ];

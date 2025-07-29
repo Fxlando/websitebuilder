@@ -5,6 +5,7 @@
 [build.environment]
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   NODE_VERSION = "18"
+  SKIP_PLUGIN_POSTBUILD = "true"
 
 [[headers]]
   for = "/_next/static/*"

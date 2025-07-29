@@ -6,32 +6,32 @@ export const SupportPoolsSection = () => {
   const pools = [
     {
       name: "Bonk",
-      logo: "/images/bonk-logo.svg",
+      color: "bg-orange-500",
       url: "https://letsbonk.fun/"
     },
     {
       name: "Pump.fun",
-      logo: "/images/pump-logo.svg",
+      color: "bg-red-500",
       url: "https://pump.fun/"
     },
     {
       name: "Raydium",
-      logo: "/images/raydium-logo.svg",
+      color: "bg-blue-500",
       url: "https://raydium.io"
     },
     {
       name: "Unnamed Moon",
-      logo: "/images/unnamedmoon-logo.svg",
+      color: "bg-purple-500",
       url: "https://moonshot.money/"
     },
     {
       name: "Beleive",
-      logo: "/images/beleive-logo.svg",
+      color: "bg-green-500",
       url: "http://believe.app/"
     },
     {
       name: "DigiByte",
-      logo: "/images/digibyte-logo.svg",
+      color: "bg-yellow-500",
       url: "https://raydium.io/"
     }
   ];
@@ -115,13 +115,10 @@ export const SupportPoolsSection = () => {
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="w-20 h-20 md:w-24 md:h-24 bg-white rounded-2xl shadow-lg border border-gray-200 flex items-center justify-center p-4 group-hover:shadow-xl transition-all duration-300 group-hover:border-orange-300">
-                  <img
-                    src={pool.logo}
-                    alt={`${pool.name} Logo`}
-                    className="w-full h-full object-contain"
-                    loading="lazy"
-                  />
+                <div className={`w-20 h-20 md:w-24 md:h-24 ${pool.color} rounded-2xl shadow-lg border border-gray-200 flex items-center justify-center p-4 group-hover:shadow-xl transition-all duration-300 group-hover:border-orange-300`}>
+                  <span className="text-white font-bold text-lg">
+                    {pool.name.split('.')[0]}
+                  </span>
                 </div>
                 <div className="mt-3 text-center">
                   <p className="text-sm font-medium text-gray-700 group-hover:text-orange-600 transition-colors duration-300">

@@ -8,7 +8,7 @@ export const SITE_CONFIG = {
     // Social Media - Realistic URLs
     twitter: process.env.NEXT_PUBLIC_TWITTER_URL || "https://x.com/bl0bsy",
     telegram: process.env.NEXT_PUBLIC_TELEGRAM_URL || "https://t.me/blobsycommunity",
-    discord: process.env.NEXT_PUBLIC_DISCORD_URL || "https://discord.gg/blobsy",
+    discord: process.env.NEXT_PUBLIC_DISCORD_URL || "https://discord.gg/CGC3dYdydV",
     blog: process.env.NEXT_PUBLIC_BLOG_URL || "https://medium.com/@blobsy",
     whitepaper: process.env.NEXT_PUBLIC_WHITEPAPER_URL || "https://docs.blobsy.com",
     

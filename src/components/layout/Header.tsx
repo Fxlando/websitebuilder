@@ -78,7 +78,7 @@ export const Header = () => {
             <Button 
               variant="outline" 
               className="text-gray-700 hover:text-orange-600 border-orange-400 hover:border-orange-500 hidden md:flex"
-              onClick={() => window.open('https://discord.gg/eYgmC4Nc', '_blank')}
+              onClick={() => window.open('https://discord.gg/CGC3dYdydV', '_blank')}
             >
               Join Discord
             </Button>
@@ -126,7 +126,7 @@ export const Header = () => {
               className="w-full text-gray-700 hover:text-orange-600 border-orange-400 hover:border-orange-500"
               onClick={() => {
                 setMobileMenuOpen(false);
-                window.open('https://discord.gg/eYgmC4Nc', '_blank');
+                window.open('https://discord.gg/CGC3dYdydV', '_blank');
               }}
             >
               Join Discord

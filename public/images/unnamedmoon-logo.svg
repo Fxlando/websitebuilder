@@ -1,1 +1,14 @@
- 
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="80" height="80" fill="black"/>
+  
+  <!-- Purple circle -->
+  <circle cx="40" cy="40" r="35" fill="#8000FF"/>
+  
+  <!-- Pink organic shape -->
+  <path d="M15 15 Q25 10 35 15 Q45 20 40 30 Q35 40 25 35 Q15 30 15 15" fill="#FF00FF"/>
+  
+  <!-- White arrow -->
+  <path d="M20 50 Q30 45 40 40 Q50 35 55 25" fill="none" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M50 30 L55 25 L50 20" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> 

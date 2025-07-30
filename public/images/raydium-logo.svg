@@ -1,1 +1,24 @@
- 
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="80" height="80" fill="black"/>
+  
+  <!-- Gradient circle -->
+  <defs>
+    <linearGradient id="raydiumGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00FFFF"/>
+      <stop offset="100%" style="stop-color:#8000FF"/>
+    </linearGradient>
+  </defs>
+  
+  <circle cx="40" cy="40" r="35" fill="url(#raydiumGradient)"/>
+  <circle cx="40" cy="40" r="35" fill="none" stroke="white" stroke-width="1"/>
+  
+  <!-- Central hexagon -->
+  <polygon points="40,15 50,20 50,30 40,35 30,30 30,20" fill="white"/>
+  
+  <!-- Letter R -->
+  <path d="M35 20 L35 35 L40 35 Q45 35 45 30 L40 30 L40 25 L45 25" fill="white" stroke="white" stroke-width="2"/>
+  
+  <!-- Small hexagon dot -->
+  <polygon points="42,18 44,19 44,21 42,22 40,21 40,19" fill="white"/>
+</svg> 

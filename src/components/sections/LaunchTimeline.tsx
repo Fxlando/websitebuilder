@@ -9,7 +9,7 @@ export const LaunchTimeline = () => {
       title: "Phase 1: Meme Infection",
       description: "The Blob begins spreading through social media. Community building and meme creation phase. Building the foundation for what's to come.",
       status: "completed",
-      date: "Q1 2024",
+      date: "Q1 2025",
       icon: Zap,
       color: "from-green-500 to-emerald-500"
     },
@@ -17,7 +17,7 @@ export const LaunchTimeline = () => {
       title: "Phase 2: Awakening",
       description: "Token launch and initial liquidity provision. The Blob officially awakens and begins its journey to revolutionize meme coin trading.",
       status: "current",
-      date: "Q2 2024",
+      date: "Q2 2025",
       icon: Rocket,
       color: "from-blob-yellow to-yellow-500"
     },
@@ -25,7 +25,7 @@ export const LaunchTimeline = () => {
       title: "Phase 3: Tool Deployment",
       description: "Release of advanced trading tools and platform features. Full ecosystem launch with cutting-edge technology for traders.",
       status: "upcoming",
-      date: "Q3 2024",
+      date: "Q3 2025",
       icon: Calendar,
       color: "from-blue-500 to-purple-500"
     }

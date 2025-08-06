@@ -135,7 +135,7 @@ export const Footer = () => {
                 <span className="text-lg">🟡</span>
               </motion.div>
               <span className="text-sm text-gray-600">
-                © 2024 Blob Token. All rights reserved.
+                © 2025 Blob Token. All rights reserved.
               </span>
             </div>
 
